@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */; };
+		2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BF1ADDFB2000F9399E /* ViewController.swift */; };
+		2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C11ADDFB2000F9399E /* Main.storyboard */; };
+		2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C41ADDFB2000F9399E /* Images.xcassets */; };
+		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
+		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E9721CE1ADDFB2000F9399E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E9721B01ADDFB2000F9399E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E9721B71ADDFB2000F9399E;
+			remoteInfo = "About Cal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E9721B81ADDFB2000F9399E /* About Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9721BC1ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E9721BF1ADDFB2000F9399E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E9721C21ADDFB2000F9399E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E9721C41ADDFB2000F9399E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2E9721C71ADDFB2000F9399E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2E9721CD1ADDFB2000F9399E /* About CalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "About CalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E9721B51ADDFB2000F9399E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9721CA1ADDFB2000F9399E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E9721AF1ADDFB2000F9399E = {
+			isa = PBXGroup;
+			children = (
+				2E9721BA1ADDFB2000F9399E /* About Cal */,
+				2E9721D01ADDFB2000F9399E /* About CalTests */,
+				2E9721B91ADDFB2000F9399E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E9721B91ADDFB2000F9399E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E9721B81ADDFB2000F9399E /* About Cal.app */,
+				2E9721CD1ADDFB2000F9399E /* About CalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E9721BA1ADDFB2000F9399E /* About Cal */ = {
+			isa = PBXGroup;
+			children = (
+				2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */,
+				2E9721BF1ADDFB2000F9399E /* ViewController.swift */,
+				2E9721C11ADDFB2000F9399E /* Main.storyboard */,
+				2E9721C41ADDFB2000F9399E /* Images.xcassets */,
+				2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */,
+				2E9721BB1ADDFB2000F9399E /* Supporting Files */,
+			);
+			path = "About Cal";
+			sourceTree = "<group>";
+		};
+		2E9721BB1ADDFB2000F9399E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E9721BC1ADDFB2000F9399E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E9721D01ADDFB2000F9399E /* About CalTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E9721D31ADDFB2000F9399E /* About_CalTests.swift */,
+				2E9721D11ADDFB2000F9399E /* Supporting Files */,
+			);
+			path = "About CalTests";
+			sourceTree = "<group>";
+		};
+		2E9721D11ADDFB2000F9399E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E9721D21ADDFB2000F9399E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E9721B71ADDFB2000F9399E /* About Cal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E9721D71ADDFB2000F9399E /* Build configuration list for PBXNativeTarget "About Cal" */;
+			buildPhases = (
+				2E9721B41ADDFB2000F9399E /* Sources */,
+				2E9721B51ADDFB2000F9399E /* Frameworks */,
+				2E9721B61ADDFB2000F9399E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "About Cal";
+			productName = "About Cal";
+			productReference = 2E9721B81ADDFB2000F9399E /* About Cal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E9721CC1ADDFB2000F9399E /* About CalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E9721DA1ADDFB2000F9399E /* Build configuration list for PBXNativeTarget "About CalTests" */;
+			buildPhases = (
+				2E9721C91ADDFB2000F9399E /* Sources */,
+				2E9721CA1ADDFB2000F9399E /* Frameworks */,
+				2E9721CB1ADDFB2000F9399E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E9721CF1ADDFB2000F9399E /* PBXTargetDependency */,
+			);
+			name = "About CalTests";
+			productName = "About CalTests";
+			productReference = 2E9721CD1ADDFB2000F9399E /* About CalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E9721B01ADDFB2000F9399E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Cal Stephens";
+				TargetAttributes = {
+					2E9721B71ADDFB2000F9399E = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2E9721CC1ADDFB2000F9399E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2E9721B71ADDFB2000F9399E;
+					};
+				};
+			};
+			buildConfigurationList = 2E9721B31ADDFB2000F9399E /* Build configuration list for PBXProject "About Cal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E9721AF1ADDFB2000F9399E;
+			productRefGroup = 2E9721B91ADDFB2000F9399E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E9721B71ADDFB2000F9399E /* About Cal */,
+				2E9721CC1ADDFB2000F9399E /* About CalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E9721B61ADDFB2000F9399E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */,
+				2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */,
+				2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9721CB1ADDFB2000F9399E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E9721B41ADDFB2000F9399E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */,
+				2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9721C91ADDFB2000F9399E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E9721CF1ADDFB2000F9399E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E9721B71ADDFB2000F9399E /* About Cal */;
+			targetProxy = 2E9721CE1ADDFB2000F9399E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E9721C11ADDFB2000F9399E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9721C21ADDFB2000F9399E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9721C71ADDFB2000F9399E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E9721D51ADDFB2000F9399E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E9721D61ADDFB2000F9399E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E9721D81ADDFB2000F9399E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "About Cal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E9721D91ADDFB2000F9399E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "About Cal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E9721DB1ADDFB2000F9399E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "About CalTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/About Cal.app/About Cal";
+			};
+			name = Debug;
+		};
+		2E9721DC1ADDFB2000F9399E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "About CalTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/About Cal.app/About Cal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E9721B31ADDFB2000F9399E /* Build configuration list for PBXProject "About Cal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9721D51ADDFB2000F9399E /* Debug */,
+				2E9721D61ADDFB2000F9399E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E9721D71ADDFB2000F9399E /* Build configuration list for PBXNativeTarget "About Cal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9721D81ADDFB2000F9399E /* Debug */,
+				2E9721D91ADDFB2000F9399E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E9721DA1ADDFB2000F9399E /* Build configuration list for PBXNativeTarget "About CalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9721DB1ADDFB2000F9399E /* Debug */,
+				2E9721DC1ADDFB2000F9399E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E9721B01ADDFB2000F9399E /* Project object */;
+}
