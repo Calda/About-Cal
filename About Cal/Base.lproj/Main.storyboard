@@ -1,25 +1,130 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="About_Cal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-sf-kax" userLabel="icon view">
+                                <rect key="frame" x="133" y="40" width="110" height="110"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOp-Ey-bH3" userLabel="border">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="8Ji-Iz-pWH"/>
+                                            <constraint firstAttribute="width" constant="110" id="9zC-oG-DwC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cal icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="i3v-AM-d5f">
+                                        <rect key="frame" x="5" y="5" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="UNA-Gz-tBg"/>
+                                            <constraint firstAttribute="height" constant="100" id="UTg-rF-ZD1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fOp-Ey-bH3" firstAttribute="leading" secondItem="VRs-sf-kax" secondAttribute="leading" id="6Vn-QC-fA6"/>
+                                    <constraint firstAttribute="bottom" secondItem="fOp-Ey-bH3" secondAttribute="bottom" id="EDq-jI-GXt"/>
+                                    <constraint firstItem="i3v-AM-d5f" firstAttribute="top" secondItem="VRs-sf-kax" secondAttribute="top" constant="5" id="FHl-nO-Bdo"/>
+                                    <constraint firstAttribute="height" constant="110" id="I9z-49-FP2"/>
+                                    <constraint firstAttribute="bottom" secondItem="i3v-AM-d5f" secondAttribute="bottom" constant="5" id="Swx-7g-Llc"/>
+                                    <constraint firstAttribute="trailing" secondItem="fOp-Ey-bH3" secondAttribute="trailing" id="ZHF-WG-vY6"/>
+                                    <constraint firstAttribute="trailing" secondItem="i3v-AM-d5f" secondAttribute="trailing" constant="5" id="bER-Ue-s3C"/>
+                                    <constraint firstItem="fOp-Ey-bH3" firstAttribute="top" secondItem="VRs-sf-kax" secondAttribute="top" id="fCs-GC-hac"/>
+                                    <constraint firstAttribute="width" constant="110" id="kQf-4L-peL"/>
+                                    <constraint firstItem="i3v-AM-d5f" firstAttribute="leading" secondItem="VRs-sf-kax" secondAttribute="leading" constant="5" id="r8R-Tc-ANd"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCT-qz-k9K">
+                                <rect key="frame" x="0.0" y="160" width="375" height="507"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Cal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8t-Wi-EEd">
+                                        <rect key="frame" x="101" y="0.0" width="173" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.32941176470588235" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="62" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFg-Of-ekg">
+                                        <rect key="frame" x="15" y="61" width="343" height="649"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="Yd1-OI-GWt"/>
+                                        </constraints>
+                                        <mutableString key="text">      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.       Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" red="0.07146657258272171" green="0.12426809221506119" blue="0.16187384724617004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wFg-Of-ekg" firstAttribute="top" secondItem="r8t-Wi-EEd" secondAttribute="bottom" constant="10" id="4k0-nj-H3v"/>
+                                    <constraint firstAttribute="centerX" secondItem="r8t-Wi-EEd" secondAttribute="centerX" id="8VV-9a-zQb"/>
+                                    <constraint firstAttribute="width" secondItem="wFg-Of-ekg" secondAttribute="width" id="9ZI-Tu-CO3"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFg-Of-ekg" secondAttribute="bottom" id="CPt-MY-YZ9"/>
+                                    <constraint firstItem="r8t-Wi-EEd" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="top" id="OeC-7s-NvV"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFg-Of-ekg" secondAttribute="bottom" id="RFr-cD-Qr1"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFg-Of-ekg" secondAttribute="trailing" id="byu-z2-aBr"/>
+                                    <constraint firstItem="wFg-Of-ekg" firstAttribute="leading" secondItem="sCT-qz-k9K" secondAttribute="leading" constant="15" id="eob-sK-PGt"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFg-Of-ekg" secondAttribute="trailing" id="mmX-Nc-dEI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9ZI-Tu-CO3"/>
+                                        <exclude reference="CPt-MY-YZ9"/>
+                                        <exclude reference="byu-z2-aBr"/>
+                                        <exclude reference="mmX-Nc-dEI"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="Chc-HR-ddJ"/>
+                            <constraint firstItem="sCT-qz-k9K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ENO-HO-npE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="bottom" id="MBV-HK-sUh"/>
+                            <constraint firstItem="VRs-sf-kax" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="10" id="QIL-UD-esM"/>
+                            <constraint firstItem="VRs-sf-kax" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="eEp-6Z-MEj"/>
+                            <constraint firstItem="sCT-qz-k9K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="jU3-Sh-USW"/>
+                            <constraint firstItem="sCT-qz-k9K" firstAttribute="top" secondItem="VRs-sf-kax" secondAttribute="bottom" constant="10" id="kNd-zM-h5l"/>
+                            <constraint firstAttribute="trailing" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="kWh-yC-bR3"/>
+                            <constraint firstAttribute="centerX" secondItem="VRs-sf-kax" secondAttribute="centerX" id="zlN-9H-bg7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QIL-UD-esM"/>
+                                <exclude reference="Chc-HR-ddJ"/>
+                                <exclude reference="ENO-HO-npE"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contentText" destination="wFg-Of-ekg" id="eXy-zv-YRp"/>
+                        <outlet property="iconBorder" destination="fOp-Ey-bH3" id="r0C-cj-ZgI"/>
+                        <outlet property="iconImage" destination="i3v-AM-d5f" id="PVR-bT-ueJ"/>
+                        <outlet property="iconView" destination="VRs-sf-kax" id="U1G-LI-NSj"/>
+                        <outlet property="textWidth" destination="Yd1-OI-GWt" id="uJJ-Eh-VA5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="484.5" y="437.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cal icon.png" width="200" height="200"/>
+    </resources>
 </document>

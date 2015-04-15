@@ -13,6 +13,7 @@
 		2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C41ADDFB2000F9399E /* Images.xcassets */; };
 		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
 		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
+		2E9721DE1ADDFB6B00F9399E /* cal icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721DD1ADDFB6B00F9399E /* cal icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2E9721CD1ADDFB2000F9399E /* About CalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "About CalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
+		2E9721DD1ADDFB6B00F9399E /* cal icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cal icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		2E9721BB1ADDFB2000F9399E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E9721DD1ADDFB6B00F9399E /* cal icon.png */,
 				2E9721BC1ADDFB2000F9399E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9721DE1ADDFB6B00F9399E /* cal icon.png in Resources */,
 				2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */,
 				2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */,
 				2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */,
