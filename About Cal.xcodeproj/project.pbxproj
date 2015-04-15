@@ -14,6 +14,7 @@
 		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
 		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
 		2E9721DE1ADDFB6B00F9399E /* cal icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721DD1ADDFB6B00F9399E /* cal icon.png */; };
+		449DE69F1ADED2E500AEC23B /* SectionIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DE69E1ADED2E500AEC23B /* SectionIcons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
 		2E9721DD1ADDFB6B00F9399E /* cal icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cal icon.png"; sourceTree = "<group>"; };
+		449DE69E1ADED2E500AEC23B /* SectionIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionIcons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				2E9721C41ADDFB2000F9399E /* Images.xcassets */,
 				2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */,
 				2E9721BB1ADDFB2000F9399E /* Supporting Files */,
+				449DE69E1ADED2E500AEC23B /* SectionIcons.swift */,
 			);
 			path = "About Cal";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */,
 				2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */,
+				449DE69F1ADED2E500AEC23B /* SectionIcons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				2E9721D91ADDFB2000F9399E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E9721DA1ADDFB2000F9399E /* Build configuration list for PBXNativeTarget "About CalTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				2E9721DC1ADDFB2000F9399E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
