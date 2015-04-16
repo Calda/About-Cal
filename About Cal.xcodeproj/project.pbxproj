@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E26293D1ADF3CC900CE6288 /* CellPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E26293C1ADF3CC900CE6288 /* CellPagingLayout.swift */; };
+		2E26293F1ADF4E1600CE6288 /* IconCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E26293E1ADF4E1600CE6288 /* IconCollectionDelegate.swift */; };
 		2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */; };
 		2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BF1ADDFB2000F9399E /* ViewController.swift */; };
 		2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C11ADDFB2000F9399E /* Main.storyboard */; };
@@ -14,7 +16,7 @@
 		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
 		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
 		2E9721DE1ADDFB6B00F9399E /* cal icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721DD1ADDFB6B00F9399E /* cal icon.png */; };
-		449DE69F1ADED2E500AEC23B /* SectionIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DE69E1ADED2E500AEC23B /* SectionIcons.swift */; };
+		449DE69F1ADED2E500AEC23B /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DE69E1ADED2E500AEC23B /* IconCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E26293C1ADF3CC900CE6288 /* CellPagingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPagingLayout.swift; sourceTree = "<group>"; };
+		2E26293E1ADF4E1600CE6288 /* IconCollectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionDelegate.swift; sourceTree = "<group>"; };
 		2E9721B81ADDFB2000F9399E /* About Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9721BC1ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +43,7 @@
 		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
 		2E9721DD1ADDFB6B00F9399E /* cal icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cal icon.png"; sourceTree = "<group>"; };
-		449DE69E1ADED2E500AEC23B /* SectionIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionIcons.swift; sourceTree = "<group>"; };
+		449DE69E1ADED2E500AEC23B /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,9 @@
 				2E9721C41ADDFB2000F9399E /* Images.xcassets */,
 				2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */,
 				2E9721BB1ADDFB2000F9399E /* Supporting Files */,
-				449DE69E1ADED2E500AEC23B /* SectionIcons.swift */,
+				449DE69E1ADED2E500AEC23B /* IconCell.swift */,
+				2E26293C1ADF3CC900CE6288 /* CellPagingLayout.swift */,
+				2E26293E1ADF4E1600CE6288 /* IconCollectionDelegate.swift */,
 			);
 			path = "About Cal";
 			sourceTree = "<group>";
@@ -221,7 +227,9 @@
 			files = (
 				2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */,
 				2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */,
-				449DE69F1ADED2E500AEC23B /* SectionIcons.swift in Sources */,
+				2E26293F1ADF4E1600CE6288 /* IconCollectionDelegate.swift in Sources */,
+				2E26293D1ADF3CC900CE6288 /* CellPagingLayout.swift in Sources */,
+				449DE69F1ADED2E500AEC23B /* IconCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

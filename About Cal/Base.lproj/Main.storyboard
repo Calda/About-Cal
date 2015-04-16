@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,23 +19,19 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fdn-1K-eFY" userLabel="Section Icons">
                                 <rect key="frame" x="0.0" y="40" width="375" height="110"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Bld-k4-wSd"/>
                                     <constraint firstAttribute="width" secondItem="Fdn-1K-eFY" secondAttribute="height" multiplier="75:32" id="qHZ-dB-mEV"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tO5-Pp-W5V">
-                                    <size key="itemSize" width="104" height="110"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="Y55-rC-1Pf" customClass="CellPagingLayout" customModule="About_Cal" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionIcon" id="MJ6-tr-X3Q" customClass="IconCell" customModule="About_Cal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="104" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-fx-agY" userLabel="border">
@@ -60,24 +55,26 @@
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="z4U-hH-CpY"/>
                                                             <exclude reference="YkO-Ui-cdY"/>
+                                                            <exclude reference="z4U-hH-CpY"/>
                                                         </mask>
                                                     </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.98738598823547363" green="0.98735648393630981" blue="0.98737317323684692" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="OfS-t7-gOI" firstAttribute="leading" secondItem="MJ6-tr-X3Q" secondAttribute="leading" constant="5" id="5qu-Cj-FZq"/>
                                             <constraint firstItem="fQd-fx-agY" firstAttribute="leading" secondItem="MJ6-tr-X3Q" secondAttribute="leading" id="bUR-Vb-LMv"/>
-                                            <constraint firstAttribute="trailing" secondItem="OfS-t7-gOI" secondAttribute="trailing" constant="5" id="cG0-m9-1Ue"/>
-                                            <constraint firstAttribute="trailing" secondItem="fQd-fx-agY" secondAttribute="trailing" id="foU-fg-p7z"/>
-                                            <constraint firstAttribute="bottom" secondItem="fQd-fx-agY" secondAttribute="bottom" id="iVi-3W-i94"/>
-                                            <constraint firstAttribute="bottom" secondItem="OfS-t7-gOI" secondAttribute="bottom" constant="5" id="k2l-K3-58X"/>
+                                            <constraint firstAttribute="trailing" secondItem="OfS-t7-gOI" secondAttribute="trailing" constant="1" id="cG0-m9-1Ue"/>
+                                            <constraint firstAttribute="trailing" secondItem="fQd-fx-agY" secondAttribute="trailing" constant="-4" id="foU-fg-p7z"/>
+                                            <constraint firstAttribute="bottom" secondItem="fQd-fx-agY" secondAttribute="bottom" constant="-10" id="iVi-3W-i94"/>
+                                            <constraint firstAttribute="bottom" secondItem="OfS-t7-gOI" secondAttribute="bottom" constant="-5" id="k2l-K3-58X"/>
                                             <constraint firstItem="fQd-fx-agY" firstAttribute="top" secondItem="MJ6-tr-X3Q" secondAttribute="top" id="na7-lu-kP8"/>
                                             <constraint firstItem="OfS-t7-gOI" firstAttribute="top" secondItem="MJ6-tr-X3Q" secondAttribute="top" constant="5" id="wNv-bs-wdB"/>
                                         </constraints>
+                                        <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="iconBorder" destination="fQd-fx-agY" id="Nb2-Hd-2fZ"/>
                                             <outlet property="iconImage" destination="OfS-t7-gOI" id="oeF-rO-xt3"/>
@@ -89,82 +86,167 @@
                                         <exclude reference="qHZ-dB-mEV"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="69F-Qo-QK0"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="n8S-X8-8GO"/>
-                                </connections>
                             </collectionView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCT-qz-k9K">
-                                <rect key="frame" x="0.0" y="160" width="375" height="507"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="About Cal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8t-Wi-EEd">
-                                        <rect key="frame" x="101" y="0.0" width="173" height="51"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
-                                        <color key="textColor" red="0.1803921568627451" green="0.32941176470588235" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="62" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFg-Of-ekg">
-                                        <rect key="frame" x="15" y="61" width="343" height="649"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fLe-ot-le9" userLabel="Content Collection">
+                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                                <color key="backgroundColor" red="0.98738598823547363" green="0.98735648393630981" blue="0.98737317323684692" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="737-uE-jwl">
+                                    <size key="itemSize" width="359" height="675"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HH2-u9-uEf">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="675"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCT-qz-k9K">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="675"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Cal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8t-Wi-EEd">
+                                                            <rect key="frame" x="93" y="10" width="173" height="51"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
+                                                            <color key="textColor" red="0.1803921568627451" green="0.32941176470588235" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="62" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFg-Of-ekg" userLabel="context text">
+                                                            <rect key="frame" x="15" y="71" width="343" height="983"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="343" id="Yd1-OI-GWt"/>
+                                                            </constraints>
+                                                            <attributedString key="attributedText">
+                                                                <fragment>
+                                                                    <string key="content">Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                                        <font key="NSOriginalFont" size="18" name="HelveticaNeue-Light"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="40"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="40"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment>
+                                                                    <string key="content">Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                                        <font key="NSOriginalFont" size="18" name="HelveticaNeue-Light"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="40"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment content=".">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="40"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment>
+                                                                    <string key="content">Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                                                        <font key="NSOriginalFont" size="18" name="HelveticaNeue-Light"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="40"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="wFg-Of-ekg" secondAttribute="width" id="9ZI-Tu-CO3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wFg-Of-ekg" secondAttribute="bottom" id="CPt-MY-YZ9"/>
+                                                        <constraint firstItem="wFg-Of-ekg" firstAttribute="top" secondItem="r8t-Wi-EEd" secondAttribute="bottom" constant="10" id="DUt-VC-PeU"/>
+                                                        <constraint firstAttribute="centerX" secondItem="r8t-Wi-EEd" secondAttribute="centerX" id="OGm-9j-Lpj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wFg-Of-ekg" secondAttribute="bottom" id="RFr-cD-Qr1"/>
+                                                        <constraint firstAttribute="centerX" secondItem="r8t-Wi-EEd" secondAttribute="centerX" id="Xuf-WO-Bmn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wFg-Of-ekg" secondAttribute="trailing" id="byu-z2-aBr"/>
+                                                        <constraint firstAttribute="centerX" secondItem="r8t-Wi-EEd" secondAttribute="centerX" id="con-R8-TbK"/>
+                                                        <constraint firstItem="r8t-Wi-EEd" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="top" id="eUc-No-M05"/>
+                                                        <constraint firstItem="wFg-Of-ekg" firstAttribute="leading" secondItem="sCT-qz-k9K" secondAttribute="leading" constant="15" id="eob-sK-PGt"/>
+                                                        <constraint firstItem="wFg-Of-ekg" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="top" constant="10" id="jve-x9-nlP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wFg-Of-ekg" secondAttribute="trailing" id="mmX-Nc-dEI"/>
+                                                        <constraint firstItem="r8t-Wi-EEd" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="top" constant="10" id="u74-VP-DjQ"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="9ZI-Tu-CO3"/>
+                                                            <exclude reference="CPt-MY-YZ9"/>
+                                                            <exclude reference="byu-z2-aBr"/>
+                                                            <exclude reference="jve-x9-nlP"/>
+                                                            <exclude reference="mmX-Nc-dEI"/>
+                                                            <exclude reference="OGm-9j-Lpj"/>
+                                                            <exclude reference="Xuf-WO-Bmn"/>
+                                                            <exclude reference="eUc-No-M05"/>
+                                                        </mask>
+                                                    </variation>
+                                                </scrollView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="Yd1-OI-GWt"/>
+                                            <constraint firstAttribute="trailing" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="7Si-jW-ENH"/>
+                                            <constraint firstAttribute="trailing" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="C2O-9j-QMa"/>
+                                            <constraint firstItem="sCT-qz-k9K" firstAttribute="leading" secondItem="HH2-u9-uEf" secondAttribute="leading" id="Uwk-nE-CFV"/>
+                                            <constraint firstItem="sCT-qz-k9K" firstAttribute="top" secondItem="HH2-u9-uEf" secondAttribute="top" id="X7J-en-sqI"/>
+                                            <constraint firstItem="sCT-qz-k9K" firstAttribute="leading" secondItem="HH2-u9-uEf" secondAttribute="leading" id="rq7-Ah-DHl"/>
+                                            <constraint firstAttribute="bottom" secondItem="sCT-qz-k9K" secondAttribute="bottom" id="yMA-bp-96p"/>
                                         </constraints>
-                                        <string key="text">      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.       Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.      Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.</string>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <color key="textColor" red="0.07146657258272171" green="0.12426809221506119" blue="0.16187384724617004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="wFg-Of-ekg" firstAttribute="top" secondItem="r8t-Wi-EEd" secondAttribute="bottom" constant="10" id="4k0-nj-H3v"/>
-                                    <constraint firstAttribute="centerX" secondItem="r8t-Wi-EEd" secondAttribute="centerX" id="8VV-9a-zQb"/>
-                                    <constraint firstAttribute="width" secondItem="wFg-Of-ekg" secondAttribute="width" id="9ZI-Tu-CO3"/>
-                                    <constraint firstAttribute="bottom" secondItem="wFg-Of-ekg" secondAttribute="bottom" id="CPt-MY-YZ9"/>
-                                    <constraint firstItem="r8t-Wi-EEd" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="top" id="OeC-7s-NvV"/>
-                                    <constraint firstAttribute="bottom" secondItem="wFg-Of-ekg" secondAttribute="bottom" id="RFr-cD-Qr1"/>
-                                    <constraint firstAttribute="trailing" secondItem="wFg-Of-ekg" secondAttribute="trailing" id="byu-z2-aBr"/>
-                                    <constraint firstItem="wFg-Of-ekg" firstAttribute="leading" secondItem="sCT-qz-k9K" secondAttribute="leading" constant="15" id="eob-sK-PGt"/>
-                                    <constraint firstAttribute="trailing" secondItem="wFg-Of-ekg" secondAttribute="trailing" id="mmX-Nc-dEI"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9ZI-Tu-CO3"/>
-                                        <exclude reference="CPt-MY-YZ9"/>
-                                        <exclude reference="byu-z2-aBr"/>
-                                        <exclude reference="mmX-Nc-dEI"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7Si-jW-ENH"/>
+                                                <exclude reference="rq7-Ah-DHl"/>
+                                            </mask>
+                                        </variation>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98738598823547363" green="0.98735648393630981" blue="0.98737317323684692" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="Chc-HR-ddJ"/>
-                            <constraint firstItem="sCT-qz-k9K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ENO-HO-npE"/>
+                            <constraint firstItem="fLe-ot-le9" firstAttribute="top" secondItem="Fdn-1K-eFY" secondAttribute="bottom" id="65e-6w-BJC"/>
+                            <constraint firstItem="fLe-ot-le9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="75n-OM-1Ix"/>
                             <constraint firstAttribute="trailing" secondItem="Fdn-1K-eFY" secondAttribute="trailing" id="G5G-xb-uk4"/>
                             <constraint firstItem="Fdn-1K-eFY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="Gd8-4s-jfq"/>
+                            <constraint firstItem="fLe-ot-le9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IxY-Y7-1QI"/>
                             <constraint firstItem="Fdn-1K-eFY" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="JgW-WE-Jwi"/>
                             <constraint firstItem="Fdn-1K-eFY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LiE-j7-jvA"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sCT-qz-k9K" secondAttribute="bottom" id="MBV-HK-sUh"/>
-                            <constraint firstItem="sCT-qz-k9K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="jU3-Sh-USW"/>
-                            <constraint firstAttribute="trailing" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="kWh-yC-bR3"/>
+                            <constraint firstItem="fLe-ot-le9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UDU-qH-f7K"/>
+                            <constraint firstAttribute="trailing" secondItem="fLe-ot-le9" secondAttribute="trailing" id="Vkv-jN-dbB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fLe-ot-le9" secondAttribute="bottom" id="Wbb-gd-nMS"/>
+                            <constraint firstAttribute="trailing" secondItem="fLe-ot-le9" secondAttribute="trailing" id="vne-Vl-Y0l"/>
+                            <constraint firstAttribute="trailing" secondItem="fLe-ot-le9" secondAttribute="trailing" id="xPJ-Iz-ezf"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="JgW-WE-Jwi"/>
-                                <exclude reference="Chc-HR-ddJ"/>
-                                <exclude reference="ENO-HO-npE"/>
+                                <exclude reference="IxY-Y7-1QI"/>
+                                <exclude reference="UDU-qH-f7K"/>
+                                <exclude reference="Vkv-jN-dbB"/>
+                                <exclude reference="xPJ-Iz-ezf"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="contentText" destination="wFg-Of-ekg" id="eXy-zv-YRp"/>
-                        <outlet property="sectionIcons" destination="Fdn-1K-eFY" id="y4I-x8-4hw"/>
-                        <outlet property="textWidth" destination="Yd1-OI-GWt" id="uJJ-Eh-VA5"/>
+                        <outlet property="sectionIcons" destination="Fdn-1K-eFY" id="G4F-KV-Ln9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.5" y="418.5"/>
+            <point key="canvasLocation" x="186.5" y="398.5"/>
         </scene>
     </scenes>
     <resources>
