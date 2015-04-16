@@ -10,10 +10,16 @@ import UIKit
 
 class CellPagingLayout : UICollectionViewFlowLayout {
     
-    var manualCenterAdjust : CGFloat = 33
+    var manualCenterAdjust : CGFloat = 0
     
-    override func awakeFromNib() {
+    init(manualCenterAdjust: CGFloat) {
+        super.init()
         self.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        self.manualCenterAdjust = manualCenterAdjust
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {

@@ -8,19 +8,23 @@
 
 import UIKit
 
-class IconCollectionDelegate : NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class IconCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var colors: [UIColor] = []
-    let screenWidth: CGFloat
     
-    init(screenWidth: CGFloat) {
-        self.screenWidth = screenWidth
+    override func viewWillAppear(animated: Bool) {
         for i in 0...9 {
-            colors.append(UIColor(hue: 1 - CGFloat(i) * 0.1, saturation: 0.4, brightness: 0.6, alpha: 1.0))
+            colors.append(UIColor(hue: 0.1 * CGFloat(i), saturation: 0.5, brightness: 0.7, alpha: 1.0))
         }
+        collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 33)
+        self.collectionView?.reloadData()
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("sectionIcon", forIndexPath: indexPath) as! IconCell
         let color = colors[indexPath.item]
         var nextColor : UIColor?
@@ -31,10 +35,8 @@ class IconCollectionDelegate : NSObject, UICollectionViewDataSource, UICollectio
         return cell
     }
     
-    //(section == 0 ? colors.count : 0)
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (section == 0 ? colors.count : 0)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -42,7 +44,7 @@ class IconCollectionDelegate : NSObject, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: screenWidth/2 - 50, bottom: 0, right: screenWidth/2 - 50)
+        return UIEdgeInsets(top: 0, left: self.view.frame.width/2 - 50, bottom: 0, right: self.view.frame.width/2 - 50)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
