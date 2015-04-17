@@ -8,8 +8,6 @@
 
 import UIKit
 
-let CS_ICON_SETUP_NOTIFICATION = "CS_ICON_SETUP_NOTIFICATION"
-
 class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var colors: [UIColor] = []
@@ -21,10 +19,6 @@ class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, U
         }
         collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 33)
         self.collectionView?.reloadData()
-    }
-
-    override func setupNotificationName() -> String {
-        return CS_ICON_SETUP_NOTIFICATION
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

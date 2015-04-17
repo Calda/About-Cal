@@ -8,8 +8,6 @@
 
 import UIKit
 
-let CS_CONTENT_SETUP_NOTIFICATION = "CS_CONTENT_SETUP_NOTIFICATION"
-
 class ContentCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var iconCollection : UICollectionView?
@@ -18,11 +16,6 @@ class ContentCollectionView : SynchronizedCollection, UICollectionViewDataSource
         super.viewWillAppear(animated)
         collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 0)
     }
-    
-    override func setupNotificationName() -> String {
-        return CS_CONTENT_SETUP_NOTIFICATION
-    }
-    
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("contentPage", forIndexPath: indexPath) as! ContentCell

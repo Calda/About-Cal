@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "embedContent" {
             let contentController = segue.destinationViewController as! ContentCollectionView
             contentCollection = contentController.collectionView!
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         if let contentCollection = contentCollection {
             NSNotificationCenter.defaultCenter().postNotificationName(CS_ICON_SETUP_NOTIFICATION, object: contentCollection)
         }
-    }
+    }*/
     
 }
 

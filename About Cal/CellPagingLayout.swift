@@ -11,6 +11,7 @@ import UIKit
 class CellPagingLayout : UICollectionViewFlowLayout {
     
     var manualCenterAdjust : CGFloat = 0
+    var mostRecentOffsetTarget : CGFloat = 0
     
     init(manualCenterAdjust: CGFloat) {
         super.init()
@@ -27,6 +28,8 @@ class CellPagingLayout : UICollectionViewFlowLayout {
         var horizontalOffset = proposedContentOffset.x
         
         if horizontalOffset == 0 {
+            mostRecentOffsetTarget = 0
+            NSNotificationCenter.defaultCenter().postNotificationName(SYNCHRONIZED_COLLECTION_RESNAP_NOTIFICATION, object: self)
             return CGPointMake(0, 0)
         }
         
@@ -38,7 +41,9 @@ class CellPagingLayout : UICollectionViewFlowLayout {
             }
         }
         
-        return CGPointMake(horizontalOffset + adjust, 0)
+        mostRecentOffsetTarget = horizontalOffset + adjust
+        NSNotificationCenter.defaultCenter().postNotificationName(SYNCHRONIZED_COLLECTION_RESNAP_NOTIFICATION, object: self)
+        return CGPointMake(mostRecentOffsetTarget, 0)
     }
     
     
