@@ -41,4 +41,6 @@ class CellPagingLayout : UICollectionViewFlowLayout {
         return CGPointMake(horizontalOffset + adjust, 0)
     }
     
+    
+    
 }

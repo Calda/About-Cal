@@ -22,13 +22,13 @@
                                     <constraint firstAttribute="height" constant="110" id="Luy-le-wx6"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="nRd-ec-Nc9" kind="embed" id="oqY-Xo-4RD"/>
+                                    <segue destination="nRd-ec-Nc9" kind="embed" identifier="embedIcons" id="oqY-Xo-4RD"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bas-HD-gDV">
                                 <rect key="frame" x="0.0" y="140" width="375" height="527"/>
                                 <connections>
-                                    <segue destination="gsH-Fg-LNo" kind="embed" id="3oa-rd-s5V"/>
+                                    <segue destination="gsH-Fg-LNo" kind="embed" identifier="embedContent" id="3oa-rd-s5V"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -246,6 +246,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="7Si-jW-ENH"/>
                                     <constraint firstAttribute="trailing" secondItem="sCT-qz-k9K" secondAttribute="trailing" id="C2O-9j-QMa"/>

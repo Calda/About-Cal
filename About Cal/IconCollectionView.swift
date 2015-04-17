@@ -8,20 +8,23 @@
 
 import UIKit
 
-class IconCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+let CS_ICON_SETUP_NOTIFICATION = "CS_ICON_SETUP_NOTIFICATION"
+
+class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var colors: [UIColor] = []
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         for i in 0...9 {
             colors.append(UIColor(hue: 0.1 * CGFloat(i), saturation: 0.5, brightness: 0.7, alpha: 1.0))
         }
         collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 33)
         self.collectionView?.reloadData()
     }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+
+    override func setupNotificationName() -> String {
+        return CS_ICON_SETUP_NOTIFICATION
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

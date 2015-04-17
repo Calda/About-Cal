@@ -8,16 +8,21 @@
 
 import UIKit
 
-class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+let CS_CONTENT_SETUP_NOTIFICATION = "CS_CONTENT_SETUP_NOTIFICATION"
+
+class ContentCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    var iconCollection : UICollectionView?
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 0)
-        self.collectionView?.reloadData()
     }
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func setupNotificationName() -> String {
+        return CS_CONTENT_SETUP_NOTIFICATION
     }
+    
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("contentPage", forIndexPath: indexPath) as! ContentCell
@@ -28,9 +33,13 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
         return 10
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return self.view.frame.size
     }
-    
     
 }
