@@ -14,8 +14,8 @@ let SYNCHRONIZED_COLLECTION_RESNAP_NOTIFICATION = "SYNCRONIZED_COLLECTION_RESNAP
 class SynchronizedCollection : UICollectionViewController, UIGestureRecognizerDelegate {
     
     var speedProportion : CGFloat = 1.0
-    var totalCollectionWidth : CGFloat = 1.0
-    var recognizer : UIGestureRecognizer?
+    var totalWidth : CGFloat = 1.0
+    var recognizer : UIPanGestureRecognizer?
     var savedSyncRatio : CGFloat = 1.0
     
     required init(coder aDecoder: NSCoder) {
@@ -27,7 +27,7 @@ class SynchronizedCollection : UICollectionViewController, UIGestureRecognizerDe
     func updateNotificationRecieved(notification: NSNotification) {
         if let sender = notification.object as? SynchronizedCollection {
             if sender == self { return }
-            let ratio = self.totalCollectionWidth / sender.totalCollectionWidth
+            let ratio = self.totalWidth / sender.totalWidth
             savedSyncRatio = ratio
             let offset = CGPointMake(ratio * sender.collectionView!.contentOffset.x, 0)
             self.collectionView!.setContentOffset(offset, animated: false)
@@ -39,19 +39,22 @@ class SynchronizedCollection : UICollectionViewController, UIGestureRecognizerDe
             if sender == self.collectionView!.collectionViewLayout { return }
             let syncTarget = sender.mostRecentOffsetTarget
             let offset = CGPointMake(savedSyncRatio * syncTarget, 0)
-            self.collectionView!.setContentOffset(offset, animated: true)
+            let offsetDiff = self.collectionView!.contentOffset.x - offset.x
+            UIView.animateWithDuration(0.75, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 10, options: nil, animations: {
+                    self.collectionView!.contentOffset = offset
+            }, completion: nil)
         }
     }
     
     override func viewDidAppear(animated: Bool) {
         self.collectionView?.reloadData()
-        totalCollectionWidth = totalCollectionWidth(self.collectionView!)
+        totalWidth = totalCollectionWidth(self.collectionView!)
         
         recognizer = UIPanGestureRecognizer(target: self, action: "touchRecieved")
         recognizer!.delegate = self
         self.collectionView!.addGestureRecognizer(recognizer!)
         
-        self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast / 3
+        self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -59,20 +62,6 @@ class SynchronizedCollection : UICollectionViewController, UIGestureRecognizerDe
     }
     
     func touchRecieved() { }
-    
-    func totalCollectionWidth(collection: UICollectionView) -> CGFloat {
-        let count = collection.numberOfItemsInSection(0)
-        let delegate = collection.delegate! as! UICollectionViewDelegateFlowLayout
-        let zeroPath = NSIndexPath(forItem: 0, inSection: 0)
-        let width = delegate.collectionView!(collection, layout: collection.collectionViewLayout, sizeForItemAtIndexPath: zeroPath).width
-        let spacing = delegate.collectionView?(collection, layout: collection.collectionViewLayout, minimumLineSpacingForSectionAtIndex: 0)
-        
-        var totalWidth = CGFloat(count) * width
-        if let spacing = spacing {
-            totalWidth += CGFloat(count) * spacing
-        }
-        return totalWidth
-    }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         if let recognizer = recognizer {

@@ -10,39 +10,84 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var iconCollection : UICollectionView?
-    var contentCollection : UICollectionView?
+    @IBOutlet weak var statusBarShadow: UIView!
+    var iconCollection : IconCollectionView? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //set proper width for text fields
-        //textWidth.constant = self.view.bounds.width - 30
-        //self.view.layoutIfNeeded()
+        //design icon shadow
+        statusBarShadow.layer.masksToBounds = false
+        statusBarShadow.layer.shadowOffset = CGSizeMake(0, 150)
+        statusBarShadow.layer.shadowRadius = 50
+        statusBarShadow.layer.shadowOpacity = 0.2
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "embedContent" {
-            let contentController = segue.destinationViewController as! ContentCollectionView
-            contentCollection = contentController.collectionView!
-        }
-        if segue.identifier == "embedIcons" {
-            let iconController = segue.destinationViewController as! IconCollectionView
-            iconCollection = iconController.collectionView!
+    
+    func syncShadowWithIconCollection() {
+        
+        func runAgain() {
+            delay(0.05) {
+                self.syncShadowWithIconCollection()
+            }
         }
         
-        if let iconCollection = iconCollection {
-           NSNotificationCenter.defaultCenter().postNotificationName(CS_CONTENT_SETUP_NOTIFICATION, object: iconCollection)
+        if let iconCollection  = iconCollection {
+            //wait until itemCollection is loaded
+            if !iconCollection.viewIsReady { runAgain(); return; }
+            
+            let shadowColor : UIColor
+            //calculate needed color
+            let percentage = iconCollection.collectionView!.contentOffset.x / totalCollectionWidth(iconCollection.collectionView!)
+            let percentagePerColor = 1 / CGFloat(iconCollection.colors.count)
+            let colorNumber = percentage / percentagePerColor
+            
+            if colorNumber <= 0.0{
+                shadowColor = iconCollection.colors.first!
+            }
+            
+            else if colorNumber >= CGFloat(iconCollection.colors.count - 1) {
+                shadowColor = iconCollection.colors.last!
+            }
+                
+            else {
+                let colorIndex1 = Int(floor(colorNumber))
+                let colorIndex2 = Int(ceil(colorNumber))
+                let ratio = 1 - (CGFloat(colorIndex2) - colorNumber)
+                
+                var hue1 : CGFloat = 0.0
+                var sat : CGFloat = 0.0
+                var bright  : CGFloat = 0.0
+                iconCollection.colors[colorIndex1].getHue(&hue1, saturation: &sat, brightness: &bright, alpha: nil)
+                
+                var hue2 : CGFloat = 0.0
+                iconCollection.colors[colorIndex2].getHue(&hue2, saturation: nil, brightness: nil, alpha: nil)
+                
+                //DERIVED FORMULA:
+                //new hue = hue1 - cx
+                //c = hue1 - hue2, x = ratio
+                
+                let c = hue1 - hue2
+                let newHue = hue1 - c * ratio
+                shadowColor = UIColor(hue: newHue, saturation: sat, brightness: bright, alpha: 1.0)
+            }
+            
+            statusBarShadow.layer.shadowColor = shadowColor.CGColor
+            
+            runAgain()
         }
-        if let contentCollection = contentCollection {
-            NSNotificationCenter.defaultCenter().postNotificationName(CS_ICON_SETUP_NOTIFICATION, object: contentCollection)
+        
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "embedIcons" {
+            iconCollection = segue.destinationViewController as? IconCollectionView
+            syncShadowWithIconCollection()
         }
-    }*/
+    }
     
 }
-

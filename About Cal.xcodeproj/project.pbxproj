@@ -20,6 +20,7 @@
 		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
 		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
 		2E9721DE1ADDFB6B00F9399E /* cal icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721DD1ADDFB6B00F9399E /* cal icon.png */; };
+		2EDCC2C21AE1F3340061FD66 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDCC2C11AE1F3340061FD66 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
 		2E9721DD1ADDFB6B00F9399E /* cal icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cal icon.png"; sourceTree = "<group>"; };
+		2EDCC2C11AE1F3340061FD66 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */,
 				2E9721BF1ADDFB2000F9399E /* ViewController.swift */,
+				2EDCC2C11AE1F3340061FD66 /* Globals.swift */,
 				2E9721C11ADDFB2000F9399E /* Main.storyboard */,
 				2E9721C41ADDFB2000F9399E /* Images.xcassets */,
 				2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */,
@@ -242,6 +245,7 @@
 				2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */,
 				2E26293F1ADF4E1600CE6288 /* IconCollectionView.swift in Sources */,
 				2E26293D1ADF3CC900CE6288 /* CellPagingLayout.swift in Sources */,
+				2EDCC2C21AE1F3340061FD66 /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

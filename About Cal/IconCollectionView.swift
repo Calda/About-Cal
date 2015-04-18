@@ -8,17 +8,21 @@
 
 import UIKit
 
+let CONNECT_STATUS_BAR_VIEW = "CONNECT_STATUS_BAR_VIEW"
+
 class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var colors: [UIColor] = []
+    var viewIsReady = false
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         for i in 0...9 {
-            colors.append(UIColor(hue: 0.1 * CGFloat(i), saturation: 0.5, brightness: 0.7, alpha: 1.0))
+            colors.append(UIColor(hue: 0.099 * CGFloat(i) + 0.001, saturation: 0.5, brightness: 0.7, alpha: 1.0))
         }
         collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 33)
         self.collectionView?.reloadData()
+        self.viewIsReady = true
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
