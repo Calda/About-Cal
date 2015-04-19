@@ -33,7 +33,8 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
             }
             
             let index = indexPath.item - 1
-            let type = pageData.modules[index].type
+            var type = pageData.modules[index].type
+            
             let module = collectionView.dequeueReusableCellWithReuseIdentifier(type, forIndexPath: indexPath) as? ModuleCell
             if let module = module {
                 module.displayWithData(pageData.modules[index].data)

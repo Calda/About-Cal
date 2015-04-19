@@ -14,6 +14,11 @@
 		2E3FE9DA1AE066F000A89515 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FE9D91AE066F000A89515 /* ContentCell.swift */; };
 		2E3FE9DE1AE0C19800A89515 /* SynchronizedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FE9DD1AE0C19800A89515 /* SynchronizedCollection.swift */; };
 		2E544E841AE21ADF00144929 /* ModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E544E831AE21ADF00144929 /* ModuleCell.swift */; };
+		2E6C47231AE39FC7008A1FF2 /* talk2014.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C47221AE39FC7008A1FF2 /* talk2014.png */; };
+		2E6C47251AE39FDE008A1FF2 /* MRI.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C47241AE39FDE008A1FF2 /* MRI.mov */; };
+		2E6C47271AE3A00A008A1FF2 /* raspberryPi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */; };
+		2E6C47291AE3A03E008A1FF2 /* MRI-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C47281AE3A03E008A1FF2 /* MRI-frame1.png */; };
+		2E6C472B1AE3A0B2008A1FF2 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C472A1AE3A0B2008A1FF2 /* VideoCell.swift */; };
 		2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */; };
 		2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BF1ADDFB2000F9399E /* ViewController.swift */; };
 		2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C11ADDFB2000F9399E /* Main.storyboard */; };
@@ -35,12 +40,20 @@
 		2ED9FB111AE34D54007BBDE8 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9FB0F1AE34D54007BBDE8 /* TextCell.swift */; };
 		2ED9FB131AE34FCE007BBDE8 /* unity-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9FB121AE34FCE007BBDE8 /* unity-logo.png */; };
 		2ED9FB151AE350A3007BBDE8 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED9FB141AE350A3007BBDE8 /* AVKit.framework */; };
-		2ED9FB171AE350BF007BBDE8 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9FB161AE350BF007BBDE8 /* VideoCell.swift */; };
 		2ED9FB191AE35448007BBDE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED9FB181AE35448007BBDE8 /* AVFoundation.framework */; };
 		2EDA5B871AE358F9007B1AE7 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B861AE358F9007B1AE7 /* playButton.png */; };
 		2EDA5B8B1AE36161007B1AE7 /* calaga.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B8A1AE36161007B1AE7 /* calaga.mov */; };
 		2EDA5B8D1AE36172007B1AE7 /* calaga-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B8C1AE36172007B1AE7 /* calaga-frame1.png */; };
 		2EDA5B8F1AE36200007B1AE7 /* playButtonWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B8E1AE36200007B1AE7 /* playButtonWhite.png */; };
+		2EDA5B911AE3795A007B1AE7 /* molio.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B901AE3795A007B1AE7 /* molio.mov */; };
+		2EDA5B931AE37972007B1AE7 /* molio-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B921AE37972007B1AE7 /* molio-frame1.png */; };
+		2EDA5B951AE384B5007B1AE7 /* automator.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B941AE384B5007B1AE7 /* automator.png */; };
+		2EDA5B991AE38995007B1AE7 /* cluster.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B981AE38995007B1AE7 /* cluster.png */; };
+		2EDA5B9B1AE38C5E007B1AE7 /* hearATale.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B9A1AE38C5E007B1AE7 /* hearATale.png */; };
+		2EDA5B9D1AE38D64007B1AE7 /* gingerbreadMan.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B9C1AE38D64007B1AE7 /* gingerbreadMan.png */; };
+		2EDA5B9F1AE390F0007B1AE7 /* children.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5B9E1AE390F0007B1AE7 /* children.png */; };
+		2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5BA01AE39228007B1AE7 /* swift.png */; };
+		2EDA5BA31AE39679007B1AE7 /* craig.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5BA21AE39679007B1AE7 /* craig.png */; };
 		2EDCC2C21AE1F3340061FD66 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDCC2C11AE1F3340061FD66 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +75,11 @@
 		2E3FE9D91AE066F000A89515 /* ContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		2E3FE9DD1AE0C19800A89515 /* SynchronizedCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedCollection.swift; sourceTree = "<group>"; };
 		2E544E831AE21ADF00144929 /* ModuleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuleCell.swift; path = "About Cal/ModuleCell.swift"; sourceTree = "<group>"; };
+		2E6C47221AE39FC7008A1FF2 /* talk2014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk2014.png; sourceTree = "<group>"; };
+		2E6C47241AE39FDE008A1FF2 /* MRI.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MRI.mov; sourceTree = "<group>"; };
+		2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raspberryPi.png; sourceTree = "<group>"; };
+		2E6C47281AE3A03E008A1FF2 /* MRI-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MRI-frame1.png"; sourceTree = "<group>"; };
+		2E6C472A1AE3A0B2008A1FF2 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "About Cal/VideoCell.swift"; sourceTree = "<group>"; };
 		2E9721B81ADDFB2000F9399E /* About Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9721BC1ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,12 +105,20 @@
 		2ED9FB0F1AE34D54007BBDE8 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextCell.swift; path = "About Cal/TextCell.swift"; sourceTree = "<group>"; };
 		2ED9FB121AE34FCE007BBDE8 /* unity-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unity-logo.png"; sourceTree = "<group>"; };
 		2ED9FB141AE350A3007BBDE8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		2ED9FB161AE350BF007BBDE8 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		2ED9FB181AE35448007BBDE8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2EDA5B861AE358F9007B1AE7 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 		2EDA5B8A1AE36161007B1AE7 /* calaga.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = calaga.mov; sourceTree = "<group>"; };
 		2EDA5B8C1AE36172007B1AE7 /* calaga-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calaga-frame1.png"; sourceTree = "<group>"; };
 		2EDA5B8E1AE36200007B1AE7 /* playButtonWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButtonWhite.png; sourceTree = "<group>"; };
+		2EDA5B901AE3795A007B1AE7 /* molio.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = molio.mov; sourceTree = "<group>"; };
+		2EDA5B921AE37972007B1AE7 /* molio-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "molio-frame1.png"; sourceTree = "<group>"; };
+		2EDA5B941AE384B5007B1AE7 /* automator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = automator.png; sourceTree = "<group>"; };
+		2EDA5B981AE38995007B1AE7 /* cluster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cluster.png; sourceTree = "<group>"; };
+		2EDA5B9A1AE38C5E007B1AE7 /* hearATale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hearATale.png; sourceTree = "<group>"; };
+		2EDA5B9C1AE38D64007B1AE7 /* gingerbreadMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gingerbreadMan.png; sourceTree = "<group>"; };
+		2EDA5B9E1AE390F0007B1AE7 /* children.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = children.png; sourceTree = "<group>"; };
+		2EDA5BA01AE39228007B1AE7 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
+		2EDA5BA21AE39679007B1AE7 /* craig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = craig.png; sourceTree = "<group>"; };
 		2EDCC2C11AE1F3340061FD66 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +214,17 @@
 		2ED9FAF01AE3033D007BBDE8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */,
+				2E6C47221AE39FC7008A1FF2 /* talk2014.png */,
+				2E6C47241AE39FDE008A1FF2 /* MRI.mov */,
+				2E6C47281AE3A03E008A1FF2 /* MRI-frame1.png */,
+				2EDA5BA01AE39228007B1AE7 /* swift.png */,
+				2EDA5BA21AE39679007B1AE7 /* craig.png */,
+				2EDA5B941AE384B5007B1AE7 /* automator.png */,
+				2EDA5B981AE38995007B1AE7 /* cluster.png */,
+				2EDA5B9A1AE38C5E007B1AE7 /* hearATale.png */,
+				2EDA5B9E1AE390F0007B1AE7 /* children.png */,
+				2EDA5B9C1AE38D64007B1AE7 /* gingerbreadMan.png */,
 				2EDA5B861AE358F9007B1AE7 /* playButton.png */,
 				2EDA5B8E1AE36200007B1AE7 /* playButtonWhite.png */,
 				2ED9FB121AE34FCE007BBDE8 /* unity-logo.png */,
@@ -201,6 +238,8 @@
 				2ED9FAF21AE3033D007BBDE8 /* cal icon.png */,
 				2EDA5B8A1AE36161007B1AE7 /* calaga.mov */,
 				2EDA5B8C1AE36172007B1AE7 /* calaga-frame1.png */,
+				2EDA5B901AE3795A007B1AE7 /* molio.mov */,
+				2EDA5B921AE37972007B1AE7 /* molio-frame1.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -212,7 +251,7 @@
 				2ED9FAF91AE31455007BBDE8 /* TitleCell.swift */,
 				2ED9FB0E1AE34D54007BBDE8 /* ImageCell.swift */,
 				2ED9FB0F1AE34D54007BBDE8 /* TextCell.swift */,
-				2ED9FB161AE350BF007BBDE8 /* VideoCell.swift */,
+				2E6C472A1AE3A0B2008A1FF2 /* VideoCell.swift */,
 			);
 			name = ModuleCells;
 			path = ..;
@@ -305,14 +344,27 @@
 				2ED9FB051AE33919007BBDE8 /* hello world.png in Resources */,
 				2EDA5B8F1AE36200007B1AE7 /* playButtonWhite.png in Resources */,
 				2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */,
+				2EDA5B9B1AE38C5E007B1AE7 /* hearATale.png in Resources */,
+				2EDA5B9F1AE390F0007B1AE7 /* children.png in Resources */,
+				2E6C47271AE3A00A008A1FF2 /* raspberryPi.png in Resources */,
 				2EDA5B8D1AE36172007B1AE7 /* calaga-frame1.png in Resources */,
+				2EDA5BA31AE39679007B1AE7 /* craig.png in Resources */,
+				2E6C47251AE39FDE008A1FF2 /* MRI.mov in Resources */,
 				2ED9FAF61AE308EA007BBDE8 /* minecraft.png in Resources */,
+				2E6C47291AE3A03E008A1FF2 /* MRI-frame1.png in Resources */,
+				2EDA5B991AE38995007B1AE7 /* cluster.png in Resources */,
+				2EDA5B931AE37972007B1AE7 /* molio-frame1.png in Resources */,
 				2ED9FAF31AE3033D007BBDE8 /* blankApp.png in Resources */,
 				2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */,
+				2EDA5B911AE3795A007B1AE7 /* molio.mov in Resources */,
 				2ED9FAEB1AE2F282007BBDE8 /* content.xml in Resources */,
 				2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */,
+				2EDA5B9D1AE38D64007B1AE7 /* gingerbreadMan.png in Resources */,
+				2E6C47231AE39FC7008A1FF2 /* talk2014.png in Resources */,
 				2ED9FB131AE34FCE007BBDE8 /* unity-logo.png in Resources */,
+				2EDA5B951AE384B5007B1AE7 /* automator.png in Resources */,
 				2ED9FB0D1AE34991007BBDE8 /* olyAnvilLogo.png in Resources */,
+				2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */,
 				2EDA5B871AE358F9007B1AE7 /* playButton.png in Resources */,
 				2ED9FB071AE339BA007BBDE8 /* confusedKid.png in Resources */,
 			);
@@ -337,7 +389,7 @@
 				2E3FE9DA1AE066F000A89515 /* ContentCell.swift in Sources */,
 				2E3FE9D41AE0585300A89515 /* IconCell.swift in Sources */,
 				2E3FE9DE1AE0C19800A89515 /* SynchronizedCollection.swift in Sources */,
-				2ED9FB171AE350BF007BBDE8 /* VideoCell.swift in Sources */,
+				2E6C472B1AE3A0B2008A1FF2 /* VideoCell.swift in Sources */,
 				2E3FE9D81AE0661100A89515 /* ContentCollectionView.swift in Sources */,
 				2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */,
 				2E26293F1ADF4E1600CE6288 /* IconCollectionView.swift in Sources */,
