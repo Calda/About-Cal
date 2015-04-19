@@ -14,6 +14,7 @@ class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, U
     
     var colors: [UIColor] = []
     var viewIsReady = false
+    var parsedPages : [PageData] = []
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,12 +33,13 @@ class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, U
         if indexPath.item + 1 < colors.count {
             nextColor = colors[indexPath.item + 1]
         }
-        cell.decorateCell(collectionView, color: color, nextColor: nextColor)
+        let icon = parsedPages[indexPath.item].icon
+        cell.decorateCell(collectionView, icon: icon, color: color, nextColor: nextColor)
         return cell
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (section == 0 ? colors.count : 0)
+        return parsedPages.count
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {

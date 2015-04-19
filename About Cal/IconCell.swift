@@ -13,7 +13,8 @@ class IconCell : UICollectionViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var iconBorder: UIImageView!
     
-    func decorateCell(collectionView: UICollectionView, color: UIColor, nextColor: UIColor?) {
+    func decorateCell(collectionView: UICollectionView, icon: UIImage, color: UIColor, nextColor: UIColor?) {
+        iconImage.image = icon
         iconImage.layer.cornerRadius = iconImage.frame.width / 2
         iconImage.clipsToBounds = true
         iconBorder.layer.cornerRadius = iconBorder.frame.width / 2
@@ -30,7 +31,6 @@ class IconCell : UICollectionViewCell {
             nextGradient.colors = [color.CGColor, nextColor.CGColor]
             nextGradient.startPoint = CGPointMake(0.0, 0.5)
             nextGradient.endPoint = CGPointMake(1.0, 0.5)
-            collectionView.layer.addSublayer(nextGradient)
         }
     }
     

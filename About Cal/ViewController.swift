@@ -12,6 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var statusBarShadow: UIView!
     var iconCollection : IconCollectionView? = nil
+    var parsedPages : [PageData] = []
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let parser = ContentParser()
+        parsedPages = parser.pages
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +94,11 @@ class ViewController: UIViewController {
         if segue.identifier == "embedIcons" {
             iconCollection = segue.destinationViewController as? IconCollectionView
             syncShadowWithIconCollection()
+            iconCollection?.parsedPages = parsedPages
+        }
+        if segue.identifier == "embedContent" {
+            let contentCollection = segue.destinationViewController as? ContentCollectionView
+            contentCollection?.parsedPages = parsedPages
         }
     }
     
