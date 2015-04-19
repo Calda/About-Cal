@@ -31,6 +31,7 @@ class IconCell : UICollectionViewCell {
             nextGradient.colors = [color.CGColor, nextColor.CGColor]
             nextGradient.startPoint = CGPointMake(0.0, 0.5)
             nextGradient.endPoint = CGPointMake(1.0, 0.5)
+            collectionView.layer.addSublayer(nextGradient)
         }
     }
     

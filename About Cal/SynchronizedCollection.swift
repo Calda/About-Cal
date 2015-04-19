@@ -38,6 +38,7 @@ class SynchronizedCollection : UICollectionViewController, UIGestureRecognizerDe
         if let sender = notification.object as? CellPagingLayout {
             if sender == self.collectionView!.collectionViewLayout { return }
             let syncTarget = sender.mostRecentOffsetTarget
+            println(syncTarget)
             let offset = CGPointMake(savedSyncRatio * syncTarget, 0)
             let offsetDiff = self.collectionView!.contentOffset.x - offset.x
             UIView.animateWithDuration(0.75, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 10, options: nil, animations: {

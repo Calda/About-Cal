@@ -2,20 +2,35 @@
 
 <content>
 
-    <page title="About This App" icon="blankApp" allowScroll="">
-        <item type="text">This app is a timeline of Cal's projects through time. Swiping left and right will take you on his journey. This is a journey of great proportions, spanning four years, several platforms, and over 50 individual projects.</item>
+    <page title="About This App" icon="blankApp">
+        <item type="text">This app is a timeline of Cal's projects through time. Swiping right will take you on his journey. This is a journey of great proportions, spanning many years, several platforms, and over 50 individual projects.</item>
         <item type="text">This app was designed with love for the 2015 WWDC scholarship. With a little bit of luck and a lot-a-bit of code, Cal will be there.</item>
-        <item type="image">wwdc logo</item>
+        <item type="image">wwdc logo/300</item>
     </page>
 
     <page title="About Cal" icon="cal icon">
-        <item type="text">Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. </item>
-        <item type="image">calApps</item>
-        <item type="text">more text</item>
+        <item type="text">I am a Senior at Davidson Fine Arts High School in Augusta, Georgia. I have been admitted to Georgia Tech and plan to pursue a degree in Computer Science starting this fall.</item>
+        <item type="text">I am a self-proclaimed Indie App Developer, with one published app and several others in-progress. My dream job is to lead my own project at Apple or some other tech giant. (Not to suck up, but I really do love Apple.)</item>
+        <item type="text">Other than programming, I make films at my school and dream of space, the universe, and our place in it. I have more than one crackpot theory on the nature of the universe. My life goal is to stand on the surface of the moon. Fingers crossed for space tourism, right?</item>
+    </page>
+    
+    <page title="Hello World" date="2009" icon="confusedKid">
+        <item type="text">My first (successful) exposure to programming was through Warren Sande's amazing book "Hello World: Computer Programming for Kids and Other Beginners". The explanitory cartoons and kid-friendly language gave the insight an 11-year-old Cal needed.</item>
+        <item type="image">hello world/175</item>
+        <item type="text">"Hello World" tought me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind I was 11.</item>
     </page>
     
     <page title="The Minecraft Era" date="2011 - 2013" icon="minecraft">
-        <item type="text">test2</item>
+        <item type="text">For anyone my age or younger, Minecraft was not just a game, but a cultural phenominon. For years, I spent my time bouncing between different multiplayer servers with my friends. After experiencing every different flavor of server out there (creative, survival, minigame, player vs player... the list goes on and on), we sought to start out own.</item>
+        <item type="image">olympus/200</item>
+        <item type="text">My friends and I launched our server Olympus PVP, to little fanfare. All of the best servers had custom server mods to customize the experience and differentiate them from the competition. We knew the only way for us to make any traction was for us to develop our own mods to mold a unique sort of gameplay.</item>
+        <item type="text">The go-to Minecraft modding platform was Bukkit, a custom multiplayer server designed to allow developers to create plugins in Java using the extensive Craftbukkit API. After weeks of mucking around with tutorial videos and pure trial-and-error, I started figuring it out piece by piece.</item>
+        <item type="image">olyAnvilLogo/200</item>
+        <item type="text">We shut down the server and took time to redesign it. We set ambitious goals, seeking to innovate in every corner. For two months, I poured myself into developing a line of plugins: olyAnvil, olySquads, olyChat, olyTell, olyWarps... you get the picture. I made somewhere in the neighborhood of 15 individual plugins, all with a very specific purpose. After I was done, we put all the pieces together and were ready to launch again, but that's where I lost all my motivation. I realized I was no longer intersted in running a server -- I had found all the fun I needed in developing plugins. </item>
+    </page>
+    
+    <page title="Unity Games" date="Summer 2013" icon="unity-logo">
+        <item type="video">~calaga</item>
     </page>
     
     <page>Empty Page is Required</page>

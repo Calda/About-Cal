@@ -18,9 +18,6 @@ class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, U
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        for i in 0...9 {
-            colors.append(UIColor(hue: 0.099 * CGFloat(i) + 0.001, saturation: 0.5, brightness: 0.7, alpha: 1.0))
-        }
         collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 33)
         self.collectionView?.reloadData()
         self.viewIsReady = true
@@ -54,5 +51,11 @@ class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, U
         return 70
     }
     
+    func calculateColors() {
+        let count = collectionView(self.collectionView!, numberOfItemsInSection: 0)
+        for i in 0..<count {
+            colors.append(UIColor(hue: (0.999/CGFloat(count)) * CGFloat(i) + 0.001, saturation: 0.5, brightness: 0.7, alpha: 1.0))
+        }
+    }
     
 }

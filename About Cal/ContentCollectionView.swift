@@ -37,4 +37,10 @@ class ContentCollectionView : SynchronizedCollection, UICollectionViewDataSource
         return self.view.frame.size
     }
     
+    @IBAction func videoPlayToggled(sender: UITapGestureRecognizer) {
+        if let videoCell = sender.view as? VideoCell {
+            NSNotificationCenter.defaultCenter().postNotificationName(VIDEO_PLAY_TOGGLE_NOTIFICATION, object: videoCell)
+        }
+    }
+    
 }

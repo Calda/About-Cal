@@ -95,6 +95,7 @@ class ViewController: UIViewController {
             iconCollection = segue.destinationViewController as? IconCollectionView
             syncShadowWithIconCollection()
             iconCollection?.parsedPages = parsedPages
+            iconCollection?.calculateColors()
         }
         if segue.identifier == "embedContent" {
             let contentCollection = segue.destinationViewController as? ContentCollectionView

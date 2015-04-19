@@ -375,6 +375,49 @@
                                                     </view>
                                                     <size key="customSize" width="369" height="245"/>
                                                 </collectionViewCell>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="cI7-EG-fQD" userLabel="video" customClass="VideoCell" customModule="About_Cal" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-3h-Yv3" userLabel="videoContainer">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="crL-wK-6wg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-s4-emg">
+                                                                <rect key="frame" x="60" y="50" width="250" height="145"/>
+                                                                <gestureRecognizers/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="centerX" secondItem="EA8-s4-emg" secondAttribute="centerX" id="1jN-gf-Jcy"/>
+                                                        <constraint firstItem="crL-wK-6wg" firstAttribute="leading" secondItem="cI7-EG-fQD" secondAttribute="leading" id="5kC-W1-UFp"/>
+                                                        <constraint firstItem="crL-wK-6wg" firstAttribute="top" secondItem="cI7-EG-fQD" secondAttribute="top" id="ATR-3s-Q8m"/>
+                                                        <constraint firstItem="Ht6-3h-Yv3" firstAttribute="leading" secondItem="cI7-EG-fQD" secondAttribute="leading" id="DRE-9p-2zQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="EA8-s4-emg" secondAttribute="bottom" constant="50" id="V0s-0J-uxR"/>
+                                                        <constraint firstItem="Ht6-3h-Yv3" firstAttribute="top" secondItem="cI7-EG-fQD" secondAttribute="top" id="Zcm-Xl-a4q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="crL-wK-6wg" secondAttribute="trailing" id="c54-lp-w6X"/>
+                                                        <constraint firstItem="EA8-s4-emg" firstAttribute="top" secondItem="cI7-EG-fQD" secondAttribute="top" constant="50" id="d7j-a0-PZ1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="crL-wK-6wg" secondAttribute="bottom" id="rOO-2z-0bK"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ht6-3h-Yv3" secondAttribute="bottom" id="w4l-rv-D4J"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ht6-3h-Yv3" secondAttribute="trailing" id="yuI-V7-JuN"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="369" height="245"/>
+                                                    <connections>
+                                                        <outlet property="firstFrame" destination="crL-wK-6wg" id="z1d-qb-79r"/>
+                                                        <outlet property="playButton" destination="EA8-s4-emg" id="1KX-WM-QfW"/>
+                                                        <outlet property="videoContainer" destination="Ht6-3h-Yv3" id="1nc-4k-Tkm"/>
+                                                        <outletCollection property="gestureRecognizers" destination="ZpD-8e-86u" appends="YES" id="T4o-LF-TXf"/>
+                                                    </connections>
+                                                </collectionViewCell>
                                             </cells>
                                             <connections>
                                                 <outlet property="dataSource" destination="HH2-u9-uEf" id="0vL-sz-lga"/>
@@ -404,11 +447,17 @@
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUR-dW-zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZpD-8e-86u">
+                    <connections>
+                        <action selector="videoPlayToggled:" destination="gsH-Fg-LNo" id="0Tx-n7-H83"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="511.5" y="528.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="cal icon.png" width="200" height="200"/>
+        <image name="playButton.png" width="250" height="250"/>
     </resources>
 </document>

@@ -53,8 +53,14 @@ enum ModuleType{
             return drawnSize.height * 1.05
         }
         
-        if self == .Image || self == .Images {
-            return 300
+        if self == .Image {
+            let splits = split(data){ $0 == "/" }
+            if splits.count != 2 { return 0 }
+            return CGFloat(splits[1].toInt()!)
+        }
+        
+        if self == .Video {
+            return width * (9/16)
         }
         return 0
     }
