@@ -15,13 +15,13 @@
     </page>
     
     <page title="Hello World" date="2009" icon="confusedKid">
-        <item type="text">My first (successful) exposure to programming was through Warren Sande's amazing book "Hello World: Computer Programming for Kids and Other Beginners". The explanitory cartoons and kid-friendly language gave the insight an 11-year-old Cal needed.</item>
+        <item type="text">My first (successful) exposure to programming was through Warren Sande's amazing book "Hello World: Computer Programming for Kids and Other Beginners". The explanitory cartoons and kid-friendly language gave the insight 11-year-old Cal needed.</item>
         <item type="image">hello world/175</item>
-        <item type="text">"Hello World" tought me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind I was 11.</item>
+        <item type="text">"Hello World" taught me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind that I was 11.</item>
     </page>
     
     <page title="The Minecraft Era" date="2011 - 2013" icon="minecraft">
-        <item type="text">For anyone my age or younger, Minecraft was not just a game, but a cultural phenominon. For years, I spent my time bouncing between different multiplayer servers with my friends. After experiencing every different flavor of server out there (creative, survival, minigame, player vs player... the list goes on and on), we sought to start out own.</item>
+        <item type="text">For anyone my age or younger, Minecraft was not just a game, but a cultural phenomenon. For years, I spent my time bouncing between different multiplayer servers with my friends. After experiencing every different flavor of server out there (creative, survival, minigame, player vs player... the list goes on and on), we sought to start our own.</item>
         <item type="image">olympus/200</item>
         <item type="text">My friends and I launched our server Olympus PVP, to little fanfare. All of the best servers had custom server mods to customize the experience and differentiate them from the competition. We knew the only way for us to make any traction was for one of us to develop our own mods to mold a unique sort of gameplay. I already had some programming experience, so I gave it a shot.</item>
         <item type="text">The go-to Minecraft modding platform was Bukkit, a custom multiplayer server designed to allow developers to create plugins in Java using the extensive Craftbukkit API. After weeks of mucking around with tutorial videos and pure trial-and-error, I started figuring it out piece by piece.</item>
@@ -34,12 +34,12 @@
         <item type="video">~calaga</item>
         <item type="text">Calaga, a space shooter game. (The name is a portmanteau of Cal and Galaga. Really original, I know.) It's not particularly fun or challenging, but it somehow became a class gag to see who could get the highest score.</item>
         <item type="video2">molio</item>
-        <item type="text">Molio, a 2D platformer I made a few months later for extra credit in my chremistry class (How does a game about a little blue blob warrant extra credit in a chemistry class? Your guess is as good as mine.)</item>
+        <item type="text">Molio, a 2D platformer I made a few months later for extra credit in my chremistry class. (How does a game about a little blue blob warrant extra credit in a chemistry class? Your guess is as good as mine.)</item>
     </page>
     
     <page title="Automation Nation" date="2014" icon="automator">
         <item type="text">I have a strong belief that nobody should ever do something that a computer can do quicker, especially not something horribly monotonous. I love building utilities to automate tasks and help people save time.</item>
-        <item type="text">My mom is a gifted teacher in a nearby elementary school. One day she was telling me about a new program they were intruducing called "Cluster Groups" where children get to choose a special class to be in for a portion of the year. To sort the kids into their groups, teachers collected sticky notes with the individual students' group choices. These sticky notes were then put on a wall where they were moved around until all groups had the proper number of students. She said this process took a teacher up to three days of work.</item>
+        <item type="text">My mom is a teacher of gifted students in a nearby elementary school. One day she was telling me about a new program they were intruducing called "Cluster Groups" where children get to choose a special class to be in for a portion of the year. To sort the kids into their groups, teachers collected sticky notes with the individual students' group choices. These sticky notes were then put on a wall where they were moved around until all groups had the proper number of students. She said this process took a teacher up to three days of work.</item>
         <item type="image">cluster/300</item>
         <item type="text">Why spend three days doing something that can be done by a computer in the click of a button? I developed a Java application called Cluster that takes a spreadsheet with the students' group choices and then automatically sorts them. This was so much easier than the manual method that other schools in the county bought this program for their teachers. It is currently being used by nearly 10 elementary schools in Columbia County, Georgia. (Little did I know that selling software would turn my phone into an obligatory software support hotline.)</item>
     </page>
@@ -61,7 +61,7 @@
     </page>
     
     <page title="Swift" date="June 2, 2014" icon="swift">
-        <item type="text">I was watching the WWDC 2014 Keynote Livestream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate (who will be very jealous of me if I get to go to WWDC). He didn't understand what I was so excited about.</item>
+        <item type="text">I was watching the WWDC 2014 Keynote Livestream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate, who didn't understand what I was so excited about.  (He will be very jealous of me if I get to go to WWDC. We love Craig.)</item>
         <item type="image">craig/200</item>
         <item type="text">Truth is, Objective-C was the reason I hadn't started making iOS apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
     </page>
