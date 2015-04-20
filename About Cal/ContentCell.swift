@@ -10,12 +10,21 @@ import UIKit
 
 class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var moduleCollection: UICollectionView!
     var pageData: PageData?
     
     func buildContentFromPageData(data: PageData) {
-        self.pageData = data
-        self.moduleCollection.reloadData()
+        if pageData == nil || pageData!.title != data.title {
+            self.pageData = data
+            self.moduleCollection.reloadData()
+        }
+        
+        shadowView.layer.masksToBounds = false
+        shadowView.layer.shadowColor = UIColor(white: 0.99, alpha: 0.1).CGColor
+        shadowView.layer.shadowOffset = CGSizeMake(0, 20)
+        shadowView.layer.shadowRadius = 10
+        shadowView.layer.shadowOpacity = 0.5
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

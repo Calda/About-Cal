@@ -10,13 +10,13 @@ import UIKit
 
 class CellPagingLayout : UICollectionViewFlowLayout {
     
-    var manualCenterAdjust : CGFloat = 0
-    var mostRecentOffsetTarget : CGFloat = 0
+    var pageWidth : CGFloat = 0
+    var previousPage : CGFloat = 0
     
-    init(manualCenterAdjust: CGFloat) {
+    init(pageWidth: CGFloat) {
         super.init()
         self.scrollDirection = UICollectionViewScrollDirection.Horizontal
-        self.manualCenterAdjust = manualCenterAdjust
+        self.pageWidth = pageWidth
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -24,26 +24,39 @@ class CellPagingLayout : UICollectionViewFlowLayout {
     }
     
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        var adjust = CGFloat.max
-        var horizontalOffset = proposedContentOffset.x
         
-        if horizontalOffset == 0 {
-            mostRecentOffsetTarget = 0
-            NSNotificationCenter.defaultCenter().postNotificationName(SYNCHRONIZED_COLLECTION_RESNAP_NOTIFICATION, object: self)
-            return CGPointMake(0, 0)
+        let newOffset = getNewOffsetForVelocity(velocity.x)
+        return CGPointMake(newOffset, 0)
+    }
+
+    
+    func getNewOffsetForVelocity(velocity: CGFloat) -> CGFloat {
+        
+        let currentOffset = collectionView!.contentOffset.x
+        var newOffset : CGFloat
+        
+        if velocity > 0 {
+            newOffset = ceil(currentOffset / pageWidth) * pageWidth
         }
-        
-        let targetRect = CGRect(x: horizontalOffset, y: 0, width: self.collectionView!.frame.width, height: self.collectionView!.frame.height)
-        for attribute in self.layoutAttributesForElementsInRect(targetRect)! as! [UICollectionViewLayoutAttributes] {
-            let itemOffset = attribute.frame.origin.x + manualCenterAdjust
-            if abs(itemOffset - horizontalOffset) < abs(adjust) {
-                adjust = itemOffset - horizontalOffset
+        else if velocity < 0 {
+            newOffset = floor(currentOffset / pageWidth) * pageWidth
+        }
+        else { //no velocity
+            let distanceToPrevious = currentOffset - previousPage
+            
+            if distanceToPrevious > 0 {
+                newOffset = ceil(currentOffset / pageWidth) * pageWidth
+            }
+            else if distanceToPrevious < 0 {
+                newOffset = floor(currentOffset / pageWidth) * pageWidth
+            }
+            else {
+                newOffset = previousPage
             }
         }
         
-        mostRecentOffsetTarget = horizontalOffset + adjust
-        NSNotificationCenter.defaultCenter().postNotificationName(SYNCHRONIZED_COLLECTION_RESNAP_NOTIFICATION, object: self)
-        return CGPointMake(mostRecentOffsetTarget, 0)
+        previousPage = newOffset
+        return newOffset
     }
     
     

@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var statusBarShadow: UIView!
     var iconCollection : IconCollectionView? = nil
+    var contentCollection : ContentCollectionView? = nil
     var parsedPages : [PageData] = []
+
+    @IBOutlet weak var iconContainer: UIView!
+    var panningOnIcons = false
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -37,7 +41,7 @@ class ViewController: UIViewController {
     func syncShadowWithIconCollection() {
         
         func runAgain() {
-            delay(0.05) {
+            delay(0.0025) {
                 self.syncShadowWithIconCollection()
             }
         }
@@ -84,11 +88,24 @@ class ViewController: UIViewController {
             
             statusBarShadow.layer.shadowColor = shadowColor.CGColor
             
+            //also sync icons with content
+            if panningOnIcons { //pan on icons
+                sync(iconCollection.collectionView!, with: contentCollection!.collectionView!)
+            }
+            else { //pan on content
+                sync(contentCollection!.collectionView!, with: iconCollection.collectionView!)
+            }
+            
             runAgain()
         }
         
     }
     
+    func sync(a: UICollectionView, with b: UICollectionView) {
+        let aPercentage = a.contentOffset.x / totalCollectionWidth(a)
+        let newBOffset = totalCollectionWidth(b) * aPercentage
+        b.contentOffset = CGPointMake(newBOffset, 0)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "embedIcons" {
@@ -98,9 +115,21 @@ class ViewController: UIViewController {
             iconCollection?.calculateColors()
         }
         if segue.identifier == "embedContent" {
-            let contentCollection = segue.destinationViewController as? ContentCollectionView
+            contentCollection = segue.destinationViewController as? ContentCollectionView
             contentCollection?.parsedPages = parsedPages
         }
     }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    @IBAction func panStartListener(sender: UIPanGestureRecognizer) {
+        if sender.state == UIGestureRecognizerState.Began {
+            let panLocation = sender.locationInView(self.view)
+            self.panningOnIcons = CGRectContainsPoint(iconContainer.frame, panLocation)
+        }
+    }
+    
     
 }

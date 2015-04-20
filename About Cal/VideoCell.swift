@@ -45,7 +45,10 @@ class VideoCell : ModuleCell {
         if let player = player {
             let asset = player.currentItem.asset as! AVURLAsset
             let file = asset.URL.lastPathComponent!
-            if file.hasPrefix(videoName) { return }
+            if file.hasPrefix(videoName) {
+                player.seekToTime(kCMTimeZero, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
+                return
+            }
         }
         
         let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mov")!
@@ -69,6 +72,18 @@ class VideoCell : ModuleCell {
     
     func videoToggeNotificationRecieved(notification: NSNotification) {
         if self == notification.object as? VideoCell {
+            
+            //restart if video is over
+            if let length = player?.currentItem.duration {
+                let currentTime = player!.currentTime()
+                if CMTimeGetSeconds(length) == CMTimeGetSeconds(currentTime) {
+                    player!.seekToTime(kCMTimeZero, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
+                    player!.play()
+                    playing = true
+                    return
+                }
+            }
+            
             playing = !playing
             if playing { player?.play() }
             else { player?.pause() }

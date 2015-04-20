@@ -10,7 +10,7 @@
 
     <page title="About Cal" icon="cal icon">
         <item type="text">I am a Senior at Davidson Fine Arts High School in Augusta, Georgia. I have been admitted to Georgia Tech and plan to pursue a degree in Computer Science starting this fall.</item>
-        <item type="text">I am a self-proclaimed Indie App Developer, with one published app and several others in-progress. My dream job is to lead my own project at Apple or some other tech giant. (Not to suck up, but I really do love Apple.)</item>
+        <item type="text">I am an Indie App Developer, with one published app and several others in-progress. My dream job is to lead my own project at Apple or some other tech giant. (Not to suck up, but I really do love Apple.)</item>
         <item type="text">Other than programming, I make films at my school and dream of space, the universe, and our place in it. I have more than one crackpot theory on the nature of the universe. My life goal is to stand on the surface of the moon. Fingers crossed for space tourism, right?</item>
     </page>
     
@@ -20,28 +20,28 @@
         <item type="text">"Hello World" tought me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind I was 11.</item>
     </page>
     
-    <page title="Unity Games" date="Summer 2012" icon="unity-logo">
-        <item type="text">During the following summer, I went to a summer camp amd participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and made some of my first standalone applications.</item>
-        <item type="video">~calaga</item>
-        <item type="text">Calaga, a space shooter game. (The name is a portmanteau of Cal and Galaga. Really original, I know.)</item>
-        <item type="video2">molio</item>
-        <item type="text">Molio, a 2D platformer I made a few months later for extra credit in my chremistry class (How does a game about a little blue blob warrent extra credit in a chemistry class? Your guess is as good as mine.)</item>
-    </page>
-    
     <page title="The Minecraft Era" date="2011 - 2013" icon="minecraft">
         <item type="text">For anyone my age or younger, Minecraft was not just a game, but a cultural phenominon. For years, I spent my time bouncing between different multiplayer servers with my friends. After experiencing every different flavor of server out there (creative, survival, minigame, player vs player... the list goes on and on), we sought to start out own.</item>
         <item type="image">olympus/200</item>
-        <item type="text">My friends and I launched our server Olympus PVP, to little fanfare. All of the best servers had custom server mods to customize the experience and differentiate them from the competition. We knew the only way for us to make any traction was for us to develop our own mods to mold a unique sort of gameplay.</item>
+        <item type="text">My friends and I launched our server Olympus PVP, to little fanfare. All of the best servers had custom server mods to customize the experience and differentiate them from the competition. We knew the only way for us to make any traction was for one of us to develop our own mods to mold a unique sort of gameplay. I already had some programming experience, so I gave it a shot.</item>
         <item type="text">The go-to Minecraft modding platform was Bukkit, a custom multiplayer server designed to allow developers to create plugins in Java using the extensive Craftbukkit API. After weeks of mucking around with tutorial videos and pure trial-and-error, I started figuring it out piece by piece.</item>
         <item type="image">olyAnvilLogo/200</item>
-        <item type="text">We shut down the server and took time to redesign it. We set ambitious goals, seeking to innovate in every corner. For two months, I poured myself into developing a line of plugins: olyAnvil, olySquads, olyChat, olyTell, olyWarps... you get the picture. I made somewhere in the neighborhood of 15 individual plugins, all with a very specific purpose. After I was done, we put all the pieces together and were ready to launch again, but that's where I lost all my motivation. I realized I was no longer intersted in running a server -- I had found all the fun I needed in developing plugins. </item>
+        <item type="text">We shut down the server and took time to redesign it. I set ambitious goals, seeking to innovate in every corner. For two months, I poured myself into developing a line of plugins: olyAnvil, olySquads, olyChat, olyTell, olyWarps... you get the picture. I made somewhere in the neighborhood of 15 individual plugins, all with a very specific purpose. After I was done, we put all the pieces together and were ready to launch again, but that's where I lost all my motivation. I realized I was no longer intersted in running a server -- I had found all the fun I wanted in developing plugins. </item>
+    </page>
+    
+    <page title="Unity Games" date="Summer 2012" icon="unity-logo">
+        <item type="text">During the summer after I was in 9th grade, I went to a summer camp amd participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and wrote my games in C#. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
+        <item type="video">~calaga</item>
+        <item type="text">Calaga, a space shooter game. (The name is a portmanteau of Cal and Galaga. Really original, I know.) It's not particularly fun or challenging, but it somehow became a class gag to see who could get the highest score.</item>
+        <item type="video2">molio</item>
+        <item type="text">Molio, a 2D platformer I made a few months later for extra credit in my chremistry class (How does a game about a little blue blob warrant extra credit in a chemistry class? Your guess is as good as mine.)</item>
     </page>
     
     <page title="Automation Nation" date="2014" icon="automator">
         <item type="text">I have a strong belief that nobody should ever do something that a computer can do quicker, especially not something horribly monotonous. I love building utilities to automate tasks and help people save time.</item>
         <item type="text">My mom is a gifted teacher in a nearby elementary school. One day she was telling me about a new program they were intruducing called "Cluster Groups" where children get to choose a special class to be in for a portion of the year. To sort the kids into their groups, teachers collected sticky notes with the individual students' group choices. These sticky notes were then put on a wall where they were moved around until all groups had the proper number of students. She said this process took a teacher up to three days of work.</item>
         <item type="image">cluster/300</item>
-        <item type="text">Why spend three days doing something that can be done by a computer in the click of a button? I developed a program called Cluster that takes a spreadsheet with the students' group choices and then automatically sorts them. This was so much easier than the manual method that other schools in the county bought this program for their teachers. It is currently being used by nearly 10 elementary schools in Columbia County, Georgia. (Little did I know that selling software would turn my phone into an obligatory software support hotline.)</item>
+        <item type="text">Why spend three days doing something that can be done by a computer in the click of a button? I developed a Java application called Cluster that takes a spreadsheet with the students' group choices and then automatically sorts them. This was so much easier than the manual method that other schools in the county bought this program for their teachers. It is currently being used by nearly 10 elementary schools in Columbia County, Georgia. (Little did I know that selling software would turn my phone into an obligatory software support hotline.)</item>
     </page>
     
     <page title="Hear a Tale" date="2014 - 2015" icon="gingerbreadMan">
@@ -49,7 +49,7 @@
         <item type="image">hearATale/350</item>
         <item type="text"> The website, Hear a Tale (http://hearatale.com), is part of a decade-long project he has had to help encourage literacy in children. He is a firm believer that rhymes and fairy tales can help foster literacy, so he slowly amassed a library of audio and video of many classic rhymes and fairy tales.</item>
         <item type="image">children/250</item>
-        <item type="text">I built upon years of work by many people, but the website itself is almost entirely by my own design. It serves as a directory for his library of rhymes and fairy tales, as well as literature for students and adults. He has been very happy with the website, and has recently hired me again to develop two apps for iOS and Android (blasphemy, I know).</item>
+        <item type="text">I built upon years of work by many people, but the website itself is almost entirely by my own design, written in a blend of PHP, HTML, and CSS. It serves as a directory for his library of rhymes and fairy tales, as well as literature for students and adults. He has been very happy with the website, and has recently hired me again to develop two apps for iOS and Android (blasphemy, I know).</item>
     </page>
     
     <page title="Research" date="2013 - 2015" icon="raspberryPi">
@@ -61,9 +61,13 @@
     </page>
     
     <page title="Swift" date="June 2, 2014" icon="swift">
-        <item type="text">I was watching the WWDC 2014 Keynote Livestream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate. He didn't understand what I was so excited about.</item>
+        <item type="text">I was watching the WWDC 2014 Keynote Livestream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate (who will be very jealous of me if I get to go to WWDC). He didn't understand what I was so excited about.</item>
         <item type="image">craig/200</item>
-        <item type="text">Truth is, Objective-C was the reason I hadn't started making apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
+        <item type="text">Truth is, Objective-C was the reason I hadn't started making iOS apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
+    </page>
+    
+    <page title="Mission: App" date="September 2014" icon="inflation">
+        <item type="text">Armed with Swift and itching to get some real experience, I started </item>
     </page>
     
     

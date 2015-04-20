@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -42,6 +42,7 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.98738598823547363" green="0.98735648393630981" blue="0.98737317323684692" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bas-HD-gDV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="31f-b3-LOC"/>
                             <constraint firstItem="Ylp-q2-WJc" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="-300" id="4BR-o5-8aP"/>
@@ -60,13 +61,23 @@
                                 <exclude reference="xDS-Wl-ce6"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Fwv-zf-fy7" appends="YES" id="Re4-BO-saG"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="iconContainer" destination="IrO-JW-vIY" id="ILh-o4-VsX"/>
                         <outlet property="statusBarShadow" destination="Ylp-q2-WJc" id="EUY-mO-QfT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Fwv-zf-fy7">
+                    <connections>
+                        <action selector="panStartListener:" destination="vXZ-lx-hvc" id="X79-AX-kGp"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="cTF-kk-dLg"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="15.5" y="441.5"/>
         </scene>
@@ -74,7 +85,7 @@
         <scene sceneID="XI6-CU-ZqM">
             <objects>
                 <collectionViewController title="icon controller" id="nRd-ec-Nc9" customClass="IconCollectionView" customModule="About_Cal" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="zUn-Mv-g9l">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="zUn-Mv-g9l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -468,19 +479,30 @@
                                                 <outlet property="delegate" destination="HH2-u9-uEf" id="KAK-Xw-6dB"/>
                                             </connections>
                                         </collectionView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSo-4D-BhP" userLabel="shadow">
+                                            <rect key="frame" x="-100" y="-300" width="569" height="300"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="300" id="rgj-KI-3j4"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="M0j-Ou-Zhc" secondAttribute="trailing" id="KEV-v2-6dw"/>
+                                    <constraint firstItem="JSo-4D-BhP" firstAttribute="top" secondItem="HH2-u9-uEf" secondAttribute="top" constant="-300" id="UhR-uW-1RT"/>
+                                    <constraint firstAttribute="trailing" secondItem="JSo-4D-BhP" secondAttribute="trailing" constant="-100" id="ZW6-X8-cto"/>
                                     <constraint firstItem="M0j-Ou-Zhc" firstAttribute="leading" secondItem="HH2-u9-uEf" secondAttribute="leading" id="gnF-PI-Bow"/>
                                     <constraint firstItem="M0j-Ou-Zhc" firstAttribute="top" secondItem="HH2-u9-uEf" secondAttribute="top" id="jzJ-S3-OeJ"/>
                                     <constraint firstAttribute="bottom" secondItem="M0j-Ou-Zhc" secondAttribute="bottom" id="mmH-J1-N4T"/>
+                                    <constraint firstItem="JSo-4D-BhP" firstAttribute="leading" secondItem="HH2-u9-uEf" secondAttribute="leading" constant="-100" id="vxM-kZ-6Xg"/>
                                 </constraints>
                                 <size key="customSize" width="369" height="587"/>
                                 <connections>
                                     <outlet property="moduleCollection" destination="M0j-Ou-Zhc" id="2kc-jl-Gav"/>
+                                    <outlet property="shadowView" destination="JSo-4D-BhP" id="BNR-Mw-vWl"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

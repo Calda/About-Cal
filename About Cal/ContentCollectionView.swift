@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ContentCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var iconCollection : UICollectionView?
     var parsedPages : [PageData] = []
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 0)
+        collectionView!.collectionViewLayout = CellPagingLayout(pageWidth: collectionView!.frame.width)
+        self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

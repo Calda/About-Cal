@@ -24,7 +24,7 @@ class TitleCell : ModuleCell {
         
         if let date = date { //has date
             let dateAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 25.0)!]
-            let attributedDate = NSMutableAttributedString(string: ("                                      " + date), attributes: dateAttributes)
+            let attributedDate = NSMutableAttributedString(string: ("                                                " + date), attributes: dateAttributes)
             newLabelText.appendAttributedString(attributedDate)
         }
         

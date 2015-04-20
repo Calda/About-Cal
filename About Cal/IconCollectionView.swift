@@ -10,7 +10,7 @@ import UIKit
 
 let CONNECT_STATUS_BAR_VIEW = "CONNECT_STATUS_BAR_VIEW"
 
-class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class IconCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var colors: [UIColor] = []
     var viewIsReady = false
@@ -18,7 +18,8 @@ class IconCollectionView : SynchronizedCollection, UICollectionViewDataSource, U
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView?.collectionViewLayout = CellPagingLayout(manualCenterAdjust: 33)
+        self.collectionView?.collectionViewLayout = CellPagingLayout(pageWidth: 170)
+        self.collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
         self.collectionView?.reloadData()
         self.viewIsReady = true
     }
