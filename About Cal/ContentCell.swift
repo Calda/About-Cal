@@ -15,6 +15,7 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
     var pageData: PageData?
     
     func buildContentFromPageData(data: PageData) {
+        self.moduleCollection.contentOffset = CGPoint(x: 0, y: 0)
         if pageData == nil || pageData!.title != data.title {
             self.pageData = data
             self.moduleCollection.reloadData()

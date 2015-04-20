@@ -21,7 +21,7 @@ class ModuleCell : UICollectionViewCell {
 }
 
 enum ModuleType{
-    case Title, Text, Image, Images, Video
+    case Title, Text, Image, Images, Video, App
     
     static func enumFromString(name: String) -> ModuleType {
         if name.hasPrefix("video"){ return .Video }
@@ -29,6 +29,7 @@ enum ModuleType{
             case "title": return .Title
             case "image": return .Image
             case "images": return .Images
+            case "app": return .App
             default: return .Text
         }
     }
@@ -40,6 +41,7 @@ enum ModuleType{
             case .Image: return "Image"
             case .Images: return "Images"
             case .Video: return "Video"
+            case .App: return "App"
         }
     }
     
@@ -63,6 +65,11 @@ enum ModuleType{
             if data == "molio" { return width * 372/640 }
             return width * (9/16)
         }
+        
+        if self == .App {
+            return (150)
+        }
+        
         return 0
     }
     

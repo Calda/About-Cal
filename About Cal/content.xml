@@ -10,14 +10,14 @@
 
     <page title="About Cal" icon="cal icon">
         <item type="text">I am a Senior at Davidson Fine Arts High School in Augusta, Georgia. I have been admitted to Georgia Tech and plan to pursue a degree in Computer Science starting this fall.</item>
-        <item type="text">I am an Indie App Developer, with one published app and several others in-progress. My dream job is to lead my own project at Apple or some other tech giant. (Not to suck up, but I really do love Apple.)</item>
+        <item type="text">I am an Indie App Developer, with one published app and several others in progress. My dream job is to lead my own project at Apple or some other tech giant. (Not to suck up, but I really do love Apple.)</item>
         <item type="text">Other than programming, I make films at my school and dream of space, the universe, and our place in it. I have more than one crackpot theory on the nature of the universe. My life goal is to stand on the surface of the moon. Fingers crossed for space tourism, right?</item>
     </page>
     
     <page title="Hello World" date="2009" icon="confusedKid">
-        <item type="text">My first (successful) exposure to programming was through Warren Sande's amazing book "Hello World: Computer Programming for Kids and Other Beginners". The explanatory cartoons and kid-friendly language gave the insight an 11-year-old Cal needed.</item>
+        <item type="text">My first (successful) exposure to programming was through Warren Sande's amazing book "Hello World: Computer Programming for Kids and Other Beginners". The explanatory cartoons and kid-friendly language gave the insight that an 11-year-old Cal needed.</item>
         <item type="image">hello world/175</item>
-        <item type="text">"Hello World" taught me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind I was 11.</item>
+        <item type="text">"Hello World" taught me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind that I was 11.</item>
     </page>
     
     <page title="The Minecraft Era" date="2011 - 2013" icon="minecraft">
@@ -71,7 +71,7 @@
     </page>
     
     <page title="Orbit" date="November 2014" icon="orbit">
-        <item type="text"> </item>
+        <item type="app">orbit</item>
     </page>
     
     

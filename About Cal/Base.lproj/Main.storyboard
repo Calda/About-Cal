@@ -250,12 +250,10 @@
                                                                     <constraint firstAttribute="width" constant="343" id="Yd1-OI-GWt"/>
                                                                 </constraints>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment>
-                                                                        <string key="content">Cal is a Senior at Davidson Fine Arts High School in Augusta, Georgia. He loves himself way too much but hey, he’s a perfect 10. So hop off his ass ok? I’m liking the way this looks so far honestly. Cal has been admitted to Georgia Tech and plans to pursue a degree in Computer Science starting this fall. Cal’s dream is to become the next Craig Federighi.</string>
+                                                                    <fragment content="Text content goes here.">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
-                                                                            <font key="NSOriginalFont" size="18" name="HelveticaNeue-Light"/>
+                                                                            <font key="NSFont" size="18" name="HelveticaNeue-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" firstLineHeadIndent="40" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -605,6 +603,79 @@
                                                         <outletCollection property="gestureRecognizers" destination="WK1-Gf-LVF" appends="YES" id="kLg-Yp-hd7"/>
                                                     </connections>
                                                 </collectionViewCell>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="app" id="5YK-Di-mmt" userLabel="app" customClass="AppCell" customModule="About_Cal" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.png" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-fs-d49" userLabel="folder background">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orbit.png" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-qw-ffw">
+                                                                <rect key="frame" x="147" y="75" width="75" height="75"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="75" id="blz-jE-bsd"/>
+                                                                    <constraint firstAttribute="height" constant="75" id="jm0-I1-Pe0"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-hu-VXL">
+                                                                <rect key="frame" x="136" y="155" width="98" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XR6-rt-0ha" userLabel="button overlay">
+                                                                <rect key="frame" x="147" y="75" width="75" height="75"/>
+                                                                <state key="selected">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="✸">
+                                                                            <attributes>
+                                                                                <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" size="1" name="ZapfDingbatsITC"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                        <fragment content=" ">
+                                                                            <attributes>
+                                                                                <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" size="1" name=".HelveticaNeueDeskInterface-Regular"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="presentApp:" destination="5YK-Di-mmt" eventType="touchUpInside" id="aC4-zX-3br"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstItem="ifg-fs-d49" firstAttribute="top" secondItem="5YK-Di-mmt" secondAttribute="top" id="1dx-fK-njY"/>
+                                                        <constraint firstItem="fbV-qw-ffw" firstAttribute="height" secondItem="XR6-rt-0ha" secondAttribute="height" id="6hP-20-t4t"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ifg-fs-d49" secondAttribute="bottom" id="ECx-eo-7fK"/>
+                                                        <constraint firstAttribute="centerX" secondItem="fbV-qw-ffw" secondAttribute="centerX" id="JJc-uR-C6W"/>
+                                                        <constraint firstItem="fbV-qw-ffw" firstAttribute="top" secondItem="XR6-rt-0ha" secondAttribute="top" id="Q4k-B8-0Ax"/>
+                                                        <constraint firstItem="fbV-qw-ffw" firstAttribute="leading" secondItem="XR6-rt-0ha" secondAttribute="leading" id="QLQ-rt-wVH"/>
+                                                        <constraint firstAttribute="centerY" secondItem="fbV-qw-ffw" secondAttribute="centerY" constant="10" id="Xdk-99-Q5M"/>
+                                                        <constraint firstAttribute="centerX" secondItem="nPK-hu-VXL" secondAttribute="centerX" id="YDg-Zs-QVh"/>
+                                                        <constraint firstItem="ifg-fs-d49" firstAttribute="leading" secondItem="5YK-Di-mmt" secondAttribute="leading" id="dXh-pI-zpC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ifg-fs-d49" secondAttribute="trailing" id="k0n-fv-mbv"/>
+                                                        <constraint firstItem="fbV-qw-ffw" firstAttribute="width" secondItem="XR6-rt-0ha" secondAttribute="width" id="kof-Xn-xej"/>
+                                                        <constraint firstItem="nPK-hu-VXL" firstAttribute="top" secondItem="fbV-qw-ffw" secondAttribute="bottom" constant="5" id="lRE-EA-o3a"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="369" height="245"/>
+                                                    <connections>
+                                                        <outlet property="background" destination="ifg-fs-d49" id="y5D-Kr-Ls8"/>
+                                                        <outlet property="icon" destination="fbV-qw-ffw" id="V5P-yj-KMP"/>
+                                                    </connections>
+                                                </collectionViewCell>
                                             </cells>
                                             <connections>
                                                 <outlet property="dataSource" destination="HH2-u9-uEf" id="0vL-sz-lga"/>
@@ -674,11 +745,13 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="511.5" y="528.5"/>
+            <point key="canvasLocation" x="501.5" y="559.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="cal icon.png" width="200" height="200"/>
+        <image name="orbit.png" width="300" height="300"/>
         <image name="playButton.png" width="250" height="250"/>
+        <image name="square.png" width="565" height="551"/>
     </resources>
 </document>

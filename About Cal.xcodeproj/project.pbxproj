@@ -56,6 +56,13 @@
 		2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5BA01AE39228007B1AE7 /* swift.png */; };
 		2EDA5BA31AE39679007B1AE7 /* craig.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5BA21AE39679007B1AE7 /* craig.png */; };
 		2EDCC2C21AE1F3340061FD66 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDCC2C11AE1F3340061FD66 /* Globals.swift */; };
+		448435351AE5273300DD074D /* CGPointVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435301AE5273300DD074D /* CGPointVector.swift */; };
+		448435361AE5273300DD074D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 448435311AE5273300DD074D /* GameScene.sks */; };
+		448435371AE5273300DD074D /* OrbitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435321AE5273300DD074D /* OrbitScene.swift */; };
+		448435381AE5273300DD074D /* OrbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435331AE5273300DD074D /* OrbitViewController.swift */; };
+		448435391AE5273300DD074D /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435341AE5273300DD074D /* Planet.swift */; };
+		4484353B1AE5282900DD074D /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484353A1AE5282900DD074D /* AppCell.swift */; };
+		44CB4EB81AE580F7000BD9A0 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CB4EB71AE580F7000BD9A0 /* square.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +129,13 @@
 		2EDA5BA01AE39228007B1AE7 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		2EDA5BA21AE39679007B1AE7 /* craig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = craig.png; sourceTree = "<group>"; };
 		2EDCC2C11AE1F3340061FD66 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		448435301AE5273300DD074D /* CGPointVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointVector.swift; sourceTree = "<group>"; };
+		448435311AE5273300DD074D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		448435321AE5273300DD074D /* OrbitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitScene.swift; sourceTree = "<group>"; };
+		448435331AE5273300DD074D /* OrbitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitViewController.swift; sourceTree = "<group>"; };
+		448435341AE5273300DD074D /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		4484353A1AE5282900DD074D /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCell.swift; path = "About Cal/AppCell.swift"; sourceTree = "<group>"; };
+		44CB4EB71AE580F7000BD9A0 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = ../../../../../../../Downloads/square.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +183,9 @@
 			children = (
 				2ED9FAEA1AE2F282007BBDE8 /* content.xml */,
 				2ED9FAF01AE3033D007BBDE8 /* images */,
-				2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */,
+				4484352E1AE5273300DD074D /* embedded apps */,
 				2E9721BF1ADDFB2000F9399E /* ViewController.swift */,
+				2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */,
 				2EDCC2C11AE1F3340061FD66 /* Globals.swift */,
 				2ED9FAEC1AE2F372007BBDE8 /* ContentParser.swift */,
 				2E9721C11ADDFB2000F9399E /* Main.storyboard */,
@@ -215,6 +230,7 @@
 		2ED9FAF01AE3033D007BBDE8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				44CB4EB71AE580F7000BD9A0 /* square.png */,
 				2ECD57761AE4B7E700F2CB71 /* orbit.png */,
 				2ECD57741AE4448300F2CB71 /* inflation.png */,
 				2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */,
@@ -251,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				2E544E831AE21ADF00144929 /* ModuleCell.swift */,
+				4484353A1AE5282900DD074D /* AppCell.swift */,
 				2ED9FAF91AE31455007BBDE8 /* TitleCell.swift */,
 				2ED9FB0E1AE34D54007BBDE8 /* ImageCell.swift */,
 				2ED9FB0F1AE34D54007BBDE8 /* TextCell.swift */,
@@ -258,6 +275,26 @@
 			);
 			name = ModuleCells;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		4484352E1AE5273300DD074D /* embedded apps */ = {
+			isa = PBXGroup;
+			children = (
+				4484352F1AE5273300DD074D /* Orbit */,
+			);
+			path = "embedded apps";
+			sourceTree = "<group>";
+		};
+		4484352F1AE5273300DD074D /* Orbit */ = {
+			isa = PBXGroup;
+			children = (
+				448435301AE5273300DD074D /* CGPointVector.swift */,
+				448435311AE5273300DD074D /* GameScene.sks */,
+				448435321AE5273300DD074D /* OrbitScene.swift */,
+				448435331AE5273300DD074D /* OrbitViewController.swift */,
+				448435341AE5273300DD074D /* Planet.swift */,
+			);
+			path = Orbit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +402,8 @@
 				2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */,
 				2EDA5B9D1AE38D64007B1AE7 /* gingerbreadMan.png in Resources */,
 				2E6C47231AE39FC7008A1FF2 /* talk2014.png in Resources */,
+				448435361AE5273300DD074D /* GameScene.sks in Resources */,
+				44CB4EB81AE580F7000BD9A0 /* square.png in Resources */,
 				2ED9FB131AE34FCE007BBDE8 /* unity-logo.png in Resources */,
 				2EDA5B951AE384B5007B1AE7 /* automator.png in Resources */,
 				2ED9FB0D1AE34991007BBDE8 /* olyAnvilLogo.png in Resources */,
@@ -392,13 +431,18 @@
 				2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */,
 				2E544E841AE21ADF00144929 /* ModuleCell.swift in Sources */,
 				2E3FE9DA1AE066F000A89515 /* ContentCell.swift in Sources */,
+				4484353B1AE5282900DD074D /* AppCell.swift in Sources */,
+				448435391AE5273300DD074D /* Planet.swift in Sources */,
 				2E3FE9D41AE0585300A89515 /* IconCell.swift in Sources */,
 				2E6C472B1AE3A0B2008A1FF2 /* VideoCell.swift in Sources */,
 				2E3FE9D81AE0661100A89515 /* ContentCollectionView.swift in Sources */,
 				2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */,
 				2E26293F1ADF4E1600CE6288 /* IconCollectionView.swift in Sources */,
 				2E26293D1ADF3CC900CE6288 /* CellPagingLayout.swift in Sources */,
+				448435371AE5273300DD074D /* OrbitScene.swift in Sources */,
 				2ED9FAED1AE2F372007BBDE8 /* ContentParser.swift in Sources */,
+				448435351AE5273300DD074D /* CGPointVector.swift in Sources */,
+				448435381AE5273300DD074D /* OrbitViewController.swift in Sources */,
 				2ED9FB111AE34D54007BBDE8 /* TextCell.swift in Sources */,
 				2EDCC2C21AE1F3340061FD66 /* Globals.swift in Sources */,
 				2ED9FAFA1AE31455007BBDE8 /* TitleCell.swift in Sources */,

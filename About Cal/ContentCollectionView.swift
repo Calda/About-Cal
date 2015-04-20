@@ -16,6 +16,7 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "launchApp:", name: LAUNCH_APP_DEMO, object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,5 +48,22 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
             NSNotificationCenter.defaultCenter().postNotificationName(VIDEO_PLAY_TOGGLE_NOTIFICATION, object: data)
         }
     }
+
+    var appController : UINavigationController?
+    
+    func launchApp(notification: NSNotification) {
+        let viewController = OrbitViewController()
+        let nav = UINavigationController(rootViewController: viewController)
+        let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
+        viewController.navigationItem.leftBarButtonItem = back
+        viewController.navigationItem.title = "Tap and Drag to spawn planets"
+        self.presentViewController(nav, animated: true, completion: nil)
+        appController = nav
+    }
+    
+    func closeModalView(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
 }
