@@ -28,7 +28,7 @@ class TextCell : ModuleCell {
         
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 5.0
-        style.firstLineHeadIndent = 40.0
+        style.firstLineHeadIndent = 20.0
         
         return [NSFontAttributeName : font, NSParagraphStyleAttributeName : style]
         

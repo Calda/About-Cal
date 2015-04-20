@@ -400,7 +400,7 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="crL-wK-6wg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999997" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-s4-emg">
+                                                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-s4-emg">
                                                                 <rect key="frame" x="60" y="50" width="250" height="145"/>
                                                                 <gestureRecognizers/>
                                                             </imageView>
@@ -444,7 +444,7 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GU8-g8-yBs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" alpha="0.40000001192092893" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-kF-bRe">
+                                                            <imageView userInteractionEnabled="NO" alpha="0.600000011920929" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-kF-bRe">
                                                                 <rect key="frame" x="60" y="50" width="250" height="145"/>
                                                                 <gestureRecognizers/>
                                                             </imageView>
@@ -471,6 +471,138 @@
                                                         <outlet property="playButton" destination="l2C-kF-bRe" id="7aK-8m-Xym"/>
                                                         <outlet property="videoContainer" destination="O3p-YW-WuR" id="sEr-Jm-Ezk"/>
                                                         <outletCollection property="gestureRecognizers" destination="qpH-jJ-WKL" appends="YES" id="Jv4-OQ-fLc"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video3" id="XwZ-qJ-zkg" customClass="VideoCell" customModule="About_Cal" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5f-Wc-daq" userLabel="videoContainer">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <gestureRecognizers/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JnL-5e-wu0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ydq-XZ-I2t">
+                                                                <rect key="frame" x="60" y="50" width="250" height="145"/>
+                                                                <gestureRecognizers/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="JnL-5e-wu0" secondAttribute="trailing" id="1xc-Aj-cpb"/>
+                                                        <constraint firstItem="Ydq-XZ-I2t" firstAttribute="top" secondItem="XwZ-qJ-zkg" secondAttribute="top" constant="50" id="9N6-g3-CDA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ydq-XZ-I2t" secondAttribute="bottom" constant="50" id="9vC-mr-yan"/>
+                                                        <constraint firstItem="JnL-5e-wu0" firstAttribute="top" secondItem="XwZ-qJ-zkg" secondAttribute="top" id="Ow1-Ac-MTb"/>
+                                                        <constraint firstItem="M5f-Wc-daq" firstAttribute="top" secondItem="XwZ-qJ-zkg" secondAttribute="top" id="TaQ-9k-jsq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="M5f-Wc-daq" secondAttribute="trailing" id="XPf-PM-kVC"/>
+                                                        <constraint firstItem="JnL-5e-wu0" firstAttribute="leading" secondItem="XwZ-qJ-zkg" secondAttribute="leading" id="ZfM-p3-puG"/>
+                                                        <constraint firstAttribute="centerX" secondItem="Ydq-XZ-I2t" secondAttribute="centerX" id="hqQ-5y-eDG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JnL-5e-wu0" secondAttribute="bottom" id="irv-u6-dAl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="M5f-Wc-daq" secondAttribute="bottom" id="wVn-h8-3Kx"/>
+                                                        <constraint firstItem="M5f-Wc-daq" firstAttribute="leading" secondItem="XwZ-qJ-zkg" secondAttribute="leading" id="zkw-qA-ucl"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="369" height="245"/>
+                                                    <connections>
+                                                        <outlet property="firstFrame" destination="JnL-5e-wu0" id="oO6-Kj-TVv"/>
+                                                        <outlet property="playButton" destination="Ydq-XZ-I2t" id="gtt-s6-gFc"/>
+                                                        <outlet property="videoContainer" destination="M5f-Wc-daq" id="hd7-rj-TDF"/>
+                                                        <outletCollection property="gestureRecognizers" destination="k8u-S9-qyH" appends="YES" id="xde-Ti-LU2"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video4" id="1W3-gm-4xH" customClass="VideoCell" customModule="About_Cal" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4o-gf-MCA" userLabel="videoContainer">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <gestureRecognizers/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-Zf-KxX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-aX-fJf">
+                                                                <rect key="frame" x="60" y="50" width="250" height="145"/>
+                                                                <gestureRecognizers/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="QeY-Zf-KxX" secondAttribute="bottom" id="FeS-K3-uQz"/>
+                                                        <constraint firstItem="j5b-aX-fJf" firstAttribute="top" secondItem="1W3-gm-4xH" secondAttribute="top" constant="50" id="GQO-VP-VwB"/>
+                                                        <constraint firstItem="U4o-gf-MCA" firstAttribute="top" secondItem="1W3-gm-4xH" secondAttribute="top" id="Kj0-QD-9GX"/>
+                                                        <constraint firstItem="QeY-Zf-KxX" firstAttribute="leading" secondItem="1W3-gm-4xH" secondAttribute="leading" id="N6q-EN-ynV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="U4o-gf-MCA" secondAttribute="bottom" id="Qzg-da-erl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="j5b-aX-fJf" secondAttribute="bottom" constant="50" id="RrI-bO-8iy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QeY-Zf-KxX" secondAttribute="trailing" id="ZPN-Pb-wB7"/>
+                                                        <constraint firstAttribute="centerX" secondItem="j5b-aX-fJf" secondAttribute="centerX" id="blE-EB-rUQ"/>
+                                                        <constraint firstItem="QeY-Zf-KxX" firstAttribute="top" secondItem="1W3-gm-4xH" secondAttribute="top" id="d0b-gq-9L5"/>
+                                                        <constraint firstItem="U4o-gf-MCA" firstAttribute="leading" secondItem="1W3-gm-4xH" secondAttribute="leading" id="hhA-1Q-2xN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="U4o-gf-MCA" secondAttribute="trailing" id="onG-SK-f38"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="369" height="245"/>
+                                                    <connections>
+                                                        <outlet property="firstFrame" destination="QeY-Zf-KxX" id="yL7-ol-mwR"/>
+                                                        <outlet property="playButton" destination="j5b-aX-fJf" id="IEx-I5-bhI"/>
+                                                        <outlet property="videoContainer" destination="U4o-gf-MCA" id="dYU-5s-Aec"/>
+                                                        <outletCollection property="gestureRecognizers" destination="9M9-Eg-H8Q" appends="YES" id="NQo-E9-Jxh"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video5" id="Lxk-8K-EuK" customClass="VideoCell" customModule="About_Cal" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-Nj-Gfy" userLabel="videoContainer">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <gestureRecognizers/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-cC-bIy">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="245"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sas-09-vKS">
+                                                                <rect key="frame" x="60" y="50" width="250" height="145"/>
+                                                                <gestureRecognizers/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="sYW-Nj-Gfy" secondAttribute="bottom" id="9lz-l4-V0E"/>
+                                                        <constraint firstAttribute="centerX" secondItem="Sas-09-vKS" secondAttribute="centerX" id="BeS-ZS-052"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Bcr-cC-bIy" secondAttribute="trailing" id="JkQ-CG-E14"/>
+                                                        <constraint firstItem="Sas-09-vKS" firstAttribute="top" secondItem="Lxk-8K-EuK" secondAttribute="top" constant="50" id="Jom-wm-xvb"/>
+                                                        <constraint firstItem="Bcr-cC-bIy" firstAttribute="leading" secondItem="Lxk-8K-EuK" secondAttribute="leading" id="Mye-aq-pdw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Sas-09-vKS" secondAttribute="bottom" constant="50" id="NMX-me-Qdu"/>
+                                                        <constraint firstItem="sYW-Nj-Gfy" firstAttribute="top" secondItem="Lxk-8K-EuK" secondAttribute="top" id="PsC-NA-LI9"/>
+                                                        <constraint firstItem="Bcr-cC-bIy" firstAttribute="top" secondItem="Lxk-8K-EuK" secondAttribute="top" id="XsG-gg-bvF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Bcr-cC-bIy" secondAttribute="bottom" id="YD9-oj-ISj"/>
+                                                        <constraint firstItem="sYW-Nj-Gfy" firstAttribute="leading" secondItem="Lxk-8K-EuK" secondAttribute="leading" id="b6X-wt-ZaS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sYW-Nj-Gfy" secondAttribute="trailing" id="dXe-RS-oSu"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="369" height="245"/>
+                                                    <connections>
+                                                        <outlet property="firstFrame" destination="Bcr-cC-bIy" id="yWo-rg-38V"/>
+                                                        <outlet property="playButton" destination="Sas-09-vKS" id="KFl-xF-gAG"/>
+                                                        <outlet property="videoContainer" destination="sYW-Nj-Gfy" id="TVO-nb-4SQ"/>
+                                                        <outletCollection property="gestureRecognizers" destination="WK1-Gf-LVF" appends="YES" id="kLg-Yp-hd7"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -521,6 +653,24 @@
                 <tapGestureRecognizer id="qpH-jJ-WKL">
                     <connections>
                         <action selector="videoPlayToggled:" destination="gsH-Fg-LNo" id="7D4-mV-tAq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="k8u-S9-qyH">
+                    <connections>
+                        <action selector="videoPlayToggled:" destination="gsH-Fg-LNo" id="jMV-Bj-O8p"/>
+                        <outlet property="delegate" destination="gsH-Fg-LNo" id="djj-WD-tay"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9M9-Eg-H8Q">
+                    <connections>
+                        <action selector="videoPlayToggled:" destination="gsH-Fg-LNo" id="85l-RD-FdJ"/>
+                        <outlet property="delegate" destination="gsH-Fg-LNo" id="8hC-wJ-alv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WK1-Gf-LVF">
+                    <connections>
+                        <action selector="videoPlayToggled:" destination="gsH-Fg-LNo" id="08T-Ga-WZd"/>
+                        <outlet property="delegate" destination="gsH-Fg-LNo" id="d0k-Ed-wJE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

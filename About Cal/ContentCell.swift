@@ -19,12 +19,6 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
             self.pageData = data
             self.moduleCollection.reloadData()
         }
-        
-        shadowView.layer.masksToBounds = false
-        shadowView.layer.shadowColor = UIColor(white: 0.99, alpha: 0.1).CGColor
-        shadowView.layer.shadowOffset = CGSizeMake(0, 20)
-        shadowView.layer.shadowRadius = 10
-        shadowView.layer.shadowOpacity = 0.5
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

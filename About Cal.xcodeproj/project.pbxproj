@@ -25,6 +25,7 @@
 		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
 		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
 		2ECD57751AE4448300F2CB71 /* inflation.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD57741AE4448300F2CB71 /* inflation.png */; };
+		2ECD57771AE4B7E700F2CB71 /* orbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD57761AE4B7E700F2CB71 /* orbit.png */; };
 		2ED9FAEB1AE2F282007BBDE8 /* content.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9FAEA1AE2F282007BBDE8 /* content.xml */; };
 		2ED9FAED1AE2F372007BBDE8 /* ContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9FAEC1AE2F372007BBDE8 /* ContentParser.swift */; };
 		2ED9FAF31AE3033D007BBDE8 /* blankApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9FAF11AE3033D007BBDE8 /* blankApp.png */; };
@@ -90,6 +91,7 @@
 		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
 		2ECD57741AE4448300F2CB71 /* inflation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inflation.png; sourceTree = "<group>"; };
+		2ECD57761AE4B7E700F2CB71 /* orbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orbit.png; sourceTree = "<group>"; };
 		2ED9FAEA1AE2F282007BBDE8 /* content.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = content.xml; sourceTree = "<group>"; };
 		2ED9FAEC1AE2F372007BBDE8 /* ContentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentParser.swift; sourceTree = "<group>"; };
 		2ED9FAF11AE3033D007BBDE8 /* blankApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankApp.png; sourceTree = "<group>"; };
@@ -165,11 +167,11 @@
 		2E9721BA1ADDFB2000F9399E /* About Cal */ = {
 			isa = PBXGroup;
 			children = (
+				2ED9FAEA1AE2F282007BBDE8 /* content.xml */,
 				2ED9FAF01AE3033D007BBDE8 /* images */,
 				2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */,
 				2E9721BF1ADDFB2000F9399E /* ViewController.swift */,
 				2EDCC2C11AE1F3340061FD66 /* Globals.swift */,
-				2ED9FAEA1AE2F282007BBDE8 /* content.xml */,
 				2ED9FAEC1AE2F372007BBDE8 /* ContentParser.swift */,
 				2E9721C11ADDFB2000F9399E /* Main.storyboard */,
 				2E9721C41ADDFB2000F9399E /* Images.xcassets */,
@@ -213,6 +215,7 @@
 		2ED9FAF01AE3033D007BBDE8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2ECD57761AE4B7E700F2CB71 /* orbit.png */,
 				2ECD57741AE4448300F2CB71 /* inflation.png */,
 				2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */,
 				2E6C47221AE39FC7008A1FF2 /* talk2014.png */,
@@ -365,6 +368,7 @@
 				2ED9FB131AE34FCE007BBDE8 /* unity-logo.png in Resources */,
 				2EDA5B951AE384B5007B1AE7 /* automator.png in Resources */,
 				2ED9FB0D1AE34991007BBDE8 /* olyAnvilLogo.png in Resources */,
+				2ECD57771AE4B7E700F2CB71 /* orbit.png in Resources */,
 				2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */,
 				2EDA5B871AE358F9007B1AE7 /* playButton.png in Resources */,
 				2ED9FB071AE339BA007BBDE8 /* confusedKid.png in Resources */,

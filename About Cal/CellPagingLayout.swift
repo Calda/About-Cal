@@ -55,6 +55,9 @@ class CellPagingLayout : UICollectionViewFlowLayout {
             }
         }
         
+        if previousPage != newOffset { //pause all videos if view changes
+            NSNotificationCenter.defaultCenter().postNotificationName(PAUSE_ALL_NOTIFICATION, object: nil)
+        }
         previousPage = newOffset
         return newOffset
     }

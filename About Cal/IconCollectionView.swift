@@ -32,7 +32,7 @@ class IconCollectionView : UICollectionViewController, UICollectionViewDataSourc
             nextColor = colors[indexPath.item + 1]
         }
         let icon = parsedPages[indexPath.item].icon
-        cell.decorateCell(collectionView, icon: icon, color: color, nextColor: nextColor)
+        cell.decorateCell(collectionView, icon: icon, color: color, nextColor: nextColor, drawArrow: indexPath.item == 0)
         return cell
     }
     

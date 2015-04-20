@@ -15,8 +15,11 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView!.collectionViewLayout = CellPagingLayout(pageWidth: collectionView!.frame.width)
         self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        collectionView!.collectionViewLayout = CellPagingLayout(pageWidth: collectionView!.frame.width)
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -40,7 +43,8 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
     
     @IBAction func videoPlayToggled(sender: UITapGestureRecognizer) {
         if let videoCell = sender.view as? VideoCell {
-            NSNotificationCenter.defaultCenter().postNotificationName(VIDEO_PLAY_TOGGLE_NOTIFICATION, object: videoCell)
+            let data = videoCell.currentData
+            NSNotificationCenter.defaultCenter().postNotificationName(VIDEO_PLAY_TOGGLE_NOTIFICATION, object: data)
         }
     }
     
