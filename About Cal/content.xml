@@ -53,15 +53,15 @@
     </page>
     
     <page title="Research" date="2013 - 2015" icon="raspberryPi">
-        <item type="video">MRI</item>
         <item type="text">I have participated in two research projects with professors in the Physics department at Georgia Regents University.</item>
-        <item type="text">In 2013/2014, I worked with Dr. Trinanjan Datta on a project to simulate Site Percolation in different classes of latticies. I created a simulation platform in Java and presented my reasarch at the 2014 Georgia Academy of Sciences meeting alongsite Undergraduate research students from across the state despite only being a Junior in High School.</item>
         <item type="image">talk2014/200</item>
+        <item type="text">In 2013/2014, I worked with Dr. Trinanjan Datta on a project to simulate Site Percolation in different classes of latticies. I created a simulation platform in Java and presented my reasarch at the 2014 Georgia Academy of Sciences meeting alongsite Undergraduate research students from across the state despite only being a Junior in High School.</item>
+        <item type="video">MRI</item>
         <item type="text">In 2014/2015, I worked with Dr. Andy Hauger and Dr. Nathan Yanasak on a project to analyze the motion of children inside of an MRI simulation using the Raspberry Pi. I developed this application in Python and presented my reasarch at the 2015 Georgia Academy of Sciences meeting. This time, I won the award for Outstanding Oral Presentation. We are currently working on upgrading the MRI simulation system and hope to deploy it to testing labs in the coming months.</item>
     </page>
     
     <page title="Swift" date="June 2, 2014" icon="swift">
-        <item type="text">I was watching the WWDC 2014 Keynote Livestream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate, who didn't understand what I was so excited about.  (He will be very jealous of me if I get to go to WWDC. We love Craig.)</item>
+        <item type="text">I was watching the WWDC 2014 Keynote live stream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate, who didn't understand what I was so excited about.  (He will be very jealous of me if I get to go to WWDC. We love Craig.)</item>
         <item type="image">craig/200</item>
         <item type="text">Truth is, Objective-C was the reason I hadn't started making iOS apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
     </page>
