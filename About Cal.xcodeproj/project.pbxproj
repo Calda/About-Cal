@@ -18,6 +18,16 @@
 		2E6C47271AE3A00A008A1FF2 /* raspberryPi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */; };
 		2E6C47291AE3A03E008A1FF2 /* MRI-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C47281AE3A03E008A1FF2 /* MRI-frame1.png */; };
 		2E6C472B1AE3A0B2008A1FF2 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C472A1AE3A0B2008A1FF2 /* VideoCell.swift */; };
+		2E6EBE291AE59EDB00CFFC87 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE281AE59EDB00CFFC87 /* square.png */; };
+		2E6EBE351AE59F5500CFFC87 /* about splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE2B1AE59F5500CFFC87 /* about splash.png */; };
+		2E6EBE391AE59F5500CFFC87 /* CPIdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE301AE59F5500CFFC87 /* CPIdata.txt */; };
+		2E6EBE3C1AE59F5500CFFC87 /* question mark button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE331AE59F5500CFFC87 /* question mark button.png */; };
+		2E6EBE3D1AE59F5500CFFC87 /* InflationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6EBE341AE59F5500CFFC87 /* InflationViewController.swift */; };
+		2E6EBE401AE59F7400CFFC87 /* Inflation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE3E1AE59F7400CFFC87 /* Inflation.storyboard */; };
+		2E6EBE421AE5A96D00CFFC87 /* inflationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE411AE5A96D00CFFC87 /* inflationIcon.png */; };
+		2E6EBE441AE5AA6800CFFC87 /* square2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE431AE5AA6800CFFC87 /* square2.png */; };
+		2E6EBE461AE5AD2800CFFC87 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE451AE5AD2800CFFC87 /* watch.png */; };
+		2E6EBE4A1AE5D10800CFFC87 /* launchScreenGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE491AE5D10800CFFC87 /* launchScreenGradient.png */; };
 		2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */; };
 		2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BF1ADDFB2000F9399E /* ViewController.swift */; };
 		2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C11ADDFB2000F9399E /* Main.storyboard */; };
@@ -56,13 +66,22 @@
 		2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5BA01AE39228007B1AE7 /* swift.png */; };
 		2EDA5BA31AE39679007B1AE7 /* craig.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA5BA21AE39679007B1AE7 /* craig.png */; };
 		2EDCC2C21AE1F3340061FD66 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDCC2C11AE1F3340061FD66 /* Globals.swift */; };
+		2EF276C81AE5E16700D36168 /* orbitJava-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276C71AE5E16700D36168 /* orbitJava-frame1.png */; };
+		2EF276CA1AE5E16E00D36168 /* orbitJava.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276C91AE5E16E00D36168 /* orbitJava.mov */; };
+		2EF276CC1AE5E87C00D36168 /* squareifyExample.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276CB1AE5E87C00D36168 /* squareifyExample.mov */; };
+		2EF276CE1AE5E8A900D36168 /* squareifyExample-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276CD1AE5E8A900D36168 /* squareifyExample-frame1.png */; };
+		2EF276D01AE5EA3A00D36168 /* instagramExample.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276CF1AE5EA3A00D36168 /* instagramExample.mov */; };
+		2EF276D21AE5EA5800D36168 /* instagramExample-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D11AE5EA5800D36168 /* instagramExample-frame1.png */; };
+		2EF276D41AE5F12A00D36168 /* squareify.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D31AE5F12A00D36168 /* squareify.mov */; };
+		2EF276D61AE5F14100D36168 /* squareify-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D51AE5F14100D36168 /* squareify-frame1.png */; };
+		2EF276D81AE5F1ED00D36168 /* squareifyExport.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D71AE5F1ED00D36168 /* squareifyExport.mov */; };
+		2EF276DA1AE5F1F600D36168 /* squareifyExport-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D91AE5F1F600D36168 /* squareifyExport-frame1.png */; };
 		448435351AE5273300DD074D /* CGPointVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435301AE5273300DD074D /* CGPointVector.swift */; };
 		448435361AE5273300DD074D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 448435311AE5273300DD074D /* GameScene.sks */; };
 		448435371AE5273300DD074D /* OrbitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435321AE5273300DD074D /* OrbitScene.swift */; };
 		448435381AE5273300DD074D /* OrbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435331AE5273300DD074D /* OrbitViewController.swift */; };
 		448435391AE5273300DD074D /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435341AE5273300DD074D /* Planet.swift */; };
 		4484353B1AE5282900DD074D /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484353A1AE5282900DD074D /* AppCell.swift */; };
-		44CB4EB81AE580F7000BD9A0 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CB4EB71AE580F7000BD9A0 /* square.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +106,16 @@
 		2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raspberryPi.png; sourceTree = "<group>"; };
 		2E6C47281AE3A03E008A1FF2 /* MRI-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MRI-frame1.png"; sourceTree = "<group>"; };
 		2E6C472A1AE3A0B2008A1FF2 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = "About Cal/VideoCell.swift"; sourceTree = "<group>"; };
+		2E6EBE281AE59EDB00CFFC87 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		2E6EBE2B1AE59F5500CFFC87 /* about splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about splash.png"; sourceTree = "<group>"; };
+		2E6EBE301AE59F5500CFFC87 /* CPIdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CPIdata.txt; sourceTree = "<group>"; };
+		2E6EBE331AE59F5500CFFC87 /* question mark button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "question mark button.png"; sourceTree = "<group>"; };
+		2E6EBE341AE59F5500CFFC87 /* InflationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InflationViewController.swift; sourceTree = "<group>"; };
+		2E6EBE3F1AE59F7400CFFC87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Inflation.storyboard; sourceTree = "<group>"; };
+		2E6EBE411AE5A96D00CFFC87 /* inflationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inflationIcon.png; sourceTree = "<group>"; };
+		2E6EBE431AE5AA6800CFFC87 /* square2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square2.png; sourceTree = "<group>"; };
+		2E6EBE451AE5AD2800CFFC87 /* watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watch.png; sourceTree = "<group>"; };
+		2E6EBE491AE5D10800CFFC87 /* launchScreenGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenGradient.png; sourceTree = "<group>"; };
 		2E9721B81ADDFB2000F9399E /* About Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9721BC1ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,13 +158,22 @@
 		2EDA5BA01AE39228007B1AE7 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		2EDA5BA21AE39679007B1AE7 /* craig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = craig.png; sourceTree = "<group>"; };
 		2EDCC2C11AE1F3340061FD66 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		2EF276C71AE5E16700D36168 /* orbitJava-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orbitJava-frame1.png"; sourceTree = "<group>"; };
+		2EF276C91AE5E16E00D36168 /* orbitJava.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = orbitJava.mov; sourceTree = "<group>"; };
+		2EF276CB1AE5E87C00D36168 /* squareifyExample.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = squareifyExample.mov; sourceTree = "<group>"; };
+		2EF276CD1AE5E8A900D36168 /* squareifyExample-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareifyExample-frame1.png"; sourceTree = "<group>"; };
+		2EF276CF1AE5EA3A00D36168 /* instagramExample.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = instagramExample.mov; sourceTree = "<group>"; };
+		2EF276D11AE5EA5800D36168 /* instagramExample-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instagramExample-frame1.png"; sourceTree = "<group>"; };
+		2EF276D31AE5F12A00D36168 /* squareify.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = squareify.mov; sourceTree = "<group>"; };
+		2EF276D51AE5F14100D36168 /* squareify-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareify-frame1.png"; sourceTree = "<group>"; };
+		2EF276D71AE5F1ED00D36168 /* squareifyExport.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = squareifyExport.mov; sourceTree = "<group>"; };
+		2EF276D91AE5F1F600D36168 /* squareifyExport-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareifyExport-frame1.png"; sourceTree = "<group>"; };
 		448435301AE5273300DD074D /* CGPointVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointVector.swift; sourceTree = "<group>"; };
 		448435311AE5273300DD074D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		448435321AE5273300DD074D /* OrbitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitScene.swift; sourceTree = "<group>"; };
 		448435331AE5273300DD074D /* OrbitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitViewController.swift; sourceTree = "<group>"; };
 		448435341AE5273300DD074D /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		4484353A1AE5282900DD074D /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCell.swift; path = "About Cal/AppCell.swift"; sourceTree = "<group>"; };
-		44CB4EB71AE580F7000BD9A0 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = ../../../../../../../Downloads/square.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +196,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E6EBE2A1AE59F5500CFFC87 /* Inflation Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				2E6EBE2B1AE59F5500CFFC87 /* about splash.png */,
+				2E6EBE3E1AE59F7400CFFC87 /* Inflation.storyboard */,
+				2E6EBE301AE59F5500CFFC87 /* CPIdata.txt */,
+				2E6EBE331AE59F5500CFFC87 /* question mark button.png */,
+				2E6EBE341AE59F5500CFFC87 /* InflationViewController.swift */,
+			);
+			path = "Inflation Calculator";
+			sourceTree = "<group>";
+		};
 		2E9721AF1ADDFB2000F9399E = {
 			isa = PBXGroup;
 			children = (
@@ -230,9 +280,23 @@
 		2ED9FAF01AE3033D007BBDE8 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				44CB4EB71AE580F7000BD9A0 /* square.png */,
+				2EF276CF1AE5EA3A00D36168 /* instagramExample.mov */,
+				2EF276D11AE5EA5800D36168 /* instagramExample-frame1.png */,
+				2EF276CB1AE5E87C00D36168 /* squareifyExample.mov */,
+				2EF276CD1AE5E8A900D36168 /* squareifyExample-frame1.png */,
+				2EF276D71AE5F1ED00D36168 /* squareifyExport.mov */,
+				2EF276D91AE5F1F600D36168 /* squareifyExport-frame1.png */,
+				2EF276D31AE5F12A00D36168 /* squareify.mov */,
+				2EF276D51AE5F14100D36168 /* squareify-frame1.png */,
+				2EF276C91AE5E16E00D36168 /* orbitJava.mov */,
+				2EF276C71AE5E16700D36168 /* orbitJava-frame1.png */,
+				2E6EBE491AE5D10800CFFC87 /* launchScreenGradient.png */,
+				2E6EBE451AE5AD2800CFFC87 /* watch.png */,
+				2E6EBE281AE59EDB00CFFC87 /* square.png */,
+				2E6EBE431AE5AA6800CFFC87 /* square2.png */,
 				2ECD57761AE4B7E700F2CB71 /* orbit.png */,
 				2ECD57741AE4448300F2CB71 /* inflation.png */,
+				2E6EBE411AE5A96D00CFFC87 /* inflationIcon.png */,
 				2E6C47261AE3A00A008A1FF2 /* raspberryPi.png */,
 				2E6C47221AE39FC7008A1FF2 /* talk2014.png */,
 				2E6C47241AE39FDE008A1FF2 /* MRI.mov */,
@@ -280,6 +344,7 @@
 		4484352E1AE5273300DD074D /* embedded apps */ = {
 			isa = PBXGroup;
 			children = (
+				2E6EBE2A1AE59F5500CFFC87 /* Inflation Calculator */,
 				4484352F1AE5273300DD074D /* Orbit */,
 			);
 			path = "embedded apps";
@@ -346,6 +411,7 @@
 				TargetAttributes = {
 					2E9721B71ADDFB2000F9399E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = FZ89A5SZ7C;
 					};
 					2E9721CC1ADDFB2000F9399E = {
 						CreatedOnToolsVersion = 6.2;
@@ -380,37 +446,55 @@
 				2ED9FB0B1AE34214007BBDE8 /* olympus.png in Resources */,
 				2EDA5B8B1AE36161007B1AE7 /* calaga.mov in Resources */,
 				2ECD57751AE4448300F2CB71 /* inflation.png in Resources */,
+				2EF276D41AE5F12A00D36168 /* squareify.mov in Resources */,
 				2ED9FAFF1AE323D2007BBDE8 /* wwdc logo.png in Resources */,
+				2E6EBE351AE59F5500CFFC87 /* about splash.png in Resources */,
 				2ED9FAF41AE3033D007BBDE8 /* cal icon.png in Resources */,
 				2ED9FB051AE33919007BBDE8 /* hello world.png in Resources */,
 				2EDA5B8F1AE36200007B1AE7 /* playButtonWhite.png in Resources */,
+				2EF276DA1AE5F1F600D36168 /* squareifyExport-frame1.png in Resources */,
 				2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */,
 				2EDA5B9B1AE38C5E007B1AE7 /* hearATale.png in Resources */,
 				2EDA5B9F1AE390F0007B1AE7 /* children.png in Resources */,
+				2EF276C81AE5E16700D36168 /* orbitJava-frame1.png in Resources */,
 				2E6C47271AE3A00A008A1FF2 /* raspberryPi.png in Resources */,
 				2EDA5B8D1AE36172007B1AE7 /* calaga-frame1.png in Resources */,
 				2EDA5BA31AE39679007B1AE7 /* craig.png in Resources */,
+				2E6EBE461AE5AD2800CFFC87 /* watch.png in Resources */,
 				2E6C47251AE39FDE008A1FF2 /* MRI.mov in Resources */,
 				2ED9FAF61AE308EA007BBDE8 /* minecraft.png in Resources */,
+				2E6EBE3C1AE59F5500CFFC87 /* question mark button.png in Resources */,
 				2E6C47291AE3A03E008A1FF2 /* MRI-frame1.png in Resources */,
 				2EDA5B991AE38995007B1AE7 /* cluster.png in Resources */,
 				2EDA5B931AE37972007B1AE7 /* molio-frame1.png in Resources */,
 				2ED9FAF31AE3033D007BBDE8 /* blankApp.png in Resources */,
 				2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */,
+				2EF276D01AE5EA3A00D36168 /* instagramExample.mov in Resources */,
+				2EF276D81AE5F1ED00D36168 /* squareifyExport.mov in Resources */,
+				2EF276D21AE5EA5800D36168 /* instagramExample-frame1.png in Resources */,
 				2EDA5B911AE3795A007B1AE7 /* molio.mov in Resources */,
 				2ED9FAEB1AE2F282007BBDE8 /* content.xml in Resources */,
 				2E9721C51ADDFB2000F9399E /* Images.xcassets in Resources */,
+				2E6EBE441AE5AA6800CFFC87 /* square2.png in Resources */,
 				2EDA5B9D1AE38D64007B1AE7 /* gingerbreadMan.png in Resources */,
 				2E6C47231AE39FC7008A1FF2 /* talk2014.png in Resources */,
 				448435361AE5273300DD074D /* GameScene.sks in Resources */,
-				44CB4EB81AE580F7000BD9A0 /* square.png in Resources */,
+				2E6EBE421AE5A96D00CFFC87 /* inflationIcon.png in Resources */,
 				2ED9FB131AE34FCE007BBDE8 /* unity-logo.png in Resources */,
+				2E6EBE391AE59F5500CFFC87 /* CPIdata.txt in Resources */,
+				2E6EBE401AE59F7400CFFC87 /* Inflation.storyboard in Resources */,
+				2EF276CC1AE5E87C00D36168 /* squareifyExample.mov in Resources */,
 				2EDA5B951AE384B5007B1AE7 /* automator.png in Resources */,
 				2ED9FB0D1AE34991007BBDE8 /* olyAnvilLogo.png in Resources */,
 				2ECD57771AE4B7E700F2CB71 /* orbit.png in Resources */,
 				2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */,
+				2E6EBE4A1AE5D10800CFFC87 /* launchScreenGradient.png in Resources */,
+				2E6EBE291AE59EDB00CFFC87 /* square.png in Resources */,
+				2EF276CE1AE5E8A900D36168 /* squareifyExample-frame1.png in Resources */,
 				2EDA5B871AE358F9007B1AE7 /* playButton.png in Resources */,
 				2ED9FB071AE339BA007BBDE8 /* confusedKid.png in Resources */,
+				2EF276CA1AE5E16E00D36168 /* orbitJava.mov in Resources */,
+				2EF276D61AE5F14100D36168 /* squareify-frame1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +516,7 @@
 				2E544E841AE21ADF00144929 /* ModuleCell.swift in Sources */,
 				2E3FE9DA1AE066F000A89515 /* ContentCell.swift in Sources */,
 				4484353B1AE5282900DD074D /* AppCell.swift in Sources */,
+				2E6EBE3D1AE59F5500CFFC87 /* InflationViewController.swift in Sources */,
 				448435391AE5273300DD074D /* Planet.swift in Sources */,
 				2E3FE9D41AE0585300A89515 /* IconCell.swift in Sources */,
 				2E6C472B1AE3A0B2008A1FF2 /* VideoCell.swift in Sources */,
@@ -469,6 +554,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2E6EBE3E1AE59F7400CFFC87 /* Inflation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E6EBE3F1AE59F7400CFFC87 /* Base */,
+			);
+			name = Inflation.storyboard;
+			sourceTree = "<group>";
+		};
 		2E9721C11ADDFB2000F9399E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -569,9 +662,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "About Cal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -579,9 +675,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "About Cal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -16,6 +16,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var parsedPages : [PageData] = []
 
     @IBOutlet weak var iconContainer: UIView!
+    @IBOutlet weak var contentContainer: UIView!
+    
     var panningOnIcons = false
     
     required init(coder aDecoder: NSCoder) {
@@ -31,6 +33,22 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         statusBarShadow.layer.shadowOffset = CGSizeMake(0, 150)
         statusBarShadow.layer.shadowRadius = 50
         statusBarShadow.layer.shadowOpacity = 0.2
+        statusBarShadow.layer.shadowColor = UIColor(hue: 0.001, saturation: 0.5, brightness: 0.7, alpha: 1.0).CGColor
+        
+        let iconEnd = iconContainer.frame.origin
+        let contentEnd = contentContainer.frame.origin
+        
+        let iconStart = CGPointMake(iconEnd.x, iconEnd.y - iconContainer.frame.height * 1.5)
+        let contentStart = CGPointMake(contentEnd.x, contentEnd.y + contentContainer.frame.height * 1.2)
+        
+        iconContainer.frame.origin = iconStart
+        contentContainer.frame.origin = contentStart
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: nil, animations: {
+            self.iconContainer.frame.origin = iconEnd
+            self.contentContainer.frame.origin = contentEnd
+        }, completion: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {

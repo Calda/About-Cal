@@ -14,21 +14,26 @@ class AppCell : ModuleCell {
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var background: UIImageView!
-    var appName = "orbit"
+    
+    var appName : String?
     
     override func moduleType() -> ModuleType {
         return .App
     }
     
     override func displayWithData(data: String) {
+        appName = data
         icon.clipsToBounds = true
         icon.layer.cornerRadius = 15.0
-        //background.clipsToBounds = true
-        //background.layer.cornerRadius = background.
+        if appName == "inflation" {
+            icon.image = UIImage(named: "inflationIcon")
+        } else {
+            background.image = UIImage(named: "square2")
+        }
     }
     
     @IBAction func presentApp(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(LAUNCH_APP_DEMO, object: appName)
+        NSNotificationCenter.defaultCenter().postNotificationName(LAUNCH_APP_DEMO, object: appName!)
     }
     
 }

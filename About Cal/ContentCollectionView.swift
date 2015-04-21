@@ -52,13 +52,26 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
     var appController : UINavigationController?
     
     func launchApp(notification: NSNotification) {
-        let viewController = OrbitViewController()
-        let nav = UINavigationController(rootViewController: viewController)
-        let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
-        viewController.navigationItem.leftBarButtonItem = back
-        viewController.navigationItem.title = "Tap and Drag to spawn planets"
-        self.presentViewController(nav, animated: true, completion: nil)
-        appController = nav
+        if let name = notification.object as? String {
+            if name == "orbit" {
+                let viewController = OrbitViewController()
+                let nav = UINavigationController(rootViewController: viewController)
+                let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
+                viewController.navigationItem.leftBarButtonItem = back
+                viewController.navigationItem.title = "Tap and Drag to spawn planets"
+                self.presentViewController(nav, animated: true, completion: nil)
+                appController = nav
+            }
+            else if name == "inflation" {
+                let storyboard = UIStoryboard(name: "Inflation", bundle: NSBundle.mainBundle())
+                let inflationController = storyboard.instantiateViewControllerWithIdentifier("Inflation") as! UIViewController
+                let nav = UINavigationController(rootViewController: inflationController)
+                let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
+                inflationController.navigationItem.leftBarButtonItem = back
+                self.presentViewController(nav, animated: true, completion: nil)
+                appController = nav
+            }
+        }
     }
     
     func closeModalView(sender: UIBarButtonItem) {

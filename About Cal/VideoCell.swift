@@ -63,7 +63,37 @@ class VideoCell : ModuleCell {
             playerController.view.frame.size = CGSizeMake(self.frame.width, self.frame.height * 2)
             playerController.view.frame.origin = CGPointMake(0, -self.frame.height / 2)
             
+            
+            //I probably should have done this dynamically but I got lazy. Oops.
+            
+            if data == "~squareifyExample"{ //weird shaped video
+                playerController.view.frame.size = CGSizeMake(self.frame.width * 0.51, self.frame.height * 2)
+                playerController.view.frame.origin = CGPointMake((self.frame.width - playerController.view.frame.width) / 2.0, -self.frame.height / 2)
+                self.firstFrame.frame = playerController.view.frame
+            }
+            
+            if data == "~instagramExample" { //weird shaped video
+                playerController.view.frame.size = CGSizeMake(self.frame.width * 0.6, self.frame.height * 2)
+                playerController.view.frame.origin = CGPointMake((self.frame.width - playerController.view.frame.width) / 2.0, -self.frame.height / 2)
+                self.firstFrame.frame = playerController.view.frame
+            }
+            
+            if data == "~squareify"{ //weird shaped video
+                playerController.view.frame.size = CGSizeMake(self.frame.width * 0.55, self.frame.height * 2)
+                playerController.view.frame.origin = CGPointMake((self.frame.width - playerController.view.frame.width) / 2.0, -self.frame.height / 2)
+                self.firstFrame.frame = playerController.view.frame
+            }
+            
+            if data == "~squareifyExport" { //weird shaped video
+                playerController.view.frame.size = CGSizeMake(self.frame.width * 0.68, self.frame.height * 2)
+                playerController.view.frame.origin = CGPointMake((self.frame.width - playerController.view.frame.width) / 2.0, -self.frame.height / 2)
+                self.firstFrame.frame = playerController.view.frame
+            }
+
+            
+            
             playerController.player = AVPlayer(URL: url)
+            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
             self.player = playerController.player
             dispatch_sync(dispatch_get_main_queue(), {
                 self.videoContainer.addSubview(playerController.view)

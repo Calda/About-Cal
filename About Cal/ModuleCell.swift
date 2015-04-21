@@ -62,7 +62,12 @@ enum ModuleType{
         }
         
         if self == .Video {
+            //I probably should have done this dynamically but I got lazy. Oops.
             if data == "molio" { return width * 372/640 }
+            if data == "~squareifyExample" { return (width * (9/16)) * 1.5 }
+            if data == "~instagramExample" { return (width * (9/16)) * 1.37 }
+            if data == "~squareifyExport" { return (width * (9/16)) * 1.2 }
+            if data == "~squareify" { return (width * (9/16)) * 1.75 }
             return width * (9/16)
         }
         

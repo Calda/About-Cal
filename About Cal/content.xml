@@ -30,7 +30,7 @@
     </page>
     
     <page title="Unity Games" date="Summer 2012" icon="unity-logo">
-        <item type="text">During the summer after I was in 9th grade, I went to a summer camp and participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and wrote my games in C#. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
+        <item type="text">During the summer after I was in 9th grade, I went to a summer camp (Duke TIP) and participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and wrote my games in C#. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
         <item type="video3">~calaga</item>
         <item type="text">Calaga, a space shooter game. (The name is a portmanteau of Cal and Galaga. Really original, I know.) It's not particularly fun or challenging, but it somehow became a class gag to see who could get the highest score.</item>
         <item type="video2">~molio</item>
@@ -67,11 +67,33 @@
     </page>
     
     <page title="Mission: App" date="September 2014" icon="inflation">
-        <item type="text">Armed with Swift and itching to get some real experience, I started </item>
+        <item type="app">inflation</item>
+        <item type="text">Armed with a powerful new language and itching to get some real experience, I started hacking away with Xcode. (or at least trying to..) Everyone's first app should be simple, so I looked to Inflation Calculator for my first attempt. </item>
+        <item type="text">It's not particularly complicated, but complexity was not my goal. Inflation Calculator helped teach me basic strategies and best practices for making apps. The lessons it taught me have paved the way to much greater things.</item>
+        <item type="image">watch/300</item>
+        <item type="text">Inflation Calculator is published on the App Store with over 3,000 downloads. It even has a WatchKit app, if I ever decide to publish the update.</item>
     </page>
     
     <page title="Orbit" date="November 2014" icon="orbit">
         <item type="app">orbit</item>
+        <item type="text">  For my first iOS game, I wanted to try something novel instead of emulating another game like I did with Calaga and Molio. I love outer space and I'm fascinated by the intricacies of orbital motion, so I explored this in Orbit.</item>
+        <item type="text">The physics behind orbital mechanics is straightforward, but designing a game based on it is not. The most difficult design challenge is constructing it in such a way to fit the "flappy bird" genre of game that's so popular today. I came up with a few ideas, but I moved on to other projects before I got a chance to try and implement them. I still hope to release Orbit eventually, though.</item>
+        <item type="text">Fun fact: I also made a version of Orbit in Java back in 2013 as an example for a game engine I was working on. Nothing too fruitful came from the engine, but it did spawn one of my favorite bugs in all of my development history:</item>
+        <item type="video4">orbitJava</item>
+        <item type="text">I think that one had something to do with a misplaced sign in the function that calculated the acceleration vector.</item>
+    </page>
+    
+    <page title="Squareify" date="2015" icon="swift">
+        <item type="text">Squareify is my current project. The idea for Squareify arose after I filmed this video during an egg drop experiment in my AP Physics class:</item>
+        <item type="video5">~squareifyExample</item>
+        <item type="text">My "egg protector" was based on an interesting idea I had, but it failed pretty spectacularly (the egg fell out in mid-air). I thought this was pretty funny, so I wanted to post it on Instagram. The only problem was that Instagram only allows for square videos. I dropped the video into Final Cut, cropped it, added some keyframes, exported it, and sent it back to my phone ready for Instagram.</item>
+        <item type="video6">~instagramExample</item>
+        <item type="text">I felt like there had to be an easier way then resoring to Final Cut. I searched the App Store, but couldn't find an app that does what I was looking for. I had been trying to come up with a new app to make, and my call was answered.</item>
+        <item type="text">Squareify is mostly complete. The editor hasn't been given an actual design, and the exporter doesn't work very well yet, but it's a start.</item>
+        <item type="video7">~squareify</item>
+        <item type="text">This is the video that was exported to the camera roll during the above demo:</item>
+        <item type="video8">~squareifyExport</item>
+        <item type="text">There's obviously a lot more to do, but I've made good progress. The biggest challenge I have left is figuring out the myserious world of AVAssetExportSession. It's not easy, but I'm hoping I'll get it done soon.</item>
     </page>
     
     

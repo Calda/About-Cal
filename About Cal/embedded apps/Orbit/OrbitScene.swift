@@ -35,7 +35,7 @@
         screenSize = (760, 1365)
         let countLabel = SKLabelNode(fontNamed: "HelveticaNeue-Thin")
         countLabel.name = "PlanetCount"
-        countLabel.text = "0 planets"
+        countLabel.text = "2 planets"
         countLabel.fontColor = UIColor(hue: 0, saturation: 0, brightness: 0.15, alpha: 1)
         countLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         countLabel.fontSize = 60
@@ -58,7 +58,7 @@
         GUINode.addChild(gameOverLabel)
         let ppsLabel = SKLabelNode(fontNamed: "HelveticaNeue-Thin")
         ppsLabel.name = "PPS"
-        ppsLabel.text = "0 points per second"
+        ppsLabel.text = "1 point per second"
         ppsLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
         ppsLabel.fontColor = UIColor(hue: 0, saturation: 0, brightness: 0.15, alpha: 1)
         ppsLabel.fontSize = 40
