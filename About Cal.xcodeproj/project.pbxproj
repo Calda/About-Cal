@@ -76,6 +76,7 @@
 		2EF276D61AE5F14100D36168 /* squareify-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D51AE5F14100D36168 /* squareify-frame1.png */; };
 		2EF276D81AE5F1ED00D36168 /* squareifyExport.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D71AE5F1ED00D36168 /* squareifyExport.mov */; };
 		2EF276DA1AE5F1F600D36168 /* squareifyExport-frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276D91AE5F1F600D36168 /* squareifyExport-frame1.png */; };
+		2EF276DC1AE5FA5600D36168 /* signatureRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF276DB1AE5FA5600D36168 /* signatureRight.png */; };
 		448435351AE5273300DD074D /* CGPointVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435301AE5273300DD074D /* CGPointVector.swift */; };
 		448435361AE5273300DD074D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 448435311AE5273300DD074D /* GameScene.sks */; };
 		448435371AE5273300DD074D /* OrbitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435321AE5273300DD074D /* OrbitScene.swift */; };
@@ -168,6 +169,7 @@
 		2EF276D51AE5F14100D36168 /* squareify-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareify-frame1.png"; sourceTree = "<group>"; };
 		2EF276D71AE5F1ED00D36168 /* squareifyExport.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = squareifyExport.mov; sourceTree = "<group>"; };
 		2EF276D91AE5F1F600D36168 /* squareifyExport-frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareifyExport-frame1.png"; sourceTree = "<group>"; };
+		2EF276DB1AE5FA5600D36168 /* signatureRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signatureRight.png; sourceTree = "<group>"; };
 		448435301AE5273300DD074D /* CGPointVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointVector.swift; sourceTree = "<group>"; };
 		448435311AE5273300DD074D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		448435321AE5273300DD074D /* OrbitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitScene.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				2EDA5B8C1AE36172007B1AE7 /* calaga-frame1.png */,
 				2EDA5B901AE3795A007B1AE7 /* molio.mov */,
 				2EDA5B921AE37972007B1AE7 /* molio-frame1.png */,
+				2EF276DB1AE5FA5600D36168 /* signatureRight.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				2ED9FAFF1AE323D2007BBDE8 /* wwdc logo.png in Resources */,
 				2E6EBE351AE59F5500CFFC87 /* about splash.png in Resources */,
 				2ED9FAF41AE3033D007BBDE8 /* cal icon.png in Resources */,
+				2EF276DC1AE5FA5600D36168 /* signatureRight.png in Resources */,
 				2ED9FB051AE33919007BBDE8 /* hello world.png in Resources */,
 				2EDA5B8F1AE36200007B1AE7 /* playButtonWhite.png in Resources */,
 				2EF276DA1AE5F1F600D36168 /* squareifyExport-frame1.png in Resources */,
