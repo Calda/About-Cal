@@ -402,8 +402,8 @@
                                                                     <constraint firstAttribute="height" constant="75" id="aab-IY-J4i"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-w7-aHz">
-                                                                <rect key="frame" x="142" y="155" width="85" height="20"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Launch App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-w7-aHz">
+                                                                <rect key="frame" x="119" y="155" width="132" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                                 <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -787,8 +787,8 @@
                                                     <size key="customSize" width="369" height="245"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="CeQ-oo-kUp"/>
                                                             <exclude reference="4kw-pT-hvH"/>
+                                                            <exclude reference="CeQ-oo-kUp"/>
                                                         </mask>
                                                     </variation>
                                                     <connections>

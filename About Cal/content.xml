@@ -37,6 +37,19 @@
         <item type="text">Molio, a 2D platformer I made a few months later for extra credit in my chemistry class (How does a game about a little blue blob warrant extra credit in a chemistry class? Your guess is as good as mine.)</item>
     </page>
     
+    <page title="Producer Buddy" date="October 2013" icon="swift">
+        <item type="text">At my school, we have a Broadcasting and Film program. Every morning, we produce a live 8 minute show that is broadcast around the campus. We learn industry standards for producing and directing, including planning for precision.</item>
+        <item type="text"> </item>
+        <item type="text">A producer's best friend is their timer. For years, we used an analog clock face to tell time. The producer would read the time off the clock face in the form of "back time" (the amount of time remaining in the show), and then quickly calculate the "show time" (the amount of time since the show started) in their heads. They use these two opposite times to keep the show on-schedule.</item>
+        <item type="image">WDFAtimer/200</item>
+        <item type="text">Despite being ingrained in the heads of most of us, the ability to read a clock face is in fact a taught skill. In today's fast paced digtal age, more and more kids make it through life relying only on their iPhone instead of using wall clocks. This skill gap adds an extra abstraction over calculating show time and back time, making it very easy to lose track. A lost producer is bad for everybody.</item>
+        <item type="text">With one too many trainwrecks caused by producing errors, I looked to provide a solution. In the industry, they use synchronized clocks to keep track of show time and back time digitally. Unfortunately, anything "industry" is a bit out of the budget of a high school these days.</item>
+        <item type="image">producerBuddyDuke/250</item>
+        <item type="text">Faced with a $0 budget, I dug a 2001 iMac G3 out of storage. It was very old, very slow, and had a cracked screen, but it was good enough so display a few clocks. I created "Producer Buddy" in Java, and was able to make it compatible with the ancient version of OS X running on the iMac.</item>
+        <item type="image">producerBuddyLisa/300</item>
+        <item type="text">As a bonus, I wired it up to our network, set up a screen sharing program, and mirrored the clocks into our studio (which is across the hall from where the producer and director work). For the first time, people in both rooms could be in the loop on the show's running time, and the show was running smoother than ever. Producer Buddy gets used almost every day, and now it's just part of our workflow.</item>
+    </page>
+    
     <page title="Automation Nation" date="2014" icon="automator">
         <item type="text">I have a strong belief that nobody should ever do something that a computer can do quicker, especially not something horribly monotonous. I love building utilities to automate tasks and help people save time.</item>
         <item type="text">My mom is a teacher of gifted students in a nearby elementary school. One day she was telling me about a new program they were introducing called "Cluster Groups" where children get to choose a special class to be in for a portion of the year. To sort the kids into their groups, teachers collected sticky notes with the individual students' group choices. These sticky notes were then put on a wall where they were moved around until all groups had the proper number of students. She said this process took a teacher up to three days of work.</item>
@@ -49,7 +62,7 @@
         <item type="image">hearATale/350</item>
         <item type="text"> The website, Hear a Tale (http://hearatale.com), is part of a decade-long project he has had to help encourage literacy in children. He is a firm believer that rhymes and fairy tales can help foster literacy, so he slowly amassed a library of audio and video of many classic rhymes and fairy tales.</item>
         <item type="image">children/250</item>
-        <item type="text">I built upon years of work by many people, but the website itself is almost entirely by my own design, written in a blend of PHP, HTML, and CSS. It serves as a directory for his library of rhymes and fairy tales, as well as literature for students and adults. He has been very happy with the website, and has recently hired me again to develop two apps for iOS and Android (blasphemy, I know).</item>
+        <item type="text">I built upon years of work by many people, but the website itself is almost entirely new. Written in a blend of PHP, HTML, and CSS, it serves as a directory for his library of rhymes and fairy tales, along with literature for students and adults. He has been very happy with the website, and has recently hired me again to develop two apps for iOS and Android (blasphemy, I know).</item>
     </page>
     
     <page title="Research" date="2013 - 2015" icon="raspberryPi">
@@ -66,7 +79,7 @@
         <item type="text">Truth is, Objective-C was the reason I hadn't started making iOS apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
     </page>
     
-    <page title="Mission: App" date="September 2014" icon="inflation">
+    <page title="Mission: App" date="October 2014" icon="appStore">
         <item type="app">inflation</item>
         <item type="text">Armed with a powerful new language and itching to get some real experience, I started hacking away with Xcode. (or at least trying to..) Everyone's first app should be simple, so I looked to Inflation Calculator for my first attempt. </item>
         <item type="text">It's not particularly complicated, but complexity was not my goal. Inflation Calculator helped teach me basic strategies and best practices for making apps. The lessons it taught me have paved the way to much greater things.</item>
@@ -89,14 +102,16 @@
         <item type="text">My "egg protector" was based on an interesting idea I had, but it failed pretty spectacularly (the egg fell out in mid-air). I thought this was pretty funny, so I wanted to post it on Instagram. The only problem was that Instagram only allows for square videos. I dropped the video into Final Cut, cropped it, added some keyframes, exported it, and sent it back to my phone ready for Instagram.</item>
         <item type="video6">~instagramExample</item>
         <item type="text">I felt like there had to be an easier way then resoring to Final Cut. I searched the App Store, but couldn't find an app that does what I was looking for. I had been trying to come up with a new app to make, and my call was answered.</item>
-        <item type="text">Squareify is mostly complete. The editor hasn't been given an actual design, and the exporter doesn't work very well yet, but it's a start.</item>
+        <item type="text">Squareify allows the user to select a video, trim it, and then edit it using live panning, scaling, and rotating. It's mostly complete. The editor hasn't been given an actual design, and the exporter doesn't work very well yet, but it's a start.</item>
+        <item type="text">Here's a demo showing the in-app process of selecting and editing the video that inspired the app in the first place:</item>
         <item type="video7">~squareify</item>
         <item type="text">This is the video that was exported to the camera roll during the above demo:</item>
         <item type="video8">~squareifyExport</item>
+        <item type="text">It works... sorta... not really.</item>
         <item type="text">There's obviously a lot more to do, but I've made good progress. The biggest challenge I have left is figuring out the mysterious world of AVAssetExportSession and working out the kinks. It's not easy, but I'm hoping I'll get it done soon.</item>
     </page>
     
-    <page title="This App" date="April 2015" icon="blankApp">
+    <page title="This App" date="Now" icon="blankApp">
         <item type="text">Wow! It's been a wild ride. Here we are, back where we started. I've had a lot of fun working on this app, and hopefully I was able to keep you entertained with my life story.</item>
         <item type="text">I'd like to thank my good friend Nate Thompson for all of the critique on this app. It definitely wouldn't be as good without him.</item>
         <item type="text">If I'm really lucky, the next page in my book will be WWDC 2015. It would be an amazing experience to visit San Francisco and attend the convention. My fingers are definitely crossed.</item>
