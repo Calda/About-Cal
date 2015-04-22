@@ -74,14 +74,14 @@
         
         let center = CGPointMake(screenSize.width / 2, screenSize.height / 2)
         
-        let planet1Origin = CGPointMake(center.x, center.y + 100)
+        let planet1Origin = CGPointMake(center.x, center.y + 200)
         let startPlanet1 = Planet(radius: 20, color: getRandomColor(), position: planet1Origin, physicsMode: .Player)
-        startPlanet1.velocityVector = CGVector(dx: 5.0, dy: 0)
+        startPlanet1.velocityVector = CGVector(dx: 7.0, dy: 0)
         addChild(startPlanet1)
         
-        let planet2Origin = CGPointMake(center.x, center.y - 100)
+        let planet2Origin = CGPointMake(center.x, center.y - 200)
         let startPlanet2 = Planet(radius: 20, color: getRandomColor(), position: planet2Origin, physicsMode: .Player)
-        startPlanet2.velocityVector = CGVector(dx: 5.0, dy: 0)
+        startPlanet2.velocityVector = CGVector(dx: -7.0, dy: 0)
         addChild(startPlanet2)
         
         let startPlanet3 = Planet(radius: 40, color: getRandomColor(), position: center, physicsMode: .Player)

@@ -30,15 +30,15 @@
     </page>
     
     <page title="Unity Games" date="Summer 2012" icon="unity-logo">
-        <item type="text">During the summer after I was in 9th grade, I went to a summer camp (Duke TIP) and participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and wrote my games in C#. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
+        <item type="text">During the summer after I was in 9th grade, I went to a summer camp (Duke TIP) and participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and got my first experience with standalone applications. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
         <item type="video3">~calaga</item>
         <item type="text">Calaga, a space shooter game. (The name is a portmanteau of Cal and Galaga. Really original, I know.) It's not particularly fun or challenging, but it somehow became a class gag to see who could get the highest score.</item>
         <item type="video2">~molio</item>
         <item type="text">Molio, a 2D platformer I made a few months later for extra credit in my chemistry class (How does a game about a little blue blob warrant extra credit in a chemistry class? Your guess is as good as mine.)</item>
     </page>
     
-    <page title="Producer Buddy" date="October 2013" icon="swift">
-        <item type="text">At my school, we have a Broadcasting and Film program. Every morning, we produce a live 8 minute show that is broadcast around the campus. We learn industry standards for producing and directing, including planning for precision.</item>
+    <page title="Producer Buddy" date="October 2013" icon="producerBuddyIcon">
+        <item type="text">At my school, we have a Broadcasting and Film program. Every morning, we produce a live 8 minute show that is broadcast around campus. We learn industry standards for producing and directing, including planning for precision.</item>
         <item type="text"> </item>
         <item type="text">A producer's best friend is their timer. For years, we used an analog clock face to tell time. The producer would read the time off the clock face in the form of "back time" (the amount of time remaining in the show), and then quickly calculate the "show time" (the amount of time since the show started) in their heads. They use these two opposite times to keep the show on-schedule.</item>
         <item type="image">WDFAtimer/200</item>
@@ -93,15 +93,15 @@
         <item type="text">The physics behind orbital mechanics is straightforward, but designing a game based on it is not. The most difficult design challenge is constructing it in such a way to fit the "flappy bird" genre of game that's so popular today. I came up with a few ideas, but I moved on to other projects before I got a chance to try and implement them. I still hope to release Orbit eventually, though.</item>
         <item type="text">Fun fact: I also made a version of Orbit in Java back in 2013 as an example for a game engine I was working on. Nothing too fruitful came from the engine, but it did spawn one of my favorite bugs in all of my development history:</item>
         <item type="video4">orbitJava</item>
-        <item type="text">I think that one had something to do with a misplaced sign in the function that calculated the acceleration vector.</item>
+        <item type="text">I think that one had something to do with a misplaced sign in the function that calculated the acceleration vector. I fixed it eventually...</item>
     </page>
     
-    <page title="Squareify" date="2015" icon="swift">
+    <page title="Squareify" date="2015" icon="squareifyIcon">
         <item type="text">The idea for Squareify arose after I filmed this video during an egg drop experiment in my AP Physics class:</item>
         <item type="video5">~squareifyExample</item>
         <item type="text">My "egg protector" was based on an interesting idea I had, but it failed pretty spectacularly (the egg fell out in mid-air). I thought this was pretty funny, so I wanted to post it on Instagram. The only problem was that Instagram only allows for square videos. I dropped the video into Final Cut, cropped it, added some keyframes, exported it, and sent it back to my phone ready for Instagram.</item>
         <item type="video6">~instagramExample</item>
-        <item type="text">I felt like there had to be an easier way then resoring to Final Cut. I searched the App Store, but couldn't find an app that does what I was looking for. I had been trying to come up with a new app to make, and my call was answered.</item>
+        <item type="text">I felt like there had to be an easier way than resorting to Final Cut. I searched the App Store, but couldn't find an app that does what I was looking for. I had been trying to come up with a new app to make, and my call was answered.</item>
         <item type="text">Squareify allows the user to select a video, trim it, and then edit it using live panning, scaling, and rotating. It's mostly complete. The editor hasn't been given an actual design, and the exporter doesn't work very well yet, but it's a start.</item>
         <item type="text">Here's a demo showing the in-app process of selecting and editing the video that inspired the app in the first place:</item>
         <item type="video7">~squareify</item>

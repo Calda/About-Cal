@@ -35,6 +35,8 @@
 		2E9721C81ADDFB2000F9399E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C61ADDFB2000F9399E /* LaunchScreen.xib */; };
 		2E9721D41ADDFB2000F9399E /* About_CalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721D31ADDFB2000F9399E /* About_CalTests.swift */; };
 		2ECD57771AE4B7E700F2CB71 /* orbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECD57761AE4B7E700F2CB71 /* orbit.png */; };
+		2ED171711AE6F84F009E08B4 /* producerBuddyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED171701AE6F84F009E08B4 /* producerBuddyIcon.png */; };
+		2ED171731AE6F8F2009E08B4 /* squareifyIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED171721AE6F8F2009E08B4 /* squareifyIcon.png */; };
 		2ED9FAEB1AE2F282007BBDE8 /* content.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9FAEA1AE2F282007BBDE8 /* content.xml */; };
 		2ED9FAED1AE2F372007BBDE8 /* ContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9FAEC1AE2F372007BBDE8 /* ContentParser.swift */; };
 		2ED9FAF31AE3033D007BBDE8 /* blankApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ED9FAF11AE3033D007BBDE8 /* blankApp.png */; };
@@ -131,6 +133,8 @@
 		2E9721D21ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721D31ADDFB2000F9399E /* About_CalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CalTests.swift; sourceTree = "<group>"; };
 		2ECD57761AE4B7E700F2CB71 /* orbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orbit.png; sourceTree = "<group>"; };
+		2ED171701AE6F84F009E08B4 /* producerBuddyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = producerBuddyIcon.png; sourceTree = "<group>"; };
+		2ED171721AE6F8F2009E08B4 /* squareifyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squareifyIcon.png; sourceTree = "<group>"; };
 		2ED9FAEA1AE2F282007BBDE8 /* content.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = content.xml; sourceTree = "<group>"; };
 		2ED9FAEC1AE2F372007BBDE8 /* ContentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentParser.swift; sourceTree = "<group>"; };
 		2ED9FAF11AE3033D007BBDE8 /* blankApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankApp.png; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		2ED9FAF01AE3033D007BBDE8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2ED171721AE6F8F2009E08B4 /* squareifyIcon.png */,
 				2EF276CF1AE5EA3A00D36168 /* instagramExample.mov */,
 				2EF276D11AE5EA5800D36168 /* instagramExample-frame1.png */,
 				2EF276CB1AE5E87C00D36168 /* squareifyExample.mov */,
@@ -334,6 +339,7 @@
 				2EF276DB1AE5FA5600D36168 /* signatureRight.png */,
 				442AD7201AE68F99008BB876 /* producerBuddyDuke.png */,
 				442AD7211AE68F99008BB876 /* producerBuddyLisa.png */,
+				2ED171701AE6F84F009E08B4 /* producerBuddyIcon.png */,
 				442AD7261AE690E8008BB876 /* WDFAtimer.png */,
 			);
 			path = images;
@@ -473,6 +479,7 @@
 				2EDA5B8D1AE36172007B1AE7 /* calaga-frame1.png in Resources */,
 				2EDA5BA31AE39679007B1AE7 /* craig.png in Resources */,
 				2E6EBE461AE5AD2800CFFC87 /* watch.png in Resources */,
+				2ED171731AE6F8F2009E08B4 /* squareifyIcon.png in Resources */,
 				2E6C47251AE39FDE008A1FF2 /* MRI.mov in Resources */,
 				2ED9FAF61AE308EA007BBDE8 /* minecraft.png in Resources */,
 				2E6EBE3C1AE59F5500CFFC87 /* question mark button.png in Resources */,
@@ -501,6 +508,7 @@
 				442AD7271AE690E8008BB876 /* WDFAtimer.png in Resources */,
 				2ECD57771AE4B7E700F2CB71 /* orbit.png in Resources */,
 				2EDA5BA11AE39228007B1AE7 /* swift.png in Resources */,
+				2ED171711AE6F84F009E08B4 /* producerBuddyIcon.png in Resources */,
 				2E6EBE4A1AE5D10800CFFC87 /* launchScreenGradient.png in Resources */,
 				2E6EBE291AE59EDB00CFFC87 /* square.png in Resources */,
 				442AD7241AE68F99008BB876 /* producerBuddyLisa.png in Resources */,
