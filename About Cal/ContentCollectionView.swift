@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WebKit
 
-class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WKNavigationDelegate {
     
     var iconCollection : UICollectionView?
     var parsedPages : [PageData] = []
@@ -48,35 +49,67 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
             NSNotificationCenter.defaultCenter().postNotificationName(VIDEO_PLAY_TOGGLE_NOTIFICATION, object: data)
         }
     }
-
-    var appController : UINavigationController?
+    
+    // MARK: - embedded app controller
     
     func launchApp(notification: NSNotification) {
         if let name = notification.object as? String {
             if name == "orbit" {
-                let viewController = OrbitViewController()
-                let nav = UINavigationController(rootViewController: viewController)
-                let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
-                viewController.navigationItem.leftBarButtonItem = back
-                viewController.navigationItem.title = "Tap and Drag to spawn planets"
-                self.presentViewController(nav, animated: true, completion: nil)
-                appController = nav
+                presentWithNavigation(OrbitViewController(), title: "Tap and Drag to spawn planets")
             }
             else if name == "inflation" {
                 let storyboard = UIStoryboard(name: "Inflation", bundle: NSBundle.mainBundle())
                 let inflationController = storyboard.instantiateViewControllerWithIdentifier("Inflation") as! UIViewController
-                let nav = UINavigationController(rootViewController: inflationController)
-                let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
-                inflationController.navigationItem.leftBarButtonItem = back
-                self.presentViewController(nav, animated: true, completion: nil)
-                appController = nav
+               presentWithNavigation(inflationController, title: nil)
             }
         }
+    }
+    
+    func presentWithNavigation(viewController: UIViewController, title: String?) -> UINavigationController {
+        let nav = UINavigationController(rootViewController: viewController)
+        let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
+        viewController.navigationItem.leftBarButtonItem = back
+        viewController.navigationItem.title = title
+        self.presentViewController(nav, animated: true, completion: nil)
+        return nav
     }
     
     func closeModalView(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // MARK: - web controller
+    
+    var webController : UIViewController?
+    var webView : WKWebView?
+    var webDepth = -1
+    
+    @IBAction func openWebView(sender: UITapGestureRecognizer) {
+        let cell = sender.view as! WebTextCell
+        webController = UIViewController()
+        webView = WKWebView(frame: webController!.view.frame)
+        webDepth = -1
+        let request = NSURLRequest(URL: NSURL(string: "http://www.hearatale.com/children.php")!)
+        webView!.navigationDelegate = self
+        webView!.loadRequest(request)
+        webController!.view.addSubview(webView!)
+        presentWithNavigation(webController!, title: "Loading...")
+    }
+    
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        webController?.navigationItem.title = "Hear a Tale"
+        webDepth += 1
+        if webDepth >= 1 {
+            webController!.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "< Back", style: .Plain, target: self, action: "webGoBack")
+        }
+    }
+    
+    func webGoBack() {
+        webView?.goBack()
+        webDepth -= 2
+        if webDepth < 1 {
+            webController!.navigationItem.rightBarButtonItem = nil
+        }
+    }
     
 }

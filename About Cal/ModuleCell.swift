@@ -21,7 +21,7 @@ class ModuleCell : UICollectionViewCell {
 }
 
 enum ModuleType{
-    case Title, Text, Image, Images, Video, App
+    case Title, Text, Image, Images, Video, App, WebText
     
     static func enumFromString(name: String) -> ModuleType {
         if name.hasPrefix("video"){ return .Video }
@@ -30,6 +30,7 @@ enum ModuleType{
             case "image": return .Image
             case "images": return .Images
             case "app": return .App
+            case "webtext": return .WebText
             default: return .Text
         }
     }
@@ -42,11 +43,12 @@ enum ModuleType{
             case .Images: return "Images"
             case .Video: return "Video"
             case .App: return "App"
+            case .WebText: return "WebText"
         }
     }
     
     func heightForData(data: String, width: CGFloat) -> CGFloat {
-        if self == .Text {
+        if self == .Text || self == .WebText{
             let attributes = TextCell.getContentTextAttributes()
             let context = NSStringDrawingContext()
             let labelSize = CGSizeMake(width - 20, CGFloat.max)

@@ -81,13 +81,16 @@
 		442AD7231AE68F99008BB876 /* producerBuddyDuke.png in Resources */ = {isa = PBXBuildFile; fileRef = 442AD7201AE68F99008BB876 /* producerBuddyDuke.png */; };
 		442AD7241AE68F99008BB876 /* producerBuddyLisa.png in Resources */ = {isa = PBXBuildFile; fileRef = 442AD7211AE68F99008BB876 /* producerBuddyLisa.png */; };
 		442AD7271AE690E8008BB876 /* WDFAtimer.png in Resources */ = {isa = PBXBuildFile; fileRef = 442AD7261AE690E8008BB876 /* WDFAtimer.png */; };
+		445250AF1AE820B7003F35DB /* WebTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445250AE1AE820B7003F35DB /* WebTextCell.swift */; };
 		448435351AE5273300DD074D /* CGPointVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435301AE5273300DD074D /* CGPointVector.swift */; };
 		448435361AE5273300DD074D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 448435311AE5273300DD074D /* GameScene.sks */; };
 		448435371AE5273300DD074D /* OrbitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435321AE5273300DD074D /* OrbitScene.swift */; };
 		448435381AE5273300DD074D /* OrbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435331AE5273300DD074D /* OrbitViewController.swift */; };
 		448435391AE5273300DD074D /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448435341AE5273300DD074D /* Planet.swift */; };
 		4484353B1AE5282900DD074D /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484353A1AE5282900DD074D /* AppCell.swift */; };
+		44B718081AE7C8F2008185A4 /* WDFAstill.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B718071AE7C8F2008185A4 /* WDFAstill.png */; };
 		44CD9DCF1AE68319004EF079 /* appStore.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CD9DCE1AE68319004EF079 /* appStore.png */; };
+		44E8831E1AE7CDED0050CD55 /* calGuru.png in Resources */ = {isa = PBXBuildFile; fileRef = 44E8831D1AE7CDEC0050CD55 /* calGuru.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,13 +182,16 @@
 		442AD7201AE68F99008BB876 /* producerBuddyDuke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = producerBuddyDuke.png; sourceTree = "<group>"; };
 		442AD7211AE68F99008BB876 /* producerBuddyLisa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = producerBuddyLisa.png; sourceTree = "<group>"; };
 		442AD7261AE690E8008BB876 /* WDFAtimer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WDFAtimer.png; sourceTree = "<group>"; };
+		445250AE1AE820B7003F35DB /* WebTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebTextCell.swift; path = "About Cal/WebTextCell.swift"; sourceTree = "<group>"; };
 		448435301AE5273300DD074D /* CGPointVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointVector.swift; sourceTree = "<group>"; };
 		448435311AE5273300DD074D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		448435321AE5273300DD074D /* OrbitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitScene.swift; sourceTree = "<group>"; };
 		448435331AE5273300DD074D /* OrbitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitViewController.swift; sourceTree = "<group>"; };
 		448435341AE5273300DD074D /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		4484353A1AE5282900DD074D /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCell.swift; path = "About Cal/AppCell.swift"; sourceTree = "<group>"; };
+		44B718071AE7C8F2008185A4 /* WDFAstill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WDFAstill.png; sourceTree = "<group>"; };
 		44CD9DCE1AE68319004EF079 /* appStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appStore.png; sourceTree = "<group>"; };
+		44E8831D1AE7CDEC0050CD55 /* calGuru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calGuru.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +324,7 @@
 				2EDA5BA21AE39679007B1AE7 /* craig.png */,
 				2EDA5B941AE384B5007B1AE7 /* automator.png */,
 				2EDA5B981AE38995007B1AE7 /* cluster.png */,
+				44E8831D1AE7CDEC0050CD55 /* calGuru.png */,
 				2EDA5B9A1AE38C5E007B1AE7 /* hearATale.png */,
 				2EDA5B9E1AE390F0007B1AE7 /* children.png */,
 				2EDA5B9C1AE38D64007B1AE7 /* gingerbreadMan.png */,
@@ -341,6 +348,7 @@
 				442AD7211AE68F99008BB876 /* producerBuddyLisa.png */,
 				2ED171701AE6F84F009E08B4 /* producerBuddyIcon.png */,
 				442AD7261AE690E8008BB876 /* WDFAtimer.png */,
+				44B718071AE7C8F2008185A4 /* WDFAstill.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -354,6 +362,7 @@
 				2ED9FB0E1AE34D54007BBDE8 /* ImageCell.swift */,
 				2ED9FB0F1AE34D54007BBDE8 /* TextCell.swift */,
 				2E6C472A1AE3A0B2008A1FF2 /* VideoCell.swift */,
+				445250AE1AE820B7003F35DB /* WebTextCell.swift */,
 			);
 			name = ModuleCells;
 			path = ..;
@@ -472,6 +481,7 @@
 				2EDA5B8F1AE36200007B1AE7 /* playButtonWhite.png in Resources */,
 				2EF276DA1AE5F1F600D36168 /* squareifyExport-frame1.png in Resources */,
 				2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */,
+				44B718081AE7C8F2008185A4 /* WDFAstill.png in Resources */,
 				2EDA5B9B1AE38C5E007B1AE7 /* hearATale.png in Resources */,
 				2EDA5B9F1AE390F0007B1AE7 /* children.png in Resources */,
 				2EF276C81AE5E16700D36168 /* orbitJava-frame1.png in Resources */,
@@ -501,6 +511,7 @@
 				2E6EBE421AE5A96D00CFFC87 /* inflationIcon.png in Resources */,
 				2ED9FB131AE34FCE007BBDE8 /* unity-logo.png in Resources */,
 				2E6EBE391AE59F5500CFFC87 /* CPIdata.txt in Resources */,
+				44E8831E1AE7CDED0050CD55 /* calGuru.png in Resources */,
 				2E6EBE401AE59F7400CFFC87 /* Inflation.storyboard in Resources */,
 				2EF276CC1AE5E87C00D36168 /* squareifyExample.mov in Resources */,
 				2EDA5B951AE384B5007B1AE7 /* automator.png in Resources */,
@@ -550,6 +561,7 @@
 				2E26293D1ADF3CC900CE6288 /* CellPagingLayout.swift in Sources */,
 				448435371AE5273300DD074D /* OrbitScene.swift in Sources */,
 				2ED9FAED1AE2F372007BBDE8 /* ContentParser.swift in Sources */,
+				445250AF1AE820B7003F35DB /* WebTextCell.swift in Sources */,
 				448435351AE5273300DD074D /* CGPointVector.swift in Sources */,
 				448435381AE5273300DD074D /* OrbitViewController.swift in Sources */,
 				2ED9FB111AE34D54007BBDE8 /* TextCell.swift in Sources */,
@@ -692,6 +704,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -705,6 +718,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

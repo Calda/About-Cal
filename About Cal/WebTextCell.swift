@@ -8,22 +8,30 @@
 
 import UIKit
 
-class TextCell : ModuleCell {
+class WebTextCell : ModuleCell {
     
     @IBOutlet weak var content: UILabel!
+    var data : NSString?
     
     override func moduleType() -> ModuleType {
         return .Text
     }
     
     override func displayWithData(data: String) {
+        self.data = data as NSString
         let attributes = TextCell.getContentTextAttributes()
         let attributedText = NSMutableAttributedString(string: data, attributes: attributes)
+        
+        if (data as NSString).containsString("http://") {
+            //The website, Hear a Tale (http://hearatale.com)
+            attributedText.addAttribute(NSLinkAttributeName, value: "http://www.hearatale.com", range: NSMakeRange(26, 20))
+            
+        }
         
         content.attributedText = attributedText
         
     }
-
+    
     
     static func getContentTextAttributes() -> [String: AnyObject] {
         
