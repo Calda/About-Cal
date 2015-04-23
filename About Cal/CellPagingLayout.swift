@@ -13,14 +13,25 @@ class CellPagingLayout : UICollectionViewFlowLayout {
     var pageWidth : CGFloat = 0
     var previousPage : CGFloat = 0
     
+    var enabled = true
+    
     init(pageWidth: CGFloat) {
         super.init()
         self.scrollDirection = UICollectionViewScrollDirection.Horizontal
         self.pageWidth = pageWidth
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "enable", name: CONTENT_COLLECTION_SCROLL_END, object: nil)
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func disable() {
+        enabled = false
+    }
+    
+    func enable() {
+        enabled = true
     }
     
     override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
@@ -31,6 +42,10 @@ class CellPagingLayout : UICollectionViewFlowLayout {
 
     
     func getNewOffsetForVelocity(velocity: CGFloat) -> CGFloat {
+        
+        if velocity == 0.0 && !enabled {
+            return previousPage
+        }
         
         let currentOffset = collectionView!.contentOffset.x
         var newOffset : CGFloat
@@ -59,6 +74,7 @@ class CellPagingLayout : UICollectionViewFlowLayout {
             NSNotificationCenter.defaultCenter().postNotificationName(PAUSE_ALL_NOTIFICATION, object: nil)
         }
         previousPage = newOffset
+        disable()
         return newOffset
     }
     

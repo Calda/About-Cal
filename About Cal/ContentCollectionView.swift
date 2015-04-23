@@ -8,8 +8,12 @@
 
 import UIKit
 import WebKit
+import CoreGraphics
 
-class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WKNavigationDelegate {
+let CONTENT_COLLECTION_SCROLL_START = "CONTENT_COLLECTION_SCROLL_START"
+let CONTENT_COLLECTION_SCROLL_END = "CONTENT_COLLECTION_SCROLL_END"
+
+class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WKNavigationDelegate, UIScrollViewDelegate {
     
     var iconCollection : UICollectionView?
     var parsedPages : [PageData] = []
@@ -69,7 +73,9 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
         let nav = UINavigationController(rootViewController: viewController)
         let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
         viewController.navigationItem.leftBarButtonItem = back
-        viewController.navigationItem.title = title
+        if title != nil {
+            viewController.navigationItem.title = title
+        }
         self.presentViewController(nav, animated: true, completion: nil)
         return nav
     }
@@ -112,4 +118,13 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
         }
     }
     
+    // MARK: - scroll view
+    
+    override func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        NSNotificationCenter.defaultCenter().postNotificationName(CONTENT_COLLECTION_SCROLL_START, object: nil)
+    }
+    
+    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        NSNotificationCenter.defaultCenter().postNotificationName(CONTENT_COLLECTION_SCROLL_END, object: nil)
+    }
 }

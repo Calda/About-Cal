@@ -14,14 +14,15 @@
         <item type="text">Other than programming, I make films at my school and dream of space, the universe, and our place in it. I have more than one crackpot theory on the nature of the universe. My life goal is to stand on the surface of the moon. Fingers crossed for space tourism, right?</item>
     </page>
     
-    <page title="Hello World" date="2009" icon="confusedKid">
+    <page title="Hello World" date="2009" icon="bottle">
         <item type="text">My first (successful) exposure to programming was through Warren Sande's amazing book "Hello World: Computer Programming for Kids and Other Beginners". The explanatory cartoons and kid-friendly language gave the insight that an 11-year-old Cal needed.</item>
         <item type="image">hello world/175</item>
         <item type="text">"Hello World" taught me how to harness the basics of Python. I used this newfound skill to dabble in "fun side projects". My crowning achievement was a rendition of Jeopardy that had hard-coded questions and answers, and probably a lot of spelling mistakes. Keep in mind that I was 11.</item>
     </page>
     
     <page title="The Minecraft Era" date="2011 - 2013" icon="minecraft">
-        <item type="text">For anyone my age or younger, Minecraft was not just a game, but a cultural phenomenon. For years, I spent my time bouncing between different multiplayer servers with my friends. After experiencing every different flavor of server out there (creative, survival, minigame, player vs player... the list goes on and on), we sought to start out own.</item>
+        <item type="text">For anyone my age or younger, Minecraft was not just a game, but a cultural phenomenon. For years, I spent my time bouncing between different multiplayer servers with my friends. After experi
+            encing every different flavor of server out there (creative, survival, minigame, player vs player... the list goes on and on), we sought to start out own.</item>
         <item type="image">olympus/200</item>
         <item type="text">My friends and I launched our server Olympus PVP, to little fanfare. All of the best servers had custom server mods to customize the experience and differentiate them from the competition. We knew the only way for us to make any traction was for one of us to develop our own mods to mold a unique sort of gameplay. I already had some programming experience, so I gave it a shot.</item>
         <item type="text">The go-to Minecraft modding platform was Bukkit, a custom multiplayer server designed to allow developers to create plugins in Java using the extensive Craftbukkit API. After weeks of mucking around with tutorial videos and pure trial-and-error, I started figuring it out piece by piece.</item>
@@ -40,12 +41,11 @@
     <page title="Producer Buddy" date="October 2013" icon="producerBuddyIcon">
         <item type="text">At my school, we have a Broadcasting and Film program. Every morning, we produce a live 8 minute show that is broadcast around campus. We learn industry standards for producing and directing, including planning for precision.</item>
         <item type="image">WDFAstill/160</item>
-        <item type="text">A producer's best friend is their timer. For years, we used an analog clock face to tell time. The producer would read the time off the clock face in the form of "back time" (the amount of time remaining in the show), and then quickly calculate the "show time" (the amount of time since the show started) in their heads. They use these two opposite times to keep the show on-schedule.</item>
+        <item type="text">A producer's best friend is their timer. For years, we used an analog clock face to tell time. The producer would read the time off the clock face in the form of "back time" (the amount of time remaining in the show), and then make a quick mental calculation of the "show time" (the amount of time since the show started). They use these two opposite times to keep the show on-schedule.</item>
         <item type="image">WDFAtimer/200</item>
-        <item type="text">Despite being ingrained in the heads of most of us, the ability to read a clock face is in fact a learned skill. In today's fast paced digtal age, more and more kids make it through life relying only on their iPhone instead of using analog clocks. This skill gap adds an extra abstraction over calculating show time and back time, making it very easy to lose track. A lost producer is bad for everybody.</item>
-        <item type="text">With one too many trainwrecks caused by producing errors, I looked to provide a solution. In the industry, they use synchronized clocks to keep track of show time and back time digitally. Unfortunately, anything "industry" is a bit out of the budget of a high school these days.</item>
+        <item type="text">In the flurry of quick decisions a producer must make, it is easy to lose track of time. After one too many trainwrecks caused by producing errors, I looked to provide a solution. In the industry, they use synchronized clocks to keep track of definitive show time and back time digitally. Unfortunately, anything "industry" is a bit out of the budget of a high school these days.</item>
         <item type="image">producerBuddyDuke/250</item>
-        <item type="text">Faced with a $0 budget, I dug a 2001 iMac G3 out of storage. It was very old, very slow, and had a cracked screen, but it was good enough to display a few clocks. I created "Producer Buddy" in Java, and was able to make it compatible with the ancient version of OS X running on the iMac. (If only the Swift runtime ran on Power PC, am I right?)</item>
+        <item type="text">Faced with a $0 budget, I dug a 2001 iMac G3 out of storage. It was very old, very slow, and had a cracked screen, but it was good enough to display a few timers. I created "Producer Buddy" in Java, and was able to make it compatible with the ancient version of OS X running on the iMac. (If only the Swift runtime ran on Power PC, am I right?)</item>
         <item type="image">producerBuddyLisa/290</item>
         <item type="text">As a bonus, I wired the iMac up to our network, found an old screen sharing program, and mirrored the clocks into our studio (which is across the hall from where the producer and director work). For the first time, people in both rooms could be in the loop on the show's running time, and the show was running smoother than ever. Producer Buddy gets used almost every day, and now it's just part of our workflow.</item>
     </page>
@@ -71,8 +71,10 @@
         <item type="video">~MRI</item>
         <item type="text">I have participated in two research projects with professors in the Physics department at Georgia Regents University.</item>
         <item type="text">In 2013/2014, I worked with Dr. Trinanjan Datta on a project to simulate Site Percolation in different classes of lattices. I created a simulation platform in Java and presented my research at the 2014 Georgia Academy of Sciences meeting alongside Undergraduate research students from across the state despite only being a Junior in High School.</item>
-        <item type="image">talk2014/200</item>
+        <item type="image">dattaGroup/200</item>
         <item type="text">In 2014/2015, I worked with Dr. Andy Hauger and Dr. Nathan Yanasak on a project to analyze the motion of children inside of an MRI simulation using the Raspberry Pi. I developed this application in Python and presented my research at the 2015 Georgia Academy of Sciences meeting. This time, I won the award for Outstanding Oral Presentation. We are currently working on upgrading the MRI simulation system and hope to deploy it to testing labs in the coming months.</item>
+        <item type="image">talk2014/200</item>
+        <item type="text">A longer cut of the video at the top of this page was submitted to the 2015 "Dream it. Code it. Win it." contest by the MIT Club of New York. Right before I submitted this app, I got news that I was selected as a winner of that competition.</item>
     </page>
     
     <page title="Swift" date="June 2, 2014" icon="swift">
