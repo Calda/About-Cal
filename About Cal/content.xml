@@ -45,7 +45,7 @@
         <item type="text">Despite being ingrained in the heads of most of us, the ability to read a clock face is in fact a learned skill. In today's fast paced digtal age, more and more kids make it through life relying only on their iPhone instead of using analog clocks. This skill gap adds an extra abstraction over calculating show time and back time, making it very easy to lose track. A lost producer is bad for everybody.</item>
         <item type="text">With one too many trainwrecks caused by producing errors, I looked to provide a solution. In the industry, they use synchronized clocks to keep track of show time and back time digitally. Unfortunately, anything "industry" is a bit out of the budget of a high school these days.</item>
         <item type="image">producerBuddyDuke/250</item>
-        <item type="text">Faced with a $0 budget, I dug a 2001 iMac G3 out of storage. It was very old, very slow, and had a cracked screen, but it was good enough to display a few clocks. I created "Producer Buddy" in Java, and was able to make it compatible with the ancient version of OS X running on the iMac. (If only the Swift runtime ran on Power PC, am I right?)</item>
+        <item type="text">Faced with a $0 budget, I dug a 2001 iMac G4 out of storage. It was very old, very slow, and had a cracked screen, but it was good enough to display a few clocks. I created "Producer Buddy" in Java, and was able to make it compatible with the ancient version of OS X running on the iMac. (If only the Swift runtime ran on Power PC, am I right?)</item>
         <item type="image">producerBuddyLisa/290</item>
         <item type="text">As a bonus, I wired the iMac up to our network, found an old screen sharing program, and mirrored the clocks into our studio (which is across the hall from where the producer and director work). For the first time, people in both rooms could be in the loop on the show's running time, and the show was running smoother than ever. Producer Buddy gets used almost every day, and now it's just part of our workflow.</item>
     </page>
@@ -81,9 +81,9 @@
         <item type="text">Truth is, Objective-C was the reason I hadn't started making iOS apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
     </page>
     
-    <page title="Mission: App" date="October 2014" icon="appStore">
+    <page title="Mission: App Store" date="October 2014" icon="appStore">
         <item type="app">inflation</item>
-        <item type="text">Armed with a powerful new language and itching to get some real experience, I started hacking away with Xcode. (or at least trying to..) Everyone's first app should be simple, so I looked to Inflation Calculator for my first attempt. </item>
+        <item type="text">Armed with a powerful new language and itching to get some real experience, I started hacking away with Xcode. Everyone's first app should be simple, so I looked to Inflation Calculator for my first attempt. </item>
         <item type="text">It's not particularly complicated, but complexity was not my goal. Inflation Calculator helped teach me basic strategies and best practices for making apps. The lessons it taught me have paved the way to much greater things.</item>
         <item type="image">watch/300</item>
         <item type="text">Inflation Calculator is published on the App Store with over 3,000 downloads. It even has a WatchKit app, if I ever decide to publish the update.</item>
