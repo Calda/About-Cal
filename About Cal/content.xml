@@ -78,8 +78,9 @@
     </page>
     
     <page title="Swift" date="June 2, 2014" icon="swift">
-        <item type="text">I was watching the WWDC 2014 Keynote live stream. I was shocked to see Apple loosen up to 3rd Party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor. With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate, who didn't understand what I was so excited about.  (He will be very jealous of me if I get to go to WWDC. We love Craig.)</item>
+        <item type="text">I was watching the WWDC 2014 Keynote live stream. I was shocked to see Apple loosen up to third-party extensions with iOS 8 and I was in love with the new look in OS X Yosemite. But then my jaw hit the floor.</item>
         <item type="image">craig/200</item>
+        <item type="text">With absolutely no warning, Craig Federighi threw the developer world into a frenzy by unveiling Swift. I was watching the keynote with my friend Nate, who didn't understand what I was so excited about.  (He will be very jealous of me if I get to go to WWDC. We love Craig.)</item>
         <item type="text">Truth is, Objective-C was the reason I hadn't started making iOS apps yet. I hated Objective-C. It was so foreign to me, especially the weird [ ] messaging syntax. But Swift... Swift was new, modern, and sleek. I read the language guide and fell in love with it overnight. Swift has been my language of choice ever since.</item>
     </page>
     
