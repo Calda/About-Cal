@@ -17,7 +17,7 @@ class TitleCell : ModuleCell {
     }
     
     func displayWithTitle(title: String, date: String?) {
-        let titleAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 42.0)!]
+        let titleAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 40.0)!]
         let attributedTitle = NSMutableAttributedString(string: title, attributes: titleAttributes)
         
         var newLabelText = attributedTitle

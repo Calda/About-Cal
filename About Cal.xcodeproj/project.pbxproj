@@ -28,6 +28,8 @@
 		2E6EBE441AE5AA6800CFFC87 /* square2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE431AE5AA6800CFFC87 /* square2.png */; };
 		2E6EBE461AE5AD2800CFFC87 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE451AE5AD2800CFFC87 /* watch.png */; };
 		2E6EBE4A1AE5D10800CFFC87 /* launchScreenGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EBE491AE5D10800CFFC87 /* launchScreenGradient.png */; };
+		2E8D0FC41AE98D9A00B93A0C /* inflationInStore.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D0FC31AE98D9A00B93A0C /* inflationInStore.png */; };
+		2E8D0FC61AE99C2E00B93A0C /* cal2011.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D0FC51AE99C2E00B93A0C /* cal2011.png */; };
 		2E9721BE1ADDFB2000F9399E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */; };
 		2E9721C01ADDFB2000F9399E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9721BF1ADDFB2000F9399E /* ViewController.swift */; };
 		2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9721C11ADDFB2000F9399E /* Main.storyboard */; };
@@ -126,6 +128,8 @@
 		2E6EBE431AE5AA6800CFFC87 /* square2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square2.png; sourceTree = "<group>"; };
 		2E6EBE451AE5AD2800CFFC87 /* watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watch.png; sourceTree = "<group>"; };
 		2E6EBE491AE5D10800CFFC87 /* launchScreenGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenGradient.png; sourceTree = "<group>"; };
+		2E8D0FC31AE98D9A00B93A0C /* inflationInStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inflationInStore.png; sourceTree = "<group>"; };
+		2E8D0FC51AE99C2E00B93A0C /* cal2011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal2011.png; sourceTree = "<group>"; };
 		2E9721B81ADDFB2000F9399E /* About Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9721BC1ADDFB2000F9399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9721BD1ADDFB2000F9399E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 		2ED9FAF01AE3033D007BBDE8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2E8D0FC51AE99C2E00B93A0C /* cal2011.png */,
+				2E8D0FC31AE98D9A00B93A0C /* inflationInStore.png */,
 				440144EF1AE96525004AF5E4 /* bottle.png */,
 				4463BF141AE9340B004CC5C2 /* dattaGroup.png */,
 				2ED171721AE6F8F2009E08B4 /* squareifyIcon.png */,
@@ -480,11 +486,13 @@
 				2E6EBE351AE59F5500CFFC87 /* about splash.png in Resources */,
 				2ED9FAF41AE3033D007BBDE8 /* cal icon.png in Resources */,
 				2EF276DC1AE5FA5600D36168 /* signatureRight.png in Resources */,
+				2E8D0FC41AE98D9A00B93A0C /* inflationInStore.png in Resources */,
 				2ED9FB051AE33919007BBDE8 /* hello world.png in Resources */,
 				2EDA5B8F1AE36200007B1AE7 /* playButtonWhite.png in Resources */,
 				2EF276DA1AE5F1F600D36168 /* squareifyExport-frame1.png in Resources */,
 				2E9721C31ADDFB2000F9399E /* Main.storyboard in Resources */,
 				44B718081AE7C8F2008185A4 /* WDFAstill.png in Resources */,
+				2E8D0FC61AE99C2E00B93A0C /* cal2011.png in Resources */,
 				2EDA5B9B1AE38C5E007B1AE7 /* hearATale.png in Resources */,
 				4463BF151AE9340B004CC5C2 /* dattaGroup.png in Resources */,
 				2EDA5B9F1AE390F0007B1AE7 /* children.png in Resources */,

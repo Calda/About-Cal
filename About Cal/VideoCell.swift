@@ -32,6 +32,7 @@ class VideoCell : ModuleCell {
         super.init(coder: aDecoder)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "videoToggeNotificationRecieved:", name: VIDEO_PLAY_TOGGLE_NOTIFICATION, object: nil)
          NSNotificationCenter.defaultCenter().addObserver(self, selector: "pauseAllNotificationRecieved", name: PAUSE_ALL_NOTIFICATION, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "videoEnded:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
     }
     
     override func displayWithData(data: String) {
@@ -112,6 +113,7 @@ class VideoCell : ModuleCell {
                     player!.seekToTime(kCMTimeZero, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
                     player!.play()
                     playing = true
+                    playButton.hidden = true
                     return
                 }
             }
@@ -128,6 +130,22 @@ class VideoCell : ModuleCell {
         player?.pause()
         playButton.hidden = false
         playing = false
+    }
+    
+    func videoEnded(notification: NSNotification) {
+
+        if let playerItem = notification.object as? AVPlayerItem {
+            let endedVideo = (playerItem.asset as! AVURLAsset).URL.path
+            
+            if let thisAsset = self.player?.currentItem.asset as? AVURLAsset {
+                if thisAsset.URL.path == endedVideo {
+                    playing = false
+                    playButton.hidden = false
+                }
+            }
+            
+        }
+        
     }
     
 }

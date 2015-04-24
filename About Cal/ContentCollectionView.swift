@@ -10,9 +10,6 @@ import UIKit
 import WebKit
 import CoreGraphics
 
-let CONTENT_COLLECTION_SCROLL_START = "CONTENT_COLLECTION_SCROLL_START"
-let CONTENT_COLLECTION_SCROLL_END = "CONTENT_COLLECTION_SCROLL_END"
-
 class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WKNavigationDelegate, UIScrollViewDelegate {
     
     var iconCollection : UICollectionView?
@@ -120,11 +117,8 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
     
     // MARK: - scroll view
     
-    override func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
-        NSNotificationCenter.defaultCenter().postNotificationName(CONTENT_COLLECTION_SCROLL_START, object: nil)
-    }
-    
     override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        NSNotificationCenter.defaultCenter().postNotificationName(CONTENT_COLLECTION_SCROLL_END, object: nil)
+        let layout = self.collectionView!.collectionViewLayout as! CellPagingLayout
+        layout.enabled = true
     }
 }
