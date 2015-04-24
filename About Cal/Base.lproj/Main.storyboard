@@ -169,7 +169,7 @@
         <scene sceneID="18K-cy-OfE">
             <objects>
                 <collectionViewController id="gsH-Fg-LNo" customClass="ContentCollectionView" customModule="About_Cal" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DrK-9B-3da">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="DrK-9B-3da">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

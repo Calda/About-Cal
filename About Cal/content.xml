@@ -95,7 +95,7 @@
     <page title="Orbit" date="November 2014" icon="orbit">
         <item type="app">orbit</item>
         <item type="text">  For my first iOS game, I wanted to try something novel instead of emulating another game like I did with Calaga and Molio. I love outer space and I'm fascinated by the intricacies of orbital motion, so I explored this in Orbit.</item>
-        <item type="text">The physics behind orbital mechanics is straightforward, but designing a game based on it is not. The most difficult design challenge is constructing it in such a way to fit the "flappy bird" genre of game that's so popular today. I came up with a few ideas, but I moved on to other projects before I got a chance to try and implement them. I still hope to release Orbit eventually, though.</item>
+        <item type="text">The physics behind orbital mechanics is straightforward, but designing a game based on it is not. The most difficult design challenge is constructing it in such a way to fit the fast-paced arcade game genre that's so popular today (think Flappy Bird). I came up with a few ideas, but I moved on to other projects before I got a chance to try and implement them. I still hope to release Orbit eventually, though.</item>
         <item type="text">Fun fact: I also made a version of Orbit in Java back in 2013 as an example for a game engine I was working on. Nothing too fruitful came from the engine, but it did spawn one of my favorite bugs in all of my development history:</item>
         <item type="video4">orbitJava</item>
         <item type="text">I think that one had something to do with a misplaced sign in the function that calculated the acceleration vector. I fixed it eventually...</item>
