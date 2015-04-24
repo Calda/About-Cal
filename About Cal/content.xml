@@ -31,7 +31,7 @@
     </page>
     
     <page title="Unity Games" date="Summer 2012" icon="unity-logo">
-        <item type="text">During the summer after I was in 9th grade, I went to a summer camp (Duke TIP) and participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and got my first experience with standalone applications. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
+        <item type="text">During the summer after I was in 9th grade, I went to the Duke TIP summer camp and participated in the "Team Video Game Programming" class. I learned how to use the Unity Game Engine and got my first experience with standalone applications. I already had experience with Java, so it wasn't difficult to hit the ground running. </item>
         <item type="video3">~calaga</item>
         <item type="text">Calaga, a space shooter game. (The name is a portmanteau of Cal and Galaga. Really original, I know.) It's not particularly fun or challenging, but it somehow became a class gag to see who could get the highest score.</item>
         <item type="video2">~molio</item>
@@ -47,7 +47,7 @@
         <item type="image">producerBuddyDuke/250</item>
         <item type="text">Faced with a $0 budget, I dug a 2001 iMac G4 out of storage. It was very old, very slow, and had a cracked screen, but it was good enough to display a few timers. I created "Producer Buddy" in Java, and was able to make it compatible with the ancient version of OS X running on the iMac. (If only the Swift runtime ran on Power PC, am I right?)</item>
         <item type="image">producerBuddyLisa/290</item>
-        <item type="text">As a bonus, I wired the iMac up to our network, found an old screen sharing program, and mirrored the clocks into our studio (which is across the hall from where the producer and director work). For the first time, people in both rooms could be in the loop on the show's running time, and the show was running smoother than ever. Producer Buddy gets used almost every day, and now it's just part of our workflow.</item>
+        <item type="text">As a bonus, I wired the iMac up to our network, found an old screen sharing program, and mirrored the clocks into our studio (which is across the hall from where the producer and director work). For the first time, people in both rooms could be in the loop on the show's running time, and the show was running smoother than ever. Producer Buddy gets used every day, and now it's just part of our workflow.</item>
     </page>
     
     <page title="Automation Nation" date="2014" icon="automator">
@@ -74,7 +74,7 @@
         <item type="image">dattaGroup/200</item>
         <item type="text">In 2014/2015, I worked with Dr. Andy Hauger and Dr. Nathan Yanasak on a project to analyze the motion of children inside of an MRI simulation using the Raspberry Pi. I developed this application in Python and presented my research at the 2015 Georgia Academy of Sciences meeting. This time, I won the award for Outstanding Oral Presentation. We are currently working on upgrading the MRI simulation system and hope to deploy it to testing labs in the coming months.</item>
         <item type="image">talk2014/200</item>
-        <item type="text">A longer cut of the video at the top of this page was submitted to the 2015 "Dream it. Code it. Win it." contest by the MIT Club of New York. Right before I submitted this app, I got news that I was selected as a winner of that competition.</item>
+        <item type="text">A longer cut of the video at the top of this page was submitted to the 2015 "Dream it. Code it. Win it." contest by the MIT Club of New York. Just before I submitted this app, I got news that I was selected as a winner of that competition.</item>
     </page>
     
     <page title="Swift" date="June 2, 2014" icon="swift">
@@ -87,8 +87,8 @@
         <item type="app">inflation</item>
         <item type="text">Armed with a powerful new language and itching to get some real experience, I started hacking away with Xcode. Everyone's first app should be simple, so I looked to Inflation Calculator for my first attempt. </item>
         <item type="text">It's not particularly complicated, but complexity was not my goal. Inflation Calculator helped teach me basic strategies and best practices for making apps. The lessons it taught me have paved the way to much greater things.</item>
-        <item type="text">Inflation Calculator is published on the App Store with over 3,000 downloads. It even has a WatchKit app, if I ever decide to publish the update.</item>
         <item type="image">inflationInStore/150</item>
+        <item type="text">Inflation Calculator is published on the App Store with over 3,000 downloads. It even has a WatchKit app, if I ever decide to publish the update.</item>
         <item type="image">watch/300</item>
     </page>
     
