@@ -58,9 +58,9 @@ enum ModuleType{
         }
         
         if self == .Image {
-            let splits = split(data){ $0 == "/" }
+            let splits = data.characters.split{ $0 == "/" }.map { String($0) }
             if splits.count != 2 { return 0 }
-            return CGFloat(splits[1].toInt()!)
+            return CGFloat(Int(splits[1])!)
         }
         
         if self == .Video {

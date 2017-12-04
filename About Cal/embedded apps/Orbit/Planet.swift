@@ -50,7 +50,7 @@ class Planet : SKShapeNode{
         let distance = CGVectorMake(other.position.x - self.position.x, other.position.y - self.position.y)
         let distanceSquared = distance.dx * distance.dx + distance.dy * distance.dy
         if (distanceSquared < pow(self.radius * 1.1, 2) || distanceSquared < pow(self.radius * 1.1, 2)) {
-            println("collision \(rand())")
+            print("collision \(rand())")
             return
         }
         let acceleration = distance / (abs(distance.dx) + abs(distance.dy))
@@ -62,7 +62,7 @@ class Planet : SKShapeNode{
     }
     
     func dumpStats(){
-        println("Planet: radius=\(radius)  mass=\(mass)  location=\(position)")
+        print("Planet: radius=\(radius)  mass=\(mass)  location=\(position)")
     }
     
 }

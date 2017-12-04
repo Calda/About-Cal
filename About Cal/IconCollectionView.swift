@@ -10,7 +10,7 @@ import UIKit
 
 let CONNECT_STATUS_BAR_VIEW = "CONNECT_STATUS_BAR_VIEW"
 
-class IconCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class IconCollectionView : UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var colors: [UIColor] = []
     var viewIsReady = false

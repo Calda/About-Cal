@@ -17,7 +17,7 @@ class ImageCell : ModuleCell {
     }
     
     override func displayWithData(data: String) {
-        let splits = split(data){ $0 == "/" }
+        let splits = data.characters.split{ $0 == "/" }.map { String($0) }
         
         image.image = UIImage(named: splits[0])
     }

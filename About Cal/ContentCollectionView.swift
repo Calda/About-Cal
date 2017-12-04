@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import CoreGraphics
 
-class ContentCollectionView : UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WKNavigationDelegate, UIScrollViewDelegate {
+class ContentCollectionView : UICollectionViewController, WKNavigationDelegate , UICollectionViewDelegateFlowLayout {
     
     var iconCollection : UICollectionView?
     var parsedPages : [PageData] = []
@@ -60,7 +60,7 @@ class ContentCollectionView : UICollectionViewController, UICollectionViewDataSo
             }
             else if name == "inflation" {
                 let storyboard = UIStoryboard(name: "Inflation", bundle: NSBundle.mainBundle())
-                let inflationController = storyboard.instantiateViewControllerWithIdentifier("Inflation") as! UIViewController
+                let inflationController = storyboard.instantiateViewControllerWithIdentifier("Inflation") 
                presentWithNavigation(inflationController, title: nil)
             }
         }

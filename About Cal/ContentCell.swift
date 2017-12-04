@@ -37,7 +37,7 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
             }
             
             let index = indexPath.item - 1
-            var type = pageData.modules[index].type
+            let type = pageData.modules[index].type
             
             let module = collectionView.dequeueReusableCellWithReuseIdentifier(type, forIndexPath: indexPath) as? ModuleCell
             if let module = module {
@@ -45,7 +45,7 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
                 return module
             }
         }
-        return collectionView.dequeueReusableCellWithReuseIdentifier("blank", forIndexPath: indexPath) as! UICollectionViewCell
+        return collectionView.dequeueReusableCellWithReuseIdentifier("blank", forIndexPath: indexPath) 
     }
     
     

@@ -24,7 +24,7 @@ class ContentParser : NSObject, NSXMLParserDelegate {
     }
     
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         if elementName == "page" { //is a new page
             //save the previousPage if it exists
@@ -38,29 +38,29 @@ class ContentParser : NSObject, NSXMLParserDelegate {
             }
             
             //get the data for this page
-            let title = attributeDict["title"] as! String
-            let icon = attributeDict["icon"] as! String
-            let date = attributeDict["date"] as? String
+            let title = attributeDict["title"]!
+            let icon = attributeDict["icon"]!
+            let date = attributeDict["date"]
             
             activePage = PageData(title: title, iconName: icon, date: date)
         }
         
         if elementName == "item" { //is item module
-            activeModuleType = attributeDict["type"] as? String
+            activeModuleType = attributeDict["type"]
         }
         
     }
     
     
-    func parser(parser: NSXMLParser, foundCharacters string: String?) {
-        if let string = string {
+    func parser(parser: NSXMLParser, foundCharacters string: String) {
+        //if let string = string {
             if string.hasPrefix("\n") { return }
             if let module = activeModuleType {
                 activePage?.modules.append(type: module, data: string)
                 activeModuleType = nil
             }
             
-        }
+        //}
     }
     
 }

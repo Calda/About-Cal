@@ -25,7 +25,7 @@ extension CGPoint{
     
 }
 
-extension CGVector : Printable {
+extension CGVector : CustomStringConvertible {
 
     public var description: String {
         return "(\(dx), \(dy))"

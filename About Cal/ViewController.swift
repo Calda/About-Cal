@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var panningOnIcons = false
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         let parser = ContentParser()
         parsedPages = parser.pages
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         iconContainer.frame.origin = iconStart
         contentContainer.frame.origin = contentStart
         
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: nil, animations: {
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: [], animations: {
             self.iconContainer.frame.origin = iconEnd
             self.contentContainer.frame.origin = contentEnd
         }, completion: nil)

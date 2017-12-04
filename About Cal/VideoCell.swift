@@ -28,7 +28,7 @@ class VideoCell : ModuleCell {
         return .Video
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "videoToggeNotificationRecieved:", name: VIDEO_PLAY_TOGGLE_NOTIFICATION, object: nil)
          NSNotificationCenter.defaultCenter().addObserver(self, selector: "pauseAllNotificationRecieved", name: PAUSE_ALL_NOTIFICATION, object: nil)
@@ -52,12 +52,12 @@ class VideoCell : ModuleCell {
         player?.pause()
         
         let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mov")!
-        let url = NSURL(fileURLWithPath: path)!
+        let url = NSURL(fileURLWithPath: path)
         firstFrame.image = UIImage(named: "\(videoName)-frame1")!
         firstFrame.hidden = false
         
         dispatch_async(BACKGROUND_QUEUE, {
-            for subview in self.videoContainer.subviews as! [UIView] {
+            for subview in self.videoContainer.subviews {
                 subview.removeFromSuperview()
             }
             let playerController = AVPlayerViewController()
@@ -94,7 +94,10 @@ class VideoCell : ModuleCell {
             
             
             playerController.player = AVPlayer(URL: url)
-            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
             self.player = playerController.player
             dispatch_sync(dispatch_get_main_queue(), {
                 self.videoContainer.addSubview(playerController.view)
@@ -107,7 +110,7 @@ class VideoCell : ModuleCell {
         if self.currentData == notification.object as? String {
             
             //restart if video is over
-            if let length = player?.currentItem.duration {
+            if let length = player?.currentItem?.duration {
                 let currentTime = player!.currentTime()
                 if CMTimeGetSeconds(length) == CMTimeGetSeconds(currentTime) {
                     player!.seekToTime(kCMTimeZero, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
@@ -137,7 +140,7 @@ class VideoCell : ModuleCell {
         if let playerItem = notification.object as? AVPlayerItem {
             let endedVideo = (playerItem.asset as! AVURLAsset).URL.path
             
-            if let thisAsset = self.player?.currentItem.asset as? AVURLAsset {
+            if let thisAsset = self.player?.currentItem?.asset as? AVURLAsset {
                 if thisAsset.URL.path == endedVideo {
                     playing = false
                     playButton.hidden = false

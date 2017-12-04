@@ -20,7 +20,7 @@ class TitleCell : ModuleCell {
         let titleAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 40.0)!]
         let attributedTitle = NSMutableAttributedString(string: title, attributes: titleAttributes)
         
-        var newLabelText = attributedTitle
+        let newLabelText = attributedTitle
         
         if let date = date { //has date
             let dateAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 25.0)!]

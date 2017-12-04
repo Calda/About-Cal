@@ -151,7 +151,7 @@
         }
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if !gameOverLabel.hidden {
             for node in self.children{
                 if node is Planet {
@@ -169,24 +169,24 @@
                 touchTracker = TouchTracker()
             }
             for touch in touches{
-                let position = (touch as! UITouch).previousLocationInNode(self)
+                let position = (touch ).previousLocationInNode(self)
                 touchTracker?.startTracking(position)
             }
         }
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches{
-            let position = (touch as! UITouch).previousLocationInNode(self)
+            let position = (touch ).previousLocationInNode(self)
             touchTracker?.didMove(position)
         }
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches{
-            let position = (touch as! UITouch).previousLocationInNode(self)
+            let position = (touch ).previousLocationInNode(self)
             if touchTracker != nil{
-                if var planet = touchTracker!.stopTracking(position) {
+                if let planet = touchTracker!.stopTracking(position) {
                     addChild(planet)
                     planetCount++
                 }
@@ -210,7 +210,7 @@
     }
     
     func stopTracking(touch: CGPoint) -> Planet?{
-        if var planet = getAssociatedPlanet(touch) {
+        if let planet = getAssociatedPlanet(touch) {
             planet.velocityVector = (planet.position.asVector() - touch.asVector()) / -40
             touches.removeValueForKey(planet)
             return planet
@@ -219,7 +219,7 @@
     }
     
     func didMove(touch: CGPoint){
-        if var planet = getAssociatedPlanet(touch) {
+        if let planet = getAssociatedPlanet(touch) {
             touches.updateValue(touch, forKey: planet)
         }
     }
@@ -227,7 +227,7 @@
     func getAssociatedPlanet(touch : CGPoint) -> Planet?{
         var closest : (distance: CGFloat, planet: Planet?, touch: CGPoint?) = (CGFloat.max, nil, nil)
         for (planet, candidate) in touches{
-            var distanceSquared = touch.distanceSquaredTo(candidate)
+            let distanceSquared = touch.distanceSquaredTo(candidate)
             if(closest.distance > distanceSquared){
                 closest = (distanceSquared, planet, candidate)
             }
@@ -241,6 +241,12 @@
     return SKColor(hue: random(min: 0.15, max: 1.0), saturation: random(min: 0.8, max: 1.0), brightness: random(min: 0.5, max: 0.8), alpha: 1.0)
  }
  
- func random(#min: CGFloat, #max: CGFloat) -> CGFloat {
+ func random(min min: CGFloat, max: CGFloat) -> CGFloat {
     return CGFloat(Float(arc4random()) / 0xFFFFFFFF) * (max - min) + min
  }
+ 
+ 
+ 
+ 
+ 
+ 
