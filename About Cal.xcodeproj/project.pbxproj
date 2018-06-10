@@ -214,9 +214,9 @@
 		2E9721AF1ADDFB2000F9399E = {
 			isa = PBXGroup;
 			children = (
+				2E9721BA1ADDFB2000F9399E /* About Cal */,
 				2ED9FB181AE35448007BBDE8 /* AVFoundation.framework */,
 				2ED9FB141AE350A3007BBDE8 /* AVKit.framework */,
-				2E9721BA1ADDFB2000F9399E /* About Cal */,
 				2E9721B91ADDFB2000F9399E /* Products */,
 			);
 			sourceTree = "<group>";
