@@ -12,7 +12,7 @@ import SpriteKit
 class Planet : SKShapeNode{
     
     let GRAVITATIONAL_CONSTANT : CGFloat = 0.0000325
-    var physicsMode : PlanetPhysicsMode = PlanetPhysicsMode.None
+    var physicsMode : PlanetPhysicsMode = PlanetPhysicsMode.none
     var deservesUpdate : Bool = true
     var radius : CGFloat = 0
     var mass : CGFloat {
@@ -25,10 +25,10 @@ class Planet : SKShapeNode{
             return mass / radius
         }
     }
-    var velocityVector = CGVectorMake(0, 0)
+    var velocityVector = CGVector(dx: 0, dy: 0)
     
     convenience init(radius: CGFloat, color: SKColor, position: CGPoint, physicsMode: PlanetPhysicsMode){
-        self.init()
+//        self.init()
         self.init(circleOfRadius: radius)
         self.physicsMode = physicsMode
         self.zPosition = CGFloat(physicsMode.rawValue)
@@ -38,19 +38,19 @@ class Planet : SKShapeNode{
         self.strokeColor = color
         self.position = position
         self.physicsBody = SKPhysicsBody(circleOfRadius: radius)
-        self.physicsBody?.dynamic = true
+        self.physicsBody?.isDynamic = true
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.contactTestBitMask = 1 | 2 | 3 | 4
         self.physicsBody?.collisionBitMask = 0
         self.physicsBody?.categoryBitMask = physicsMode.rawValue
     }
     
-    func applyForcesOf(other: Planet){
+    func applyForcesOf(_ other: Planet){
         if physicsMode.stationary { return }
-        let distance = CGVectorMake(other.position.x - self.position.x, other.position.y - self.position.y)
+        let distance = CGVector(dx: other.position.x - self.position.x, dy: other.position.y - self.position.y)
         let distanceSquared = distance.dx * distance.dx + distance.dy * distance.dy
         if (distanceSquared < pow(self.radius * 1.1, 2) || distanceSquared < pow(self.radius * 1.1, 2)) {
-            print("collision \(rand())")
+            print("collision \(arc4random())")
             return
         }
         let acceleration = distance / (abs(distance.dx) + abs(distance.dy))
@@ -58,7 +58,7 @@ class Planet : SKShapeNode{
     }
     
     func updatePosition(){
-        self.position = CGPointMake(self.position.x + velocityVector.dx, self.position.y + velocityVector.dy)
+        self.position = CGPoint(x: self.position.x + velocityVector.dx, y: self.position.y + velocityVector.dy)
     }
     
     func dumpStats(){
@@ -68,7 +68,7 @@ class Planet : SKShapeNode{
 }
 
 enum PlanetPhysicsMode : UInt32{
-    case None = 0, Player, PlayerStationary, Scene, SceneStationary
+    case none = 0, player, playerStationary, scene, sceneStationary
     
     var affactedByPlayer : Bool{
         get{

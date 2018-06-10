@@ -11,16 +11,16 @@ import SpriteKit
 
 extension CGPoint{
     
-    func distanceSquaredTo(other: CGPoint) -> CGFloat{
+    func distanceSquaredTo(_ other: CGPoint) -> CGFloat{
         return abs(pow(self.x - other.x, 2) + pow(self.y - other.y, 2))
     }
     
-    func distanceTo(other: CGPoint) -> CGFloat{
+    func distanceTo(_ other: CGPoint) -> CGFloat{
         return sqrt(distanceSquaredTo(other))
     }
     
     func asVector() -> CGVector{
-        return CGVectorMake(x, y)
+        return CGVector(dx: x, dy: y)
     }
     
 }
@@ -33,25 +33,25 @@ extension CGVector : CustomStringConvertible {
 }
 
 func + (left: CGVector, right: CGVector) -> CGVector{
-    return CGVectorMake(left.dx + right.dx, left.dy + right.dy)
+    return CGVector(dx: left.dx + right.dx, dy: left.dy + right.dy)
 }
 
 func - (left: CGVector, right: CGVector) -> CGVector{
-    return CGVectorMake(left.dx - right.dx, left.dy - right.dy)
+    return CGVector(dx: left.dx - right.dx, dy: left.dy - right.dy)
 }
 
 func * (left: CGVector, right: CGVector) -> CGVector{
-    return CGVectorMake(left.dx * right.dx, left.dy * right.dy)
+    return CGVector(dx: left.dx * right.dx, dy: left.dy * right.dy)
 }
 
 func / (left: CGVector, right: CGVector) -> CGVector{
-    return CGVectorMake(left.dx / right.dx, left.dy / right.dy)
+    return CGVector(dx: left.dx / right.dx, dy: left.dy / right.dy)
 }
 
 func * (left: CGVector, right: CGFloat) -> CGVector{
-    return CGVectorMake(left.dx * right, left.dy * right)
+    return CGVector(dx: left.dx * right, dy: left.dy * right)
 }
 
 func / (left: CGVector, right: CGFloat) -> CGVector{
-    return CGVectorMake(left.dx / right, left.dy / right)
+    return CGVector(dx: left.dx / right, dy: left.dy / right)
 }

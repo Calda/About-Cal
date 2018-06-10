@@ -8,12 +8,12 @@
 
 import UIKit
 
-func totalCollectionWidth(collection: UICollectionView) -> CGFloat {
-    let count = collection.numberOfItemsInSection(0)
+func totalCollectionWidth(_ collection: UICollectionView) -> CGFloat {
+    let count = collection.numberOfItems(inSection: 0)
     let delegate = collection.delegate! as! UICollectionViewDelegateFlowLayout
-    let zeroPath = NSIndexPath(forItem: 0, inSection: 0)
-    let width = delegate.collectionView!(collection, layout: collection.collectionViewLayout, sizeForItemAtIndexPath: zeroPath).width
-    let spacing = delegate.collectionView?(collection, layout: collection.collectionViewLayout, minimumLineSpacingForSectionAtIndex: 0)
+    let zeroPath = IndexPath(item: 0, section: 0)
+    let width = delegate.collectionView!(collection, layout: collection.collectionViewLayout, sizeForItemAt: zeroPath).width
+    let spacing = delegate.collectionView?(collection, layout: collection.collectionViewLayout, minimumLineSpacingForSectionAt: 0)
     
     var totalWidth = CGFloat(count) * width
     if let spacing = spacing {
@@ -23,7 +23,7 @@ func totalCollectionWidth(collection: UICollectionView) -> CGFloat {
 }
 
 
-func delay(delay:Double, closure:()->()) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
-    dispatch_after(time, dispatch_get_main_queue(), closure)
+func delay(_ delay:Double, closure:@escaping ()->()) {
+    let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+    DispatchQueue.main.asyncAfter(deadline: time, execute: closure)
 }
