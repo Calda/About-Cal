@@ -8,23 +8,23 @@
 
 import UIKit
 
-class ContentParser : NSObject, NSXMLParserDelegate {
+class ContentParser : NSObject, XMLParserDelegate {
     
     var pages : [PageData] = []
     var activePage : PageData?
     var activeModuleType : String?
     
     override init() {
-        let path = NSBundle.mainBundle().pathForResource("content", ofType: "xml")!
-        let data = NSData(contentsOfFile: path)
-        let xmlParser = NSXMLParser(data: data!)
+        let path = Bundle.main.path(forResource: "content", ofType: "xml")!
+        let data = try? Data(contentsOf: URL(fileURLWithPath: path))
+        let xmlParser = XMLParser(data: data!)
         super.init()
         xmlParser.delegate = self
         xmlParser.parse()
     }
     
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         if elementName == "page" { //is a new page
             //save the previousPage if it exists
@@ -52,11 +52,11 @@ class ContentParser : NSObject, NSXMLParserDelegate {
     }
     
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
         //if let string = string {
             if string.hasPrefix("\n") { return }
             if let module = activeModuleType {
-                activePage?.modules.append(type: module, data: string)
+                activePage?.modules.append((type: module, data: string))
                 activeModuleType = nil
             }
             
@@ -76,7 +76,7 @@ class PageData {
         self.title = title
         self.date = date
         
-        let imagePath = NSBundle.mainBundle().pathForResource(iconName, ofType: "png")!
+        let imagePath = Bundle.main.path(forResource: iconName, ofType: "png")!
         icon = UIImage(contentsOfFile: imagePath)!
     }
     

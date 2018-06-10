@@ -13,10 +13,10 @@ class TextCell : ModuleCell {
     @IBOutlet weak var content: UILabel!
     
     override func moduleType() -> ModuleType {
-        return .Text
+        return .text
     }
     
-    override func displayWithData(data: String) {
+    override func displayWithData(_ data: String) {
         let attributes = TextCell.getContentTextAttributes()
         let attributedText = NSMutableAttributedString(string: data, attributes: attributes)
         
@@ -25,7 +25,7 @@ class TextCell : ModuleCell {
     }
 
     
-    static func getContentTextAttributes() -> [String: AnyObject] {
+    static func getContentTextAttributes() -> [NSAttributedStringKey: Any] {
         
         let font = UIFont(name: "HelveticaNeue-Thin", size: 19.0)!
         
@@ -33,7 +33,7 @@ class TextCell : ModuleCell {
         style.lineSpacing = 5.0
         style.firstLineHeadIndent = 20.0
         
-        return [NSFontAttributeName : font, NSParagraphStyleAttributeName : style]
+        return [NSAttributedStringKey.font : font, NSAttributedStringKey.paragraphStyle : style]
         
     }
     

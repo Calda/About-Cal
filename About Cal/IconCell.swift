@@ -13,54 +13,54 @@ class IconCell : UICollectionViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var iconBorder: UIImageView!
     
-    func decorateCell(collectionView: UICollectionView, icon: UIImage, color: UIColor, nextColor: UIColor?, drawArrow: Bool) {
+    func decorateCell(_ collectionView: UICollectionView, icon: UIImage, color: UIColor, nextColor: UIColor?, drawArrow: Bool) {
         iconImage.image = icon
         iconImage.layer.cornerRadius = iconImage.frame.width / 2
         iconImage.clipsToBounds = true
         iconBorder.layer.cornerRadius = iconBorder.frame.width / 2
-        iconBorder.layer.borderColor = color.CGColor
+        iconBorder.layer.borderColor = color.cgColor
         iconBorder.layer.borderWidth = 2.5
         
         if let nextColor = nextColor {
             //create and draw gradient if there is a next color
             let iconFrame = self.frame
-            let iconCenter = CGPointMake(CGRectGetMidX(iconFrame), CGRectGetMidY(iconFrame))
+//            let iconCenter = CGPoint(x: iconFrame.midX, y: iconFrame.midY)
             
             let nextGradient = CAGradientLayer()
-            nextGradient.frame = CGRectMake(CGRectGetMidX(iconFrame) + iconBorder.bounds.width/2 - 2, CGRectGetMidY(iconFrame) - 1.25, 72, 2.5)
-            nextGradient.colors = [color.CGColor, nextColor.CGColor]
-            nextGradient.startPoint = CGPointMake(0.0, 0.5)
-            nextGradient.endPoint = CGPointMake(1.0, 0.5)
+            nextGradient.frame = CGRect(x: iconFrame.midX + iconBorder.bounds.width/2 - 2, y: iconFrame.midY - 1.25, width: 72, height: 2.5)
+            nextGradient.colors = [color.cgColor, nextColor.cgColor]
+            nextGradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+            nextGradient.endPoint = CGPoint(x: 1.0, y: 0.5)
             
             if drawArrow { //draw arrows
                 let arrowLegWidth = nextGradient.frame.width / 4
                 let arrowLegHeight = nextGradient.frame.height
-                let arrowLegX = CGRectGetMidX(nextGradient.frame)
-                let arrowLegY = CGRectGetMinY(nextGradient.frame)
+                let arrowLegX = nextGradient.frame.midX
+                let arrowLegY = nextGradient.frame.minY
                 let root2Over4 = CGFloat(sqrt(2)/4.0)
                 
-                let topLegTransform = CGAffineTransformMakeRotation(CGFloat(M_PI / 4.0))
-                let bottomLegTransform = CGAffineTransformMakeRotation(CGFloat(-M_PI / 4.0))
+                let topLegTransform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 4.0))
+                let bottomLegTransform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 4.0))
                 
                 let topLeg = CAGradientLayer()
-                topLeg.frame = CGRectMake(arrowLegX - 0.9, arrowLegY - arrowLegWidth*root2Over4 + 0.9, arrowLegWidth, arrowLegHeight)
+                topLeg.frame = CGRect(x: arrowLegX - 0.9, y: arrowLegY - arrowLegWidth*root2Over4 + 0.9, width: arrowLegWidth, height: arrowLegHeight)
                 topLeg.colors = nextGradient.colors
-                topLeg.startPoint = CGPointMake(0.0, 0.5)
-                topLeg.endPoint = CGPointMake(2.0, 0.5)
+                topLeg.startPoint = CGPoint(x: 0.0, y: 0.5)
+                topLeg.endPoint = CGPoint(x: 2.0, y: 0.5)
                 topLeg.setAffineTransform(topLegTransform)
                 collectionView.layer.addSublayer(topLeg)
                 
                 let bottomLeg = CAGradientLayer()
-                bottomLeg.frame = CGRectMake(arrowLegX - 0.9, arrowLegY + arrowLegWidth*root2Over4 - 0.9, arrowLegWidth, arrowLegHeight)
+                bottomLeg.frame = CGRect(x: arrowLegX - 0.9, y: arrowLegY + arrowLegWidth*root2Over4 - 0.9, width: arrowLegWidth, height: arrowLegHeight)
                 bottomLeg.colors = nextGradient.colors
-                bottomLeg.startPoint = CGPointMake(0.0, 0.5)
-                bottomLeg.endPoint = CGPointMake(2.0, 0.5)
+                bottomLeg.startPoint = CGPoint(x: 0.0, y: 0.5)
+                bottomLeg.endPoint = CGPoint(x: 2.0, y: 0.5)
                 bottomLeg.setAffineTransform(bottomLegTransform)
                 collectionView.layer.addSublayer(bottomLeg)
                 
                 //shorted gradient line
-                nextGradient.frame.size = CGSizeMake(nextGradient.frame.width * 0.69, nextGradient.frame.height)
-                nextGradient.endPoint = CGPointMake(1.45, 0.5)
+                nextGradient.frame.size = CGSize(width: nextGradient.frame.width * 0.69, height: nextGradient.frame.height)
+                nextGradient.endPoint = CGPoint(x: 1.45, y: 0.5)
             }
             
             collectionView.layer.addSublayer(nextGradient)

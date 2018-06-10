@@ -16,7 +16,7 @@ class IconCollectionView : UICollectionViewController, UICollectionViewDelegateF
     var viewIsReady = false
     var parsedPages : [PageData] = []
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView?.collectionViewLayout = CellPagingLayout(pageWidth: 170)
         self.collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
@@ -24,8 +24,8 @@ class IconCollectionView : UICollectionViewController, UICollectionViewDelegateF
         self.viewIsReady = true
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("sectionIcon", forIndexPath: indexPath) as! IconCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionIcon", for: indexPath) as! IconCell
         let color = colors[indexPath.item]
         var nextColor : UIColor?
         if indexPath.item + 1 < colors.count {
@@ -36,19 +36,19 @@ class IconCollectionView : UICollectionViewController, UICollectionViewDelegateF
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return parsedPages.count
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(100, 100)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: self.view.frame.width/2 - 50, bottom: 0, right: self.view.frame.width/2 - 50)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 70
     }
     

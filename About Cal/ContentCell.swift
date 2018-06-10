@@ -14,7 +14,7 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
     @IBOutlet weak var moduleCollection: UICollectionView!
     var pageData: PageData?
     
-    func buildContentFromPageData(data: PageData) {
+    func buildContentFromPageData(_ data: PageData) {
         self.moduleCollection.contentOffset = CGPoint(x: 0, y: 0)
         if pageData == nil || pageData!.title != data.title {
             self.pageData = data
@@ -22,16 +22,16 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
         }
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (pageData == nil ? 0 : pageData!.modules.count + 1)
     }
     
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let pageData = pageData {
             
             if indexPath.item == 0 { //title view
-                let titleModule = collectionView.dequeueReusableCellWithReuseIdentifier("title", forIndexPath: indexPath) as! TitleCell
+                let titleModule = collectionView.dequeueReusableCell(withReuseIdentifier: "title", for: indexPath) as! TitleCell
                 titleModule.displayWithTitle(pageData.title, date: pageData.date)
                 return titleModule
             }
@@ -39,17 +39,17 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
             let index = indexPath.item - 1
             let type = pageData.modules[index].type
             
-            let module = collectionView.dequeueReusableCellWithReuseIdentifier(type, forIndexPath: indexPath) as? ModuleCell
+            let module = collectionView.dequeueReusableCell(withReuseIdentifier: type, for: indexPath) as? ModuleCell
             if let module = module {
                 module.displayWithData(pageData.modules[index].data)
                 return module
             }
         }
-        return collectionView.dequeueReusableCellWithReuseIdentifier("blank", forIndexPath: indexPath) 
+        return collectionView.dequeueReusableCell(withReuseIdentifier: "blank", for: indexPath) 
     }
     
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let pageData = pageData {
             var height: CGFloat = 0
             
@@ -64,14 +64,14 @@ class ContentCell : UICollectionViewCell, UICollectionViewDelegateFlowLayout, UI
                 height = moduleType.heightForData(module.data, width: self.frame.width)
             }
             
-            return CGSizeMake(self.frame.width, height)
+            return CGSize(width: self.frame.width, height: height)
         }
         
-        return CGSizeZero
+        return CGSize.zero
         
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 10.0, right: 0)
     }
     

@@ -30,21 +30,21 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         //design icon shadow
         statusBarShadow.layer.masksToBounds = false
-        statusBarShadow.layer.shadowOffset = CGSizeMake(0, 150)
+        statusBarShadow.layer.shadowOffset = CGSize(width: 0, height: 150)
         statusBarShadow.layer.shadowRadius = 50
         statusBarShadow.layer.shadowOpacity = 0.2
-        statusBarShadow.layer.shadowColor = UIColor(hue: 0.001, saturation: 0.5, brightness: 0.7, alpha: 1.0).CGColor
+        statusBarShadow.layer.shadowColor = UIColor(hue: 0.001, saturation: 0.5, brightness: 0.7, alpha: 1.0).cgColor
         
         let iconEnd = iconContainer.frame.origin
         let contentEnd = contentContainer.frame.origin
         
-        let iconStart = CGPointMake(iconEnd.x, iconEnd.y - iconContainer.frame.height * 1.5)
-        let contentStart = CGPointMake(contentEnd.x, contentEnd.y + contentContainer.frame.height * 1.2)
+        let iconStart = CGPoint(x: iconEnd.x, y: iconEnd.y - iconContainer.frame.height * 1.5)
+        let contentStart = CGPoint(x: contentEnd.x, y: contentEnd.y + contentContainer.frame.height * 1.2)
         
         iconContainer.frame.origin = iconStart
         contentContainer.frame.origin = contentStart
         
-        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: [], animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: [], animations: {
             self.iconContainer.frame.origin = iconEnd
             self.contentContainer.frame.origin = contentEnd
         }, completion: nil)
@@ -104,7 +104,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 shadowColor = UIColor(hue: newHue, saturation: sat, brightness: bright, alpha: 1.0)
             }
             
-            statusBarShadow.layer.shadowColor = shadowColor.CGColor
+            statusBarShadow.layer.shadowColor = shadowColor.cgColor
             
             //also sync icons with content
             if panningOnIcons { //pan on icons
@@ -119,33 +119,33 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
-    func sync(a: UICollectionView, with b: UICollectionView) {
+    func sync(_ a: UICollectionView, with b: UICollectionView) {
         let aPercentage = a.contentOffset.x / totalCollectionWidth(a)
         let newBOffset = totalCollectionWidth(b) * aPercentage
-        b.contentOffset = CGPointMake(newBOffset, 0)
+        b.contentOffset = CGPoint(x: newBOffset, y: 0)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedIcons" {
-            iconCollection = segue.destinationViewController as? IconCollectionView
+            iconCollection = segue.destination as? IconCollectionView
             syncShadowWithIconCollection()
             iconCollection?.parsedPages = parsedPages
             iconCollection?.calculateColors()
         }
         if segue.identifier == "embedContent" {
-            contentCollection = segue.destinationViewController as? ContentCollectionView
+            contentCollection = segue.destination as? ContentCollectionView
             contentCollection?.parsedPages = parsedPages
         }
     }
     
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
-    @IBAction func panStartListener(sender: UIPanGestureRecognizer) {
-        if sender.state == UIGestureRecognizerState.Began {
-            let panLocation = sender.locationInView(self.view)
-            self.panningOnIcons = CGRectContainsPoint(iconContainer.frame, panLocation)
+    @IBAction func panStartListener(_ sender: UIPanGestureRecognizer) {
+        if sender.state == UIGestureRecognizerState.began {
+            let panLocation = sender.location(in: self.view)
+            self.panningOnIcons = iconContainer.frame.contains(panLocation)
         }
     }
     

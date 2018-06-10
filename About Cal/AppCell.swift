@@ -18,10 +18,10 @@ class AppCell : ModuleCell {
     var appName : String?
     
     override func moduleType() -> ModuleType {
-        return .App
+        return .app
     }
     
-    override func displayWithData(data: String) {
+    override func displayWithData(_ data: String) {
         appName = data
         icon.clipsToBounds = true
         icon.layer.cornerRadius = 15.0
@@ -32,8 +32,8 @@ class AppCell : ModuleCell {
         }
     }
     
-    @IBAction func presentApp(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(LAUNCH_APP_DEMO, object: appName!)
+    @IBAction func presentApp(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: LAUNCH_APP_DEMO), object: appName!)
     }
     
 }

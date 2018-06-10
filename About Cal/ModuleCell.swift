@@ -14,56 +14,56 @@ class ModuleCell : UICollectionViewCell {
         fatalError("must be overridden by subclass")
     }
     
-    func displayWithData(data: String) {
+    func displayWithData(_ data: String) {
         fatalError("must be overriden by subclass")
     }
     
 }
 
 enum ModuleType{
-    case Title, Text, Image, Images, Video, App, WebText
+    case title, text, image, images, video, app, webText
     
-    static func enumFromString(name: String) -> ModuleType {
-        if name.hasPrefix("video"){ return .Video }
-        switch(name.lowercaseString) {
-            case "title": return .Title
-            case "image": return .Image
-            case "images": return .Images
-            case "app": return .App
-            case "webtext": return .WebText
-            default: return .Text
+    static func enumFromString(_ name: String) -> ModuleType {
+        if name.hasPrefix("video"){ return .video }
+        switch(name.lowercased()) {
+            case "title": return .title
+            case "image": return .image
+            case "images": return .images
+            case "app": return .app
+            case "webtext": return .webText
+            default: return .text
         }
     }
     
     func stringName() -> String {
         switch(self) {
-            case .Title: return "Title"
-            case .Text: return "Text"
-            case .Image: return "Image"
-            case .Images: return "Images"
-            case .Video: return "Video"
-            case .App: return "App"
-            case .WebText: return "WebText"
+            case .title: return "Title"
+            case .text: return "Text"
+            case .image: return "Image"
+            case .images: return "Images"
+            case .video: return "Video"
+            case .app: return "App"
+            case .webText: return "WebText"
         }
     }
     
-    func heightForData(data: String, width: CGFloat) -> CGFloat {
-        if self == .Text || self == .WebText{
+    func heightForData(_ data: String, width: CGFloat) -> CGFloat {
+        if self == .text || self == .webText{
             let attributes = TextCell.getContentTextAttributes()
             let context = NSStringDrawingContext()
-            let labelSize = CGSizeMake(width - 20, CGFloat.max)
+            let labelSize = CGSize(width: width - 20, height: CGFloat.greatestFiniteMagnitude)
             
-            let drawnSize = (data as NSString).boundingRectWithSize(labelSize, options: .UsesLineFragmentOrigin, attributes: attributes, context: context)
+            let drawnSize = (data as NSString).boundingRect(with: labelSize, options: .usesLineFragmentOrigin, attributes: attributes, context: context)
             return drawnSize.height * 1.05
         }
         
-        if self == .Image {
-            let splits = data.characters.split{ $0 == "/" }.map { String($0) }
+        if self == .image {
+            let splits = data.split{ $0 == "/" }.map { String($0) }
             if splits.count != 2 { return 0 }
             return CGFloat(Int(splits[1])!)
         }
         
-        if self == .Video {
+        if self == .video {
             //I probably should have done this dynamically but I got lazy. Oops.
             if data == "molio" { return width * 372/640 }
             if data == "~squareifyExample" { return (width * (9/16)) * 1.5 }
@@ -73,7 +73,7 @@ enum ModuleType{
             return width * (9/16)
         }
         
-        if self == .App {
+        if self == .app {
             return (150)
         }
         

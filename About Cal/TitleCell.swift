@@ -13,19 +13,19 @@ class TitleCell : ModuleCell {
     @IBOutlet weak var label: UILabel!
     
     override func moduleType() -> ModuleType {
-        return .Title
+        return .title
     }
     
-    func displayWithTitle(title: String, date: String?) {
-        let titleAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 40.0)!]
+    func displayWithTitle(_ title: String, date: String?) {
+        let titleAttributes : [NSAttributedStringKey: Any] = [NSAttributedStringKey.font : UIFont(name: "HelveticaNeue-Thin", size: 40.0)!]
         let attributedTitle = NSMutableAttributedString(string: title, attributes: titleAttributes)
         
         let newLabelText = attributedTitle
         
         if let date = date { //has date
-            let dateAttributes : [String: AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 25.0)!]
+            let dateAttributes : [NSAttributedStringKey: Any] = [NSAttributedStringKey.font : UIFont(name: "HelveticaNeue-Thin", size: 25.0)!]
             let attributedDate = NSMutableAttributedString(string: ("                                                " + date), attributes: dateAttributes)
-            newLabelText.appendAttributedString(attributedDate)
+            newLabelText.append(attributedDate)
         }
         
         label.attributedText = newLabelText

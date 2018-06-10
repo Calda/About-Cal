@@ -17,7 +17,7 @@ class CellPagingLayout : UICollectionViewFlowLayout {
     
     init(pageWidth: CGFloat) {
         super.init()
-        self.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        self.scrollDirection = UICollectionViewScrollDirection.horizontal
         self.pageWidth = pageWidth
     }
 
@@ -25,14 +25,14 @@ class CellPagingLayout : UICollectionViewFlowLayout {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
         let newOffset = getNewOffsetForVelocity(velocity.x)
-        return CGPointMake(newOffset, 0)
+        return CGPoint(x: newOffset, y: 0)
     }
 
     
-    func getNewOffsetForVelocity(velocity: CGFloat) -> CGFloat {
+    func getNewOffsetForVelocity(_ velocity: CGFloat) -> CGFloat {
         
         if velocity == 0.0 && !enabled {
             return previousPage
@@ -62,7 +62,7 @@ class CellPagingLayout : UICollectionViewFlowLayout {
         }
         
         if previousPage != newOffset { //pause all videos if view changes
-            NSNotificationCenter.defaultCenter().postNotificationName(PAUSE_ALL_NOTIFICATION, object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: PAUSE_ALL_NOTIFICATION), object: nil)
         }
         previousPage = newOffset
         enabled = false

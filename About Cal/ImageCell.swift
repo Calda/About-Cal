@@ -13,11 +13,11 @@ class ImageCell : ModuleCell {
     @IBOutlet weak var image: UIImageView!
     
     override func moduleType() -> ModuleType {
-        return .Image
+        return .image
     }
     
-    override func displayWithData(data: String) {
-        let splits = data.characters.split{ $0 == "/" }.map { String($0) }
+    override func displayWithData(_ data: String) {
+        let splits = data.split{ $0 == "/" }.map { String($0) }
         
         image.image = UIImage(named: splits[0])
     }

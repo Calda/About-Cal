@@ -14,17 +14,17 @@ class WebTextCell : ModuleCell {
     var data : NSString?
     
     override func moduleType() -> ModuleType {
-        return .Text
+        return .text
     }
     
-    override func displayWithData(data: String) {
+    override func displayWithData(_ data: String) {
         self.data = data as NSString
         let attributes = TextCell.getContentTextAttributes()
         let attributedText = NSMutableAttributedString(string: data, attributes: attributes)
         
-        if (data as NSString).containsString("http://") {
+        if (data as NSString).contains("http://") {
             //The website, Hear a Tale (http://hearatale.com)
-            attributedText.addAttribute(NSLinkAttributeName, value: "http://www.hearatale.com", range: NSMakeRange(26, 20))
+            attributedText.addAttribute(NSAttributedStringKey.link, value: "http://www.hearatale.com", range: NSMakeRange(26, 20))
             
         }
         
@@ -41,7 +41,7 @@ class WebTextCell : ModuleCell {
         style.lineSpacing = 5.0
         style.firstLineHeadIndent = 20.0
         
-        return [NSFontAttributeName : font, NSParagraphStyleAttributeName : style]
+        return [NSAttributedStringKey.font.rawValue : font, NSAttributedStringKey.paragraphStyle.rawValue : style]
         
     }
     

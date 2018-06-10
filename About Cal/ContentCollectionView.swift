@@ -15,70 +15,70 @@ class ContentCollectionView : UICollectionViewController, WKNavigationDelegate ,
     var iconCollection : UICollectionView?
     var parsedPages : [PageData] = []
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "launchApp:", name: LAUNCH_APP_DEMO, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ContentCollectionView.launchApp(_:)), name: NSNotification.Name(rawValue: LAUNCH_APP_DEMO), object: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         collectionView!.collectionViewLayout = CellPagingLayout(pageWidth: collectionView!.frame.width)
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("contentPage", forIndexPath: indexPath) as! ContentCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentPage", for: indexPath) as! ContentCell
         cell.buildContentFromPageData(parsedPages[indexPath.item])
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return parsedPages.count
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
     
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.view.frame.size
     }
     
-    @IBAction func videoPlayToggled(sender: UITapGestureRecognizer) {
+    @IBAction func videoPlayToggled(_ sender: UITapGestureRecognizer) {
         if let videoCell = sender.view as? VideoCell {
             let data = videoCell.currentData
-            NSNotificationCenter.defaultCenter().postNotificationName(VIDEO_PLAY_TOGGLE_NOTIFICATION, object: data)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: VIDEO_PLAY_TOGGLE_NOTIFICATION), object: data)
         }
     }
     
     // MARK: - embedded app controller
     
-    func launchApp(notification: NSNotification) {
+    @objc func launchApp(_ notification: Notification) {
         if let name = notification.object as? String {
             if name == "orbit" {
-                presentWithNavigation(OrbitViewController(), title: "Tap and Drag to spawn planets")
+                _ = presentWithNavigation(OrbitViewController(), title: "Tap and Drag to spawn planets")
             }
             else if name == "inflation" {
-                let storyboard = UIStoryboard(name: "Inflation", bundle: NSBundle.mainBundle())
-                let inflationController = storyboard.instantiateViewControllerWithIdentifier("Inflation") 
-               presentWithNavigation(inflationController, title: nil)
+                let storyboard = UIStoryboard(name: "Inflation", bundle: Bundle.main)
+                let inflationController = storyboard.instantiateViewController(withIdentifier: "Inflation") 
+               _ = presentWithNavigation(inflationController, title: nil)
             }
         }
     }
     
-    func presentWithNavigation(viewController: UIViewController, title: String?) -> UINavigationController {
+    func presentWithNavigation(_ viewController: UIViewController, title: String?) -> UINavigationController {
         let nav = UINavigationController(rootViewController: viewController)
-        let back = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "closeModalView:")
+        let back = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(ContentCollectionView.closeModalView(_:)))
         viewController.navigationItem.leftBarButtonItem = back
         if title != nil {
             viewController.navigationItem.title = title
         }
-        self.presentViewController(nav, animated: true, completion: nil)
+        self.present(nav, animated: true, completion: nil)
         return nav
     }
     
-    func closeModalView(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @objc func closeModalView(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - web controller
@@ -87,27 +87,27 @@ class ContentCollectionView : UICollectionViewController, WKNavigationDelegate ,
     var webView : WKWebView?
     var webDepth = -1
     
-    @IBAction func openWebView(sender: UITapGestureRecognizer) {
-        let cell = sender.view as! WebTextCell
+    @IBAction func openWebView(_ sender: UITapGestureRecognizer) {
+//        let cell = sender.view as! WebTextCell
         webController = UIViewController()
         webView = WKWebView(frame: webController!.view.frame)
         webDepth = -1
-        let request = NSURLRequest(URL: NSURL(string: "http://www.hearatale.com/children.php")!)
+        let request = URLRequest(url: URL(string: "http://www.hearatale.com/children.php")!)
         webView!.navigationDelegate = self
-        webView!.loadRequest(request)
+        webView!.load(request)
         webController!.view.addSubview(webView!)
-        presentWithNavigation(webController!, title: "Loading...")
+        _ = presentWithNavigation(webController!, title: "Loading...")
     }
     
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webController?.navigationItem.title = "Hear a Tale"
         webDepth += 1
         if webDepth >= 1 {
-            webController!.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "< Back", style: .Plain, target: self, action: "webGoBack")
+            webController!.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(ContentCollectionView.webGoBack))
         }
     }
     
-    func webGoBack() {
+    @objc func webGoBack() {
         webView?.goBack()
         webDepth -= 2
         if webDepth < 1 {
@@ -117,7 +117,7 @@ class ContentCollectionView : UICollectionViewController, WKNavigationDelegate ,
     
     // MARK: - scroll view
     
-    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let layout = self.collectionView!.collectionViewLayout as! CellPagingLayout
         layout.enabled = true
     }
